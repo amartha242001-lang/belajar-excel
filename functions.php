@@ -1,11 +1,11 @@
 <?php
 /**
- * CyberNeurova - WordPress Theme Functions
+ * ExcelKu - WordPress Theme Functions
  * Website Tutorial Rumus & Shortcut MS Excel
  */
 
 // ========== THEME SETUP ==========
-function cyberneurova_setup() {
+function excelku_setup() {
     // Dukungan judul otomatis
     add_theme_support( 'title-tag' );
 
@@ -14,8 +14,8 @@ function cyberneurova_setup() {
 
     // Daftarkan menu navigasi
     register_nav_menus( array(
-        'primary' => esc_html__( 'Menu Utama', 'cyberneurova' ),
-        'footer'  => esc_html__( 'Menu Footer', 'cyberneurova' ),
+        'primary' => esc_html__( 'Menu Utama', 'excelku' ),
+        'footer'  => esc_html__( 'Menu Footer', 'excelku' ),
     ) );
 
     // Dukungan HTML5
@@ -27,28 +27,28 @@ function cyberneurova_setup() {
         'caption',
     ) );
 }
-add_action( 'after_setup_theme', 'cyberneurova_setup' );
+add_action( 'after_setup_theme', 'excelku_setup' );
 
 // ========== ENQUEUE STYLES & SCRIPTS ==========
-function cyberneurova_scripts() {
-    wp_enqueue_style( 'cyberneurova-style', get_stylesheet_uri(), array(), '1.0.0' );
-    wp_enqueue_script( 'cyberneurova-script', get_template_directory_uri() . '/script.js', array(), '1.0.0', true );
+function excelku_scripts() {
+    wp_enqueue_style( 'excelku-style', get_stylesheet_uri(), array(), '1.0.0' );
+    wp_enqueue_script( 'excelku-script', get_template_directory_uri() . '/script.js', array(), '1.0.0', true );
 }
-add_action( 'wp_enqueue_scripts', 'cyberneurova_scripts' );
+add_action( 'wp_enqueue_scripts', 'excelku_scripts' );
 
 // ========== REGISTER SIDEBAR / WIDGET AREA ==========
-function cyberneurova_register_widgets() {
+function excelku_register_widgets() {
     register_sidebar( array(
-        'name'          => esc_html__( 'Sidebar Excel Tips', 'cyberneurova' ),
+        'name'          => esc_html__( 'Sidebar Excel Tips', 'excelku' ),
         'id'            => 'sidebar-excel-tips',
-        'description'   => esc_html__( 'Tempatkan widget untuk menampilkan rumus populer atau shortcut cepat.', 'cyberneurova' ),
-        'before_widget' => '<section class="widget cyberneurova-widget">',
+        'description'   => esc_html__( 'Tempatkan widget untuk menampilkan rumus populer atau shortcut cepat.', 'excelku' ),
+        'before_widget' => '<section class="widget excelku-widget">',
         'after_widget'  => '</section>',
         'before_title'  => '<h3 class="widget-title">',
         'after_title'   => '</h3>',
     ) );
 }
-add_action( 'widgets_init', 'cyberneurova_register_widgets' );
+add_action( 'widgets_init', 'excelku_register_widgets' );
 
 // ========== SHORTCODES ==========
 
@@ -140,7 +140,7 @@ function excel_tip_shortcode( $atts, $content = null ) {
 add_shortcode( 'excel_tip', 'excel_tip_shortcode' );
 
 // ========== CUSTOM POST TYPE: RUMUS EXCEL ==========
-function cyberneurova_register_cpt() {
+function excelku_register_cpt() {
     // Custom Post Type: Rumus Excel
     register_post_type( 'rumus_excel', array(
         'labels' => array(
@@ -181,10 +181,10 @@ function cyberneurova_register_cpt() {
         'show_in_rest' => true,
     ) );
 }
-add_action( 'init', 'cyberneurova_register_cpt' );
+add_action( 'init', 'excelku_register_cpt' );
 
 // ========== CUSTOM TAXONOMY: KATEGORI RUMUS ==========
-function cyberneurova_register_taxonomy() {
+function excelku_register_taxonomy() {
     register_taxonomy( 'kategori_rumus', 'rumus_excel', array(
         'labels' => array(
             'name'          => 'Kategori Rumus',
@@ -207,5 +207,5 @@ function cyberneurova_register_taxonomy() {
         'show_in_rest' => true,
     ) );
 }
-add_action( 'init', 'cyberneurova_register_taxonomy' );
+add_action( 'init', 'excelku_register_taxonomy' );
 ?>
