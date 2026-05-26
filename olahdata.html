@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Olah Data - ExcelKu</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="nav-logo">📊 ExcelKu</a>
+            <button class="hamburger" id="hamburger"><span></span><span></span><span></span></button>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="index.html" class="nav-link">Beranda</a></li>
+                <li><a href="dasar.html" class="nav-link">Dasar Excel</a></li>
+                <li><a href="rumus.html" class="nav-link">Rumus &amp; Fungsi</a></li>
+                <li><a href="olahdata.html" class="nav-link active">Olah Data</a></li>
+                <li><a href="visualisasi.html" class="nav-link">Visualisasi</a></li>
+                <li><a href="shortcut.html" class="nav-link">Shortcut</a></li>
+                <li><a href="latihan.html" class="nav-link">Latihan</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <section class="page-header">
+        <h1>📙 Level 3: Olah Data</h1>
+        <p>Kelola, bersihkan, dan atur data dengan fitur-fitur powerful Excel.</p>
+    </section>
+
+    <section class="formulas-section">
+        <div class="container-main">
+
+            <article class="formula-article">
+                <div class="formula-header"><span class="category-badge badge-data">Data</span><h2>1. Sorting (Pengurutan)</h2></div>
+                <div class="formula-body">
+                    <div class="explanation"><p>Sorting mengurutkan data berdasarkan satu atau beberapa kolom. Bisa dari A-Z, Z-A, terkecil-terbesar, atau custom.</p></div>
+                    <div class="params-table">
+                        <table>
+                            <tr><th>Cara</th><th>Langkah</th></tr>
+                            <tr><td>Sort Cepat</td><td>Klik header kolom → Data → Sort A to Z / Z to A</td></tr>
+                            <tr><td>Sort Multi-Level</td><td>Data → Sort → Add Level (urutkan berdasarkan beberapa kolom)</td></tr>
+                            <tr><td>Sort Custom</td><td>Data → Sort → Order → Custom List (misal: Senin, Selasa, Rabu...)</td></tr>
+                        </table>
+                    </div>
+                    <div class="tips-box"><h4>💡 Tips:</h4><ul><li>Pastikan data punya header agar Excel tidak ikut mengurutkan baris judul</li><li>Gunakan Ctrl+Shift+L untuk aktifkan filter, lalu sort dari dropdown</li></ul></div>
+                </div>
+            </article>
+
+            <article class="formula-article">
+                <div class="formula-header"><span class="category-badge badge-data">Data</span><h2>2. Filtering (Penyaringan)</h2></div>
+                <div class="formula-body">
+                    <div class="explanation"><p>Filter menyembunyikan baris yang tidak sesuai kriteria tanpa menghapusnya. Data asli tetap utuh.</p></div>
+                    <div class="syntax-box">
+                        <div class="syntax-label">Cara Aktifkan:</div>
+                        <code>Pilih data → Data → Filter (atau Ctrl+Shift+L)</code>
+                        <button class="copy-btn" onclick="copyCode(this)">📋 Salin</button>
+                    </div>
+                    <div class="params-table">
+                        <table>
+                            <tr><th>Jenis Filter</th><th>Fungsi</th></tr>
+                            <tr><td>Text Filter</td><td>Contains, Begins With, Ends With</td></tr>
+                            <tr><td>Number Filter</td><td>Greater Than, Less Than, Between</td></tr>
+                            <tr><td>Date Filter</td><td>This Month, Last Quarter, Custom</td></tr>
+                            <tr><td>Color Filter</td><td>Filter berdasarkan warna sel atau font</td></tr>
+                        </table>
+                    </div>
+                </div>
+            </article>
+
+            <article class="formula-article">
+                <div class="formula-header"><span class="category-badge badge-data">Data</span><h2>3. Data Validation</h2></div>
+                <div class="formula-body">
+                    <div class="explanation"><p>Data Validation membatasi input yang bisa dimasukkan ke sel. Berguna untuk membuat dropdown list atau mencegah input salah.</p></div>
+                    <div class="syntax-box">
+                        <div class="syntax-label">Cara:</div>
+                        <code>Pilih sel → Data → Data Validation → Settings</code>
+                        <button class="copy-btn" onclick="copyCode(this)">📋 Salin</button>
+                    </div>
+                    <div class="params-table">
+                        <table>
+                            <tr><th>Tipe Validasi</th><th>Contoh Penggunaan</th></tr>
+                            <tr><td>List (Dropdown)</td><td>Pilihan: "Jakarta, Bandung, Surabaya"</td></tr>
+                            <tr><td>Whole Number</td><td>Hanya angka bulat 1-100</td></tr>
+                            <tr><td>Date</td><td>Hanya tanggal setelah 01/01/2026</td></tr>
+                            <tr><td>Text Length</td><td>Maksimal 50 karakter</td></tr>
+                            <tr><td>Custom Formula</td><td>=LEN(A1)<=10</td></tr>
+                        </table>
+                    </div>
+                </div>
+            </article>
+
+            <article class="formula-article">
+                <div class="formula-header"><span class="category-badge badge-data">Data</span><h2>4. Remove Duplicates</h2></div>
+                <div class="formula-body">
+                    <div class="explanation"><p>Menghapus baris duplikat dari data. Excel akan menyimpan satu baris unik dan menghapus sisanya.</p></div>
+                    <div class="syntax-box">
+                        <div class="syntax-label">Cara:</div>
+                        <code>Pilih data → Data → Remove Duplicates → Pilih kolom → OK</code>
+                        <button class="copy-btn" onclick="copyCode(this)">📋 Salin</button>
+                    </div>
+                    <div class="tips-box"><h4>💡 Tips:</h4><ul><li>Backup data sebelum remove duplicates (tidak bisa di-undo setelah save)</li><li>Pilih kolom spesifik jika hanya ingin cek duplikat berdasarkan kolom tertentu</li><li>Alternatif: gunakan Conditional Formatting → Highlight Duplicates untuk melihat dulu sebelum hapus</li></ul></div>
+                </div>
+            </article>
+
+            <article class="formula-article">
+                <div class="formula-header"><span class="category-badge badge-data">Data</span><h2>5. Text to Columns</h2></div>
+                <div class="formula-body">
+                    <div class="explanation"><p>Memisahkan isi satu kolom menjadi beberapa kolom berdasarkan delimiter (pemisah) tertentu.</p></div>
+                    <div class="syntax-box">
+                        <div class="syntax-label">Cara:</div>
+                        <code>Pilih kolom → Data → Text to Columns → Delimited → Pilih separator (Comma, Space, dll)</code>
+                        <button class="copy-btn" onclick="copyCode(this)">📋 Salin</button>
+                    </div>
+                    <div class="example-box">
+                        <h4>Contoh:</h4>
+                        <code>"Andi,Jakarta,Marketing" → Kolom A: Andi | Kolom B: Jakarta | Kolom C: Marketing</code>
+                    </div>
+                </div>
+            </article>
+
+        </div>
+    </section>
+
+    <footer>
+        <div class="container-main"><div class="footer-bottom"><p>&copy; 2026 ExcelKu. Semua hak dilindungi. | <a href="index.html">Kembali ke Beranda</a></p></div></div>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>

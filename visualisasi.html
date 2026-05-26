@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Visualisasi & Pelaporan - ExcelKu</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="nav-logo">📊 ExcelKu</a>
+            <button class="hamburger" id="hamburger"><span></span><span></span><span></span></button>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="index.html" class="nav-link">Beranda</a></li>
+                <li><a href="dasar.html" class="nav-link">Dasar Excel</a></li>
+                <li><a href="rumus.html" class="nav-link">Rumus &amp; Fungsi</a></li>
+                <li><a href="olahdata.html" class="nav-link">Olah Data</a></li>
+                <li><a href="visualisasi.html" class="nav-link active">Visualisasi</a></li>
+                <li><a href="shortcut.html" class="nav-link">Shortcut</a></li>
+                <li><a href="latihan.html" class="nav-link">Latihan</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <section class="page-header">
+        <h1>📕 Level 4: Visualisasi &amp; Pelaporan</h1>
+        <p>Sajikan data dalam bentuk grafik dan laporan yang mudah dipahami.</p>
+    </section>
+
+    <section class="formulas-section">
+        <div class="container-main">
+
+            <article class="formula-article">
+                <div class="formula-header"><span class="category-badge badge-data">Chart</span><h2>1. Membuat Chart (Grafik)</h2></div>
+                <div class="formula-body">
+                    <div class="syntax-box">
+                        <div class="syntax-label">Cara Cepat:</div>
+                        <code>Pilih data → Insert → Chart (atau Alt+F1 untuk chart instan)</code>
+                        <button class="copy-btn" onclick="copyCode(this)">📋 Salin</button>
+                    </div>
+                    <div class="params-table">
+                        <h4>Jenis Chart &amp; Kapan Digunakan:</h4>
+                        <table>
+                            <tr><th>Jenis Chart</th><th>Kapan Digunakan</th><th>Contoh</th></tr>
+                            <tr><td>📊 Column/Bar</td><td>Membandingkan kategori</td><td>Penjualan per bulan</td></tr>
+                            <tr><td>📈 Line</td><td>Menunjukkan tren waktu</td><td>Pertumbuhan revenue</td></tr>
+                            <tr><td>🥧 Pie/Donut</td><td>Menunjukkan proporsi</td><td>Market share</td></tr>
+                            <tr><td>📉 Area</td><td>Tren dengan volume</td><td>Traffic website</td></tr>
+                            <tr><td>⚡ Scatter</td><td>Korelasi 2 variabel</td><td>Harga vs Penjualan</td></tr>
+                            <tr><td>🗺️ Map</td><td>Data geografis</td><td>Penjualan per provinsi</td></tr>
+                        </table>
+                    </div>
+                    <div class="tips-box"><h4>💡 Tips:</h4><ul><li>Gunakan Recommended Charts jika bingung pilih jenis chart</li><li>Klik chart → Design tab → Change Chart Type untuk ganti jenis</li><li>Tambahkan Data Labels agar angka terlihat langsung di chart</li></ul></div>
+                </div>
+            </article>
+
+            <article class="formula-article" id="pivot">
+                <div class="formula-header"><span class="category-badge badge-statistik">Pivot</span><h2>2. Pivot Table (Wajib Dikuasai!)</h2></div>
+                <div class="formula-body">
+                    <div class="syntax-box">
+                        <div class="syntax-label">Cara Membuat:</div>
+                        <code>Pilih data → Insert → PivotTable → Pilih lokasi → OK</code>
+                        <button class="copy-btn" onclick="copyCode(this)">📋 Salin</button>
+                    </div>
+                    <div class="params-table">
+                        <h4>4 Area Pivot Table:</h4>
+                        <table>
+                            <tr><th>Area</th><th>Fungsi</th><th>Contoh</th></tr>
+                            <tr><td>📋 Rows</td><td>Mengelompokkan data per baris</td><td>Nama Kota, Nama Produk</td></tr>
+                            <tr><td>📊 Columns</td><td>Mengelompokkan data per kolom</td><td>Bulan, Kuartal</td></tr>
+                            <tr><td>🔢 Values</td><td>Data yang dihitung</td><td>SUM of Penjualan, COUNT of Order</td></tr>
+                            <tr><td>🔎 Filters</td><td>Menyaring keseluruhan pivot</td><td>Filter per Tahun</td></tr>
+                        </table>
+                    </div>
+                    <div class="example-box">
+                        <h4>Contoh Kasus:</h4>
+                        <p><strong>Data:</strong> 5000 baris transaksi dengan kolom Tanggal, Produk, Kota, Qty, Total</p>
+                        <p><strong>Pivot:</strong> Drag "Kota" ke Rows, "Produk" ke Columns, "Total" ke Values</p>
+                        <p><strong>Hasil:</strong> Tabel ringkasan total penjualan per kota per produk dalam hitungan detik!</p>
+                    </div>
+                    <div class="tips-box"><h4>💡 Tips:</h4><ul>
+                        <li>Klik kanan pada tanggal → Group → pilih Months/Quarters untuk grouping otomatis</li>
+                        <li>Gunakan Pivot Chart untuk visualisasi langsung dari Pivot Table</li>
+                        <li>Refresh pivot (Alt+F5) setelah data sumber berubah</li>
+                        <li>Gunakan Slicer (Insert → Slicer) untuk filter visual yang interaktif</li>
+                    </ul></div>
+                </div>
+            </article>
+
+            <article class="formula-article">
+                <div class="formula-header"><span class="category-badge badge-data">Report</span><h2>3. Conditional Formatting</h2></div>
+                <div class="formula-body">
+                    <div class="explanation"><p>Memberi warna/format otomatis berdasarkan nilai sel. Membuat data "berbicara" secara visual.</p></div>
+                    <div class="params-table">
+                        <table>
+                            <tr><th>Tipe</th><th>Fungsi</th><th>Contoh</th></tr>
+                            <tr><td>Data Bars</td><td>Bar horizontal dalam sel</td><td>Visualisasi progress</td></tr>
+                            <tr><td>Color Scales</td><td>Gradasi warna (hijau-kuning-merah)</td><td>Heatmap nilai</td></tr>
+                            <tr><td>Icon Sets</td><td>Ikon (panah, lampu, bintang)</td><td>Status KPI</td></tr>
+                            <tr><td>Highlight Rules</td><td>Warnai sel berdasarkan kondisi</td><td>Nilai > 90 = hijau</td></tr>
+                        </table>
+                    </div>
+                </div>
+            </article>
+
+            <article class="formula-article">
+                <div class="formula-header"><span class="category-badge badge-data">Report</span><h2>4. Sparklines (Mini Chart dalam Sel)</h2></div>
+                <div class="formula-body">
+                    <div class="explanation"><p>Grafik kecil yang muat dalam satu sel. Cocok untuk menunjukkan tren tanpa membuat chart besar.</p></div>
+                    <div class="syntax-box">
+                        <div class="syntax-label">Cara:</div>
+                        <code>Insert → Sparklines → Line/Column/Win-Loss → Pilih data range → OK</code>
+                        <button class="copy-btn" onclick="copyCode(this)">📋 Salin</button>
+                    </div>
+                </div>
+            </article>
+
+        </div>
+    </section>
+
+    <footer>
+        <div class="container-main"><div class="footer-bottom"><p>&copy; 2026 ExcelKu. Semua hak dilindungi. | <a href="index.html">Kembali ke Beranda</a></p></div></div>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>

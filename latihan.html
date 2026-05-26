@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Latihan & Download Template - ExcelKu</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="nav-logo">📊 ExcelKu</a>
+            <button class="hamburger" id="hamburger"><span></span><span></span><span></span></button>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="index.html" class="nav-link">Beranda</a></li>
+                <li><a href="dasar.html" class="nav-link">Dasar Excel</a></li>
+                <li><a href="rumus.html" class="nav-link">Rumus &amp; Fungsi</a></li>
+                <li><a href="olahdata.html" class="nav-link">Olah Data</a></li>
+                <li><a href="visualisasi.html" class="nav-link">Visualisasi</a></li>
+                <li><a href="shortcut.html" class="nav-link">Shortcut</a></li>
+                <li><a href="latihan.html" class="nav-link active">Latihan</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <section class="page-header page-header-shortcut">
+        <h1>📥 Latihan &amp; Download Template</h1>
+        <p>Praktikkan setiap materi dengan file Excel siap pakai. Belajar Excel harus sambil praktik!</p>
+    </section>
+
+    <section class="formulas-section">
+        <div class="container-main">
+
+            <div class="guide-box" style="margin-bottom:30px;">
+                <h3>📖 Cara Menggunakan Template</h3>
+                <p>1. Download file .xlsx → 2. Buka di Excel → 3. Ikuti instruksi di sheet "Petunjuk" → 4. Kerjakan latihan di sheet "Latihan"</p>
+            </div>
+
+            <div class="cards-grid">
+                <div class="formula-card card-logic">
+                    <div class="card-icon">📗</div>
+                    <h3>Template Level 1: Dasar</h3>
+                    <p>Latihan format cell, aritmatika dasar, dan freeze panes.</p>
+                    <code>Berisi: 3 sheet latihan + kunci jawaban</code>
+                    <p><em>📌 Segera tersedia</em></p>
+                </div>
+                <div class="formula-card card-reference">
+                    <div class="card-icon">📘</div>
+                    <h3>Template Level 2: Rumus</h3>
+                    <p>Latihan IF, VLOOKUP, SUMIF, INDEX+MATCH, dan fungsi teks.</p>
+                    <code>Berisi: 5 sheet latihan + data sample</code>
+                    <p><em>📌 Segera tersedia</em></p>
+                </div>
+                <div class="formula-card card-reference">
+                    <div class="card-icon">📙</div>
+                    <h3>Template Level 3: Olah Data</h3>
+                    <p>Latihan sorting, filtering, data validation, dan remove duplicates.</p>
+                    <code>Berisi: Data 500 baris untuk diolah</code>
+                    <p><em>📌 Segera tersedia</em></p>
+                </div>
+                <div class="formula-card card-logic">
+                    <div class="card-icon">📕</div>
+                    <h3>Template Level 4: Pivot &amp; Chart</h3>
+                    <p>Latihan membuat Pivot Table dan berbagai jenis chart.</p>
+                    <code>Berisi: Data penjualan 1000 baris</code>
+                    <p><em>📌 Segera tersedia</em></p>
+                </div>
+            </div>
+
+            <!-- Quiz Section -->
+            <div style="margin-top:50px;">
+                <h2 class="section-title">🧠 Kuis Cepat Excel</h2>
+                <p style="text-align:center; margin-bottom:20px; color:#666;">Uji pemahaman kamu! Klik jawaban yang benar.</p>
+
+                <div class="formula-article" id="quiz-section">
+                    <div class="formula-body">
+                        <div id="quiz-container">
+                            <div class="quiz-question" data-correct="b">
+                                <h4>1. Apa hasil dari =IF(10>5, "Ya", "Tidak")?</h4>
+                                <div class="quiz-options">
+                                    <button class="quiz-btn" data-answer="a" onclick="checkQuiz(this)">A. Tidak</button>
+                                    <button class="quiz-btn" data-answer="b" onclick="checkQuiz(this)">B. Ya</button>
+                                    <button class="quiz-btn" data-answer="c" onclick="checkQuiz(this)">C. TRUE</button>
+                                    <button class="quiz-btn" data-answer="d" onclick="checkQuiz(this)">D. Error</button>
+                                </div>
+                                <div class="quiz-feedback"></div>
+                            </div>
+
+                            <div class="quiz-question" data-correct="c">
+                                <h4>2. VLOOKUP mencari data ke arah mana?</h4>
+                                <div class="quiz-options">
+                                    <button class="quiz-btn" data-answer="a" onclick="checkQuiz(this)">A. Horizontal (kiri-kanan)</button>
+                                    <button class="quiz-btn" data-answer="b" onclick="checkQuiz(this)">B. Diagonal</button>
+                                    <button class="quiz-btn" data-answer="c" onclick="checkQuiz(this)">C. Vertikal (atas-bawah)</button>
+                                    <button class="quiz-btn" data-answer="d" onclick="checkQuiz(this)">D. Semua arah</button>
+                                </div>
+                                <div class="quiz-feedback"></div>
+                            </div>
+
+                            <div class="quiz-question" data-correct="a">
+                                <h4>3. Shortcut untuk menyimpan file adalah?</h4>
+                                <div class="quiz-options">
+                                    <button class="quiz-btn" data-answer="a" onclick="checkQuiz(this)">A. Ctrl+S</button>
+                                    <button class="quiz-btn" data-answer="b" onclick="checkQuiz(this)">B. Ctrl+V</button>
+                                    <button class="quiz-btn" data-answer="c" onclick="checkQuiz(this)">C. Ctrl+P</button>
+                                    <button class="quiz-btn" data-answer="d" onclick="checkQuiz(this)">D. Ctrl+N</button>
+                                </div>
+                                <div class="quiz-feedback"></div>
+                            </div>
+
+                            <div class="quiz-question" data-correct="b">
+                                <h4>4. Fungsi apa yang menghitung jumlah sel berdasarkan kriteria?</h4>
+                                <div class="quiz-options">
+                                    <button class="quiz-btn" data-answer="a" onclick="checkQuiz(this)">A. SUM</button>
+                                    <button class="quiz-btn" data-answer="b" onclick="checkQuiz(this)">B. COUNTIF</button>
+                                    <button class="quiz-btn" data-answer="c" onclick="checkQuiz(this)">C. AVERAGE</button>
+                                    <button class="quiz-btn" data-answer="d" onclick="checkQuiz(this)">D. MAX</button>
+                                </div>
+                                <div class="quiz-feedback"></div>
+                            </div>
+
+                            <div class="quiz-question" data-correct="d">
+                                <h4>5. Apa fungsi IFERROR?</h4>
+                                <div class="quiz-options">
+                                    <button class="quiz-btn" data-answer="a" onclick="checkQuiz(this)">A. Membuat error</button>
+                                    <button class="quiz-btn" data-answer="b" onclick="checkQuiz(this)">B. Menghitung error</button>
+                                    <button class="quiz-btn" data-answer="c" onclick="checkQuiz(this)">C. Menghapus rumus</button>
+                                    <button class="quiz-btn" data-answer="d" onclick="checkQuiz(this)">D. Menangani error dengan nilai alternatif</button>
+                                </div>
+                                <div class="quiz-feedback"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <footer>
+        <div class="container-main"><div class="footer-bottom"><p>&copy; 2026 ExcelKu. Semua hak dilindungi. | <a href="index.html">Kembali ke Beranda</a></p></div></div>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>

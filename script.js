@@ -136,16 +136,94 @@ document.addEventListener('DOMContentLoaded', function() {
 
 // ========== TOGGLE DEMO FOR SHORTCUT ITEMS ==========
 function toggleDemo(element) {
-    // Jika sudah active, tutup
     if (element.classList.contains('active')) {
         element.classList.remove('active');
     } else {
-        // Tutup semua demo lain yang terbuka (opsional, bisa dihapus jika ingin banyak terbuka)
-        // document.querySelectorAll('.shortcut-item-interactive.active').forEach(item => {
-        //     item.classList.remove('active');
-        // });
         element.classList.add('active');
     }
+}
+
+// ========== QUIZ FUNCTION ==========
+function checkQuiz(button) {
+    const question = button.closest('.quiz-question');
+    const correctAnswer = question.getAttribute('data-correct');
+    const selectedAnswer = button.getAttribute('data-answer');
+    const feedback = question.querySelector('.quiz-feedback');
+    const allBtns = question.querySelectorAll('.quiz-btn');
+
+    allBtns.forEach(btn => btn.disabled = true);
+
+    if (selectedAnswer === correctAnswer) {
+        button.classList.add('correct');
+        feedback.textContent = '✅ Benar! Jawaban kamu tepat.';
+        feedback.style.color = '#155724';
+    } else {
+        button.classList.add('wrong');
+        allBtns.forEach(btn => {
+            if (btn.getAttribute('data-answer') === correctAnswer) {
+                btn.classList.add('correct');
+            }
+        });
+        feedback.textContent = '❌ Salah. Jawaban yang benar ditandai hijau.';
+        feedback.style.color = '#721c24';
+    }
+}
+
+// ========== LIVE SEARCH (Homepage) ==========
+const liveSearch = document.getElementById('liveSearch');
+if (liveSearch) {
+    const searchData = [
+        { title: 'IF - Fungsi Logika', url: 'rumus.html#if', category: 'Rumus' },
+        { title: 'VLOOKUP - Pencarian Vertikal', url: 'rumus.html#vlookup', category: 'Rumus' },
+        { title: 'HLOOKUP - Pencarian Horizontal', url: 'rumus.html#hlookup', category: 'Rumus' },
+        { title: 'XLOOKUP - Pencarian Modern', url: 'rumus.html#xlookup', category: 'Rumus' },
+        { title: 'INDEX + MATCH', url: 'rumus.html#indexmatch', category: 'Rumus' },
+        { title: 'SUMIF - Jumlah Bersyarat', url: 'rumus.html#sumif', category: 'Rumus' },
+        { title: 'COUNTIF - Hitung Bersyarat', url: 'rumus.html#countif', category: 'Rumus' },
+        { title: 'IFERROR - Penanganan Error', url: 'rumus.html#iferror', category: 'Rumus' },
+        { title: 'Nested IF, AND, OR', url: 'rumus.html#nestedif', category: 'Rumus' },
+        { title: 'TRIM, PROPER, UPPER, LOWER', url: 'rumus.html#trim', category: 'Rumus' },
+        { title: 'CONCATENATE / CONCAT', url: 'rumus.html#concatenate', category: 'Rumus' },
+        { title: 'LEFT, RIGHT, MID', url: 'rumus.html#leftmid', category: 'Rumus' },
+        { title: 'Fungsi Tanggal (TODAY, DATEDIF)', url: 'rumus.html#tanggal', category: 'Rumus' },
+        { title: 'EOMONTH dan NETWORKDAYS', url: 'rumus.html#eomonth', category: 'Rumus' },
+        { title: 'Pivot Table', url: 'visualisasi.html#pivot', category: 'Visualisasi' },
+        { title: 'Shortcut Navigasi', url: 'shortcut.html', category: 'Shortcut' },
+        { title: 'Shortcut Copy Paste', url: 'shortcut.html', category: 'Shortcut' },
+        { title: 'Shortcut Format', url: 'shortcut.html', category: 'Shortcut' },
+        { title: 'Sorting dan Filtering', url: 'olahdata.html', category: 'Olah Data' },
+        { title: 'Data Validation', url: 'olahdata.html', category: 'Olah Data' },
+        { title: 'Format Cell', url: 'dasar.html', category: 'Dasar' },
+        { title: 'Freeze Panes', url: 'dasar.html', category: 'Dasar' },
+        { title: 'Chart dan Grafik', url: 'visualisasi.html', category: 'Visualisasi' },
+        { title: 'Download Template Latihan', url: 'latihan.html', category: 'Latihan' },
+    ];
+
+    const searchResults = document.getElementById('searchResults');
+
+    liveSearch.addEventListener('input', function() {
+        const query = this.value.toLowerCase().trim();
+        if (query.length < 2) {
+            searchResults.innerHTML = '';
+            return;
+        }
+
+        const results = searchData.filter(item =>
+            item.title.toLowerCase().includes(query) ||
+            item.category.toLowerCase().includes(query)
+        );
+
+        if (results.length > 0) {
+            searchResults.innerHTML = results.slice(0, 8).map(item =>
+                '<a href="' + item.url + '" class="search-result-item">' +
+                '<span class="search-result-title">' + item.title + '</span>' +
+                '<span class="search-result-cat">' + item.category + '</span>' +
+                '</a>'
+            ).join('');
+        } else {
+            searchResults.innerHTML = '<div class="search-result-item">Tidak ditemukan. Coba kata kunci lain.</div>';
+        }
+    });
 }
 
 // ========== COPY CODE FUNCTION ==========

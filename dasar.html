@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dasar Excel - ExcelKu</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="nav-logo">📊 ExcelKu</a>
+            <button class="hamburger" id="hamburger"><span></span><span></span><span></span></button>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="index.html" class="nav-link">Beranda</a></li>
+                <li><a href="dasar.html" class="nav-link active">Dasar Excel</a></li>
+                <li><a href="rumus.html" class="nav-link">Rumus &amp; Fungsi</a></li>
+                <li><a href="olahdata.html" class="nav-link">Olah Data</a></li>
+                <li><a href="visualisasi.html" class="nav-link">Visualisasi</a></li>
+                <li><a href="shortcut.html" class="nav-link">Shortcut</a></li>
+                <li><a href="latihan.html" class="nav-link">Latihan</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <section class="page-header">
+        <h1>📗 Level 1: Dasar Excel</h1>
+        <p>Fondasi penting sebelum melangkah ke rumus dan analisis data.</p>
+    </section>
+
+    <section class="formulas-section">
+        <div class="container-main">
+
+            <article class="formula-article">
+                <div class="formula-header"><span class="category-badge badge-data">Dasar</span><h2>1. Mengenal Interface Excel</h2></div>
+                <div class="formula-body">
+                    <div class="explanation">
+                        <h4>Komponen Utama:</h4>
+                        <ul class="bento-topics">
+                            <li><strong>Ribbon</strong> — Menu utama berisi tab (Home, Insert, Page Layout, Formulas, Data, Review, View)</li>
+                            <li><strong>Formula Bar</strong> — Tempat menulis/mengedit rumus, menampilkan isi sel aktif</li>
+                            <li><strong>Name Box</strong> — Menampilkan alamat sel aktif (misal A1, B5)</li>
+                            <li><strong>Worksheet Area</strong> — Grid baris (1,2,3...) dan kolom (A,B,C...) tempat data dimasukkan</li>
+                            <li><strong>Sheet Tab</strong> — Tab di bawah untuk berpindah antar sheet</li>
+                            <li><strong>Status Bar</strong> — Menampilkan info cepat (Sum, Average, Count) dari sel terpilih</li>
+                        </ul>
+                    </div>
+                </div>
+            </article>
+
+            <article class="formula-article">
+                <div class="formula-header"><span class="category-badge badge-data">Dasar</span><h2>2. Tipe Data di Excel</h2></div>
+                <div class="formula-body">
+                    <div class="params-table">
+                        <table>
+                            <tr><th>Tipe Data</th><th>Contoh</th><th>Ciri-ciri</th></tr>
+                            <tr><td>Angka (Number)</td><td>100, 3.14, -50</td><td>Rata kanan, bisa dihitung</td></tr>
+                            <tr><td>Teks (Text)</td><td>"Halo", "A001"</td><td>Rata kiri, tidak bisa dihitung</td></tr>
+                            <tr><td>Tanggal (Date)</td><td>26/05/2026</td><td>Sebenarnya angka serial, bisa dihitung selisihnya</td></tr>
+                            <tr><td>Boolean</td><td>TRUE, FALSE</td><td>Hasil dari perbandingan logika</td></tr>
+                            <tr><td>Error</td><td>#VALUE!, #REF!, #N/A</td><td>Menandakan ada kesalahan rumus</td></tr>
+                        </table>
+                    </div>
+                    <div class="tips-box">
+                        <h4>💡 Tips:</h4>
+                        <ul><li>Angka yang diawali apostrof (') akan dianggap teks: '001 → teks "001"</li><li>Tanggal yang salah format bisa dianggap teks dan tidak bisa dihitung</li></ul>
+                    </div>
+                </div>
+            </article>
+
+            <article class="formula-article">
+                <div class="formula-header"><span class="category-badge badge-data">Dasar</span><h2>3. Operasi Aritmatika Dasar</h2></div>
+                <div class="formula-body">
+                    <div class="params-table">
+                        <table>
+                            <tr><th>Operator</th><th>Fungsi</th><th>Contoh</th><th>Hasil</th></tr>
+                            <tr><td>+</td><td>Penjumlahan</td><td>=5+3</td><td>8</td></tr>
+                            <tr><td>-</td><td>Pengurangan</td><td>=10-4</td><td>6</td></tr>
+                            <tr><td>*</td><td>Perkalian</td><td>=6*7</td><td>42</td></tr>
+                            <tr><td>/</td><td>Pembagian</td><td>=20/4</td><td>5</td></tr>
+                            <tr><td>^</td><td>Pangkat</td><td>=2^3</td><td>8</td></tr>
+                            <tr><td>%</td><td>Persen</td><td>=50%</td><td>0.5</td></tr>
+                        </table>
+                    </div>
+                    <div class="example-box">
+                        <h4>Urutan Operasi (PEMDAS):</h4>
+                        <code>=2+3*4 → 14 (bukan 20, karena perkalian duluan)</code>
+                        <code>=(2+3)*4 → 20 (kurung diproses duluan)</code>
+                    </div>
+                </div>
+            </article>
+
+            <article class="formula-article">
+                <div class="formula-header"><span class="category-badge badge-data">Dasar</span><h2>4. Format Cell</h2></div>
+                <div class="formula-body">
+                    <div class="explanation">
+                        <p>Format Cell mengubah tampilan data tanpa mengubah nilainya. Akses via <kbd>Ctrl</kbd>+<kbd>1</kbd>.</p>
+                    </div>
+                    <div class="params-table">
+                        <table>
+                            <tr><th>Format</th><th>Contoh Input</th><th>Tampilan</th></tr>
+                            <tr><td>Number</td><td>1234.5</td><td>1,234.50</td></tr>
+                            <tr><td>Currency</td><td>50000</td><td>Rp50,000</td></tr>
+                            <tr><td>Percentage</td><td>0.85</td><td>85%</td></tr>
+                            <tr><td>Date</td><td>45073</td><td>26/05/2026</td></tr>
+                            <tr><td>Text</td><td>001</td><td>001 (tidak hilang nol)</td></tr>
+                        </table>
+                    </div>
+                </div>
+            </article>
+
+            <article class="formula-article">
+                <div class="formula-header"><span class="category-badge badge-data">Dasar</span><h2>5. Freeze Panes</h2></div>
+                <div class="formula-body">
+                    <div class="explanation">
+                        <p>Freeze Panes mengunci baris/kolom agar tetap terlihat saat scroll. Sangat berguna untuk tabel data yang panjang.</p>
+                    </div>
+                    <div class="params-table">
+                        <table>
+                            <tr><th>Opsi</th><th>Cara</th><th>Fungsi</th></tr>
+                            <tr><td>Freeze Top Row</td><td>View → Freeze Panes → Freeze Top Row</td><td>Baris 1 (header) tetap terlihat saat scroll ke bawah</td></tr>
+                            <tr><td>Freeze First Column</td><td>View → Freeze Panes → Freeze First Column</td><td>Kolom A tetap terlihat saat scroll ke kanan</td></tr>
+                            <tr><td>Freeze Custom</td><td>Klik sel → View → Freeze Panes</td><td>Mengunci baris di atas dan kolom di kiri sel aktif</td></tr>
+                        </table>
+                    </div>
+                    <div class="tips-box">
+                        <h4>💡 Tips:</h4>
+                        <ul><li>Untuk freeze baris 1 dan kolom A sekaligus, klik sel B2 lalu Freeze Panes</li><li>Untuk membatalkan: View → Unfreeze Panes</li></ul>
+                    </div>
+                </div>
+            </article>
+
+        </div>
+    </section>
+
+    <footer>
+        <div class="container-main">
+            <div class="footer-bottom">
+                <p>&copy; 2026 ExcelKu. Semua hak dilindungi. | <a href="index.html">Kembali ke Beranda</a></p>
+            </div>
+        </div>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>

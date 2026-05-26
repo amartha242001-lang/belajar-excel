@@ -19,8 +19,12 @@
             </button>
             <ul class="nav-menu" id="navMenu">
                 <li><a href="index.html" class="nav-link">Beranda</a></li>
-                <li><a href="rumus.html" class="nav-link active">Rumus & Fungsi</a></li>
-                <li><a href="shortcut.html" class="nav-link">Shortcut Keyboard</a></li>
+                <li><a href="dasar.html" class="nav-link">Dasar Excel</a></li>
+                <li><a href="rumus.html" class="nav-link active">Rumus &amp; Fungsi</a></li>
+                <li><a href="olahdata.html" class="nav-link">Olah Data</a></li>
+                <li><a href="visualisasi.html" class="nav-link">Visualisasi</a></li>
+                <li><a href="shortcut.html" class="nav-link">Shortcut</a></li>
+                <li><a href="latihan.html" class="nav-link">Latihan</a></li>
             </ul>
         </div>
     </nav>
@@ -786,10 +790,148 @@
                 </div>
             </article>
 
+            <!-- 11. XLOOKUP -->
+            <article class="formula-article" id="xlookup" data-category="referensi">
+                <div class="formula-header"><span class="category-badge badge-referensi">Referensi</span><h2>11. Fungsi XLOOKUP (Modern)</h2></div>
+                <div class="formula-body">
+                    <div class="syntax-box">
+                        <div class="syntax-label">Sintaks:</div>
+                        <code>=XLOOKUP(lookup_value, lookup_array, return_array, [if_not_found], [match_mode], [search_mode])</code>
+                        <button class="copy-btn" onclick="copyCode(this)">📋 Salin</button>
+                    </div>
+                    <div class="params-table"><h4>Parameter:</h4>
+                        <table>
+                            <tr><th>Parameter</th><th>Keterangan</th></tr>
+                            <tr><td>lookup_value</td><td>Nilai yang dicari</td></tr>
+                            <tr><td>lookup_array</td><td>Range tempat pencarian</td></tr>
+                            <tr><td>return_array</td><td>Range yang berisi nilai hasil</td></tr>
+                            <tr><td>if_not_found</td><td>(Opsional) Nilai jika tidak ditemukan</td></tr>
+                        </table>
+                    </div>
+                    <div class="explanation"><h4>Penjelasan:</h4><p>XLOOKUP adalah pengganti VLOOKUP dan HLOOKUP yang lebih modern (Excel 365/2021+). Bisa mencari ke segala arah, default exact match, dan punya parameter "not found" bawaan.</p></div>
+                    <div class="example-box"><h4>Contoh:</h4><code>=XLOOKUP(F1, A2:A100, C2:C100, "Tidak ditemukan")</code><p>Mencari F1 di kolom A, mengembalikan nilai dari kolom C. Jika tidak ada, tampilkan "Tidak ditemukan".</p></div>
+                    <div class="tips-box"><h4>💡 Tips:</h4><ul><li>Tidak perlu nomor kolom seperti VLOOKUP</li><li>Bisa mencari dari bawah ke atas (search_mode = -1)</li><li>Menggantikan VLOOKUP + IFERROR sekaligus</li></ul></div>
+                </div>
+            </article>
+
+            <!-- 12. IFERROR -->
+            <article class="formula-article" id="iferror" data-category="logika">
+                <div class="formula-header"><span class="category-badge badge-logika">Logika</span><h2>12. Fungsi IFERROR</h2></div>
+                <div class="formula-body">
+                    <div class="syntax-box">
+                        <div class="syntax-label">Sintaks:</div>
+                        <code>=IFERROR(value, value_if_error)</code>
+                        <button class="copy-btn" onclick="copyCode(this)">📋 Salin</button>
+                    </div>
+                    <div class="explanation"><h4>Penjelasan:</h4><p>IFERROR menangkap error (#N/A, #VALUE!, #REF!, dll) dan menggantinya dengan nilai alternatif. Wajib digunakan untuk membungkus VLOOKUP agar tidak menampilkan error jelek.</p></div>
+                    <div class="example-box"><h4>Contoh:</h4><code>=IFERROR(VLOOKUP(A2, Data!A:C, 3, FALSE), "Data tidak ada")</code><p>Jika VLOOKUP error (data tidak ditemukan), tampilkan "Data tidak ada" alih-alih #N/A.</p></div>
+                    <div class="tips-box"><h4>💡 Tips:</h4><ul><li>Gunakan IFNA jika hanya ingin menangkap error #N/A saja</li><li>Jangan gunakan IFERROR untuk menyembunyikan error yang seharusnya diperbaiki</li></ul></div>
+                </div>
+            </article>
+
+            <!-- 13. Nested IF + AND + OR -->
+            <article class="formula-article" id="nestedif" data-category="logika">
+                <div class="formula-header"><span class="category-badge badge-logika">Logika</span><h2>13. Nested IF, AND, OR</h2></div>
+                <div class="formula-body">
+                    <div class="syntax-box">
+                        <div class="syntax-label">Sintaks:</div>
+                        <code>=IF(AND(kondisi1, kondisi2), "Benar semua", "Ada yang salah")
+=IF(OR(kondisi1, kondisi2), "Salah satu benar", "Semua salah")
+=IF(kondisi1, "A", IF(kondisi2, "B", IF(kondisi3, "C", "D")))</code>
+                        <button class="copy-btn" onclick="copyCode(this)">📋 Salin</button>
+                    </div>
+                    <div class="example-box"><h4>Contoh Nested IF (Grading):</h4>
+                        <code>=IF(B2>=90,"A",IF(B2>=80,"B",IF(B2>=70,"C",IF(B2>=60,"D","E"))))</code>
+                        <p>Memberikan grade A/B/C/D/E berdasarkan nilai.</p>
+                    </div>
+                    <div class="example-box"><h4>Contoh AND:</h4>
+                        <code>=IF(AND(B2>=75, C2>=75), "Lulus", "Tidak Lulus")</code>
+                        <p>Lulus hanya jika KEDUA nilai (B2 dan C2) >= 75.</p>
+                    </div>
+                    <div class="tips-box"><h4>💡 Tips:</h4><ul><li>Maksimal 64 level nested IF (tapi jangan lebih dari 3-4 agar mudah dibaca)</li><li>Gunakan IFS di Excel 2019+ sebagai pengganti nested IF</li><li>AND = semua harus benar, OR = minimal satu benar</li></ul></div>
+                </div>
+            </article>
+
+            <!-- 14. AVERAGEIF -->
+            <article class="formula-article" id="averageif" data-category="statistik">
+                <div class="formula-header"><span class="category-badge badge-statistik">Statistik</span><h2>14. Fungsi AVERAGEIF / AVERAGEIFS</h2></div>
+                <div class="formula-body">
+                    <div class="syntax-box">
+                        <div class="syntax-label">Sintaks:</div>
+                        <code>=AVERAGEIF(range, criteria, [average_range])</code>
+                        <button class="copy-btn" onclick="copyCode(this)">📋 Salin</button>
+                    </div>
+                    <div class="explanation"><h4>Penjelasan:</h4><p>Menghitung rata-rata sel yang memenuhi kriteria tertentu. AVERAGEIFS untuk beberapa kriteria sekaligus.</p></div>
+                    <div class="example-box"><h4>Contoh:</h4><code>=AVERAGEIF(A2:A100, "Jakarta", C2:C100)</code><p>Menghitung rata-rata nilai di kolom C hanya untuk baris yang kolom A-nya "Jakarta".</p></div>
+                </div>
+            </article>
+
+            <!-- 15. TRIM, PROPER, UPPER, LOWER -->
+            <article class="formula-article" id="trim" data-category="teks">
+                <div class="formula-header"><span class="category-badge badge-teks">Teks</span><h2>15. TRIM, PROPER, UPPER, LOWER (Data Cleaning)</h2></div>
+                <div class="formula-body">
+                    <div class="syntax-box">
+                        <div class="syntax-label">Sintaks:</div>
+                        <code>=TRIM(teks)       → Hapus spasi berlebih
+=PROPER(teks)     → Huruf Kapital Di Awal Kata
+=UPPER(teks)      → SEMUA HURUF BESAR
+=LOWER(teks)      → semua huruf kecil</code>
+                        <button class="copy-btn" onclick="copyCode(this)">📋 Salin</button>
+                    </div>
+                    <div class="example-box"><h4>Contoh Data Cleaning:</h4>
+                        <code>=TRIM("  Andi   Pratama  ") → "Andi Pratama"
+=PROPER("aNDI pRATAMA") → "Andi Pratama"
+=UPPER("hello") → "HELLO"
+=LOWER("HELLO") → "hello"</code>
+                    </div>
+                    <div class="tips-box"><h4>💡 Tips:</h4><ul><li>TRIM sangat penting untuk membersihkan data import dari sistem lain</li><li>Kombinasikan: =PROPER(TRIM(A1)) untuk merapikan nama</li><li>Data yang ada spasi tersembunyi sering menyebabkan VLOOKUP gagal — gunakan TRIM!</li></ul></div>
+                </div>
+            </article>
+
+            <!-- 16. EOMONTH & NETWORKDAYS -->
+            <article class="formula-article" id="eomonth" data-category="tanggal">
+                <div class="formula-header"><span class="category-badge badge-tanggal">Tanggal</span><h2>16. EOMONTH &amp; NETWORKDAYS</h2></div>
+                <div class="formula-body">
+                    <div class="syntax-box">
+                        <div class="syntax-label">Sintaks:</div>
+                        <code>=EOMONTH(start_date, months)
+=NETWORKDAYS(start_date, end_date, [holidays])</code>
+                        <button class="copy-btn" onclick="copyCode(this)">📋 Salin</button>
+                    </div>
+                    <div class="params-table"><h4>Penjelasan:</h4>
+                        <table>
+                            <tr><th>Fungsi</th><th>Kegunaan</th><th>Contoh</th></tr>
+                            <tr><td>EOMONTH</td><td>Tanggal akhir bulan (+ offset bulan)</td><td>=EOMONTH(TODAY(),0) → akhir bulan ini</td></tr>
+                            <tr><td>NETWORKDAYS</td><td>Jumlah hari kerja (tanpa Sabtu/Minggu)</td><td>=NETWORKDAYS(A1,B1) → hari kerja antara 2 tanggal</td></tr>
+                        </table>
+                    </div>
+                    <div class="example-box"><h4>Contoh di Dunia Kerja:</h4>
+                        <code>=EOMONTH(TODAY(), 1) → Tanggal akhir bulan depan (deadline)
+=NETWORKDAYS("01/05/2026", "31/05/2026") → 21 hari kerja</code>
+                    </div>
+                    <div class="tips-box"><h4>💡 Tips:</h4><ul><li>EOMONTH(date, -1) = akhir bulan lalu</li><li>Tambahkan parameter holidays di NETWORKDAYS untuk exclude tanggal libur nasional</li></ul></div>
+                </div>
+            </article>
+
+            <!-- 17. SUMIFS (Multi Criteria) -->
+            <article class="formula-article" id="sumifs" data-category="statistik">
+                <div class="formula-header"><span class="category-badge badge-statistik">Statistik</span><h2>17. Fungsi SUMIFS (Multi Kriteria)</h2></div>
+                <div class="formula-body">
+                    <div class="syntax-box">
+                        <div class="syntax-label">Sintaks:</div>
+                        <code>=SUMIFS(sum_range, criteria_range1, criteria1, [criteria_range2, criteria2], ...)</code>
+                        <button class="copy-btn" onclick="copyCode(this)">📋 Salin</button>
+                    </div>
+                    <div class="explanation"><h4>Penjelasan:</h4><p>SUMIFS menjumlahkan dengan BEBERAPA kriteria sekaligus. Berbeda dengan SUMIF yang hanya 1 kriteria.</p></div>
+                    <div class="example-box"><h4>Contoh:</h4>
+                        <code>=SUMIFS(D2:D100, A2:A100, "Jakarta", B2:B100, "Laptop")</code>
+                        <p>Menjumlahkan kolom D hanya untuk baris yang kota = "Jakarta" DAN produk = "Laptop".</p>
+                    </div>
+                </div>
+            </article>
+
         </div>
     </section>
-
-    <!-- Footer -->
     <footer>
         <div class="container-main">
             <div class="footer-grid">

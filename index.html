@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ExcelKu - Belajar Rumus & Shortcut MS Excel</title>
+    <title>ExcelKu - Dashboard Belajar Microsoft Excel</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -19,8 +19,12 @@
             </button>
             <ul class="nav-menu" id="navMenu">
                 <li><a href="index.html" class="nav-link active">Beranda</a></li>
-                <li><a href="rumus.html" class="nav-link">Rumus & Fungsi</a></li>
-                <li><a href="shortcut.html" class="nav-link">Shortcut Keyboard</a></li>
+                <li><a href="dasar.html" class="nav-link">Dasar Excel</a></li>
+                <li><a href="rumus.html" class="nav-link">Rumus &amp; Fungsi</a></li>
+                <li><a href="olahdata.html" class="nav-link">Olah Data</a></li>
+                <li><a href="visualisasi.html" class="nav-link">Visualisasi</a></li>
+                <li><a href="shortcut.html" class="nav-link">Shortcut</a></li>
+                <li><a href="latihan.html" class="nav-link">Latihan</a></li>
             </ul>
         </div>
     </nav>
@@ -28,97 +32,153 @@
     <!-- Hero Section -->
     <section class="hero">
         <div class="hero-content">
-            <h1>Kuasai Microsoft Excel</h1>
-            <p>Pelajari rumus, fungsi, dan shortcut keyboard untuk meningkatkan produktivitas Anda di Excel.</p>
-            <div class="hero-buttons">
-                <a href="rumus.html" class="btn btn-primary">📘 Pelajari Rumus</a>
-                <a href="shortcut.html" class="btn btn-secondary">⌨️ Lihat Shortcut</a>
+            <h1>🚀 Mulai Perjalanan Excel Kamu</h1>
+            <p>Kenali antarmuka Excel dan kuasai setiap fiturnya langkah demi langkah.</p>
+            <div class="hero-excel-intro">
+                <div class="excel-feature">
+                    <span class="excel-feature-icon">🎀</span>
+                    <h3>Ribbon</h3>
+                    <p>Menu utama berisi tab seperti Home, Insert, Page Layout, dan lainnya untuk mengakses semua fitur Excel.</p>
+                </div>
+                <div class="excel-feature">
+                    <span class="excel-feature-icon">📝</span>
+                    <h3>Formula Bar</h3>
+                    <p>Tempat menulis dan mengedit rumus atau isi sel. Terletak di bawah Ribbon dan menampilkan isi sel aktif.</p>
+                </div>
+                <div class="excel-feature">
+                    <span class="excel-feature-icon">📐</span>
+                    <h3>Row &amp; Column</h3>
+                    <p>Baris (angka) dan kolom (huruf) membentuk grid sel tempat kamu memasukkan dan mengolah data.</p>
+                </div>
             </div>
         </div>
     </section>
 
-    <!-- Statistik -->
+    <!-- Live Search Bar -->
+    <section class="search-section">
+        <div class="container-main">
+            <div class="search-wrapper">
+                <span class="search-icon">🔍</span>
+                <input type="text" id="liveSearch" class="search-input" placeholder="Cari materi, rumus, shortcut, atau topik apapun...">
+            </div>
+            <div id="searchResults" class="search-results"></div>
+        </div>
+    </section>
+
+    <!-- Learning Path Bento Grid -->
+    <section class="learning-path-section">
+        <div class="container-main">
+            <h2 class="section-title">🗺️ Learning Path</h2>
+            <p class="section-subtitle">Ikuti jalur belajar dari dasar hingga mahir</p>
+            <div class="bento-grid">
+
+                <!-- Level 1: Dasar -->
+                <div class="bento-card bento-level-1">
+                    <div class="bento-header">
+                        <span class="bento-level-badge">Level 1</span>
+                        <h3>📗 Dasar Excel</h3>
+                    </div>
+                    <p class="bento-desc">Fondasi penting sebelum melangkah lebih jauh.</p>
+                    <ul class="bento-topics">
+                        <li>📌 Tipe Data (Teks, Angka, Tanggal)</li>
+                        <li>➕ Operasi Aritmatika Dasar</li>
+                        <li>🎨 Format Cell &amp; Number Format</li>
+                        <li>❄️ Freeze Panes</li>
+                    </ul>
+                    <a href="dasar.html" class="bento-link">Mulai Belajar →</a>
+                </div>
+
+                <!-- Level 2: Rumus & Fungsi -->
+                <div class="bento-card bento-level-2">
+                    <div class="bento-header">
+                        <span class="bento-level-badge">Level 2</span>
+                        <h3>📘 Rumus &amp; Fungsi</h3>
+                    </div>
+                    <p class="bento-desc">Kuasai formula untuk mengolah data secara otomatis.</p>
+                    <div class="bento-sub-grid">
+                        <span class="bento-sub-item">🔀 Logika</span>
+                        <span class="bento-sub-item">📊 Statistik</span>
+                        <span class="bento-sub-item">🔍 Lookup</span>
+                        <span class="bento-sub-item">📝 Teks</span>
+                    </div>
+                    <a href="rumus.html" class="bento-link">Pelajari Rumus →</a>
+                </div>
+
+                <!-- Level 3: Olah Data -->
+                <div class="bento-card bento-level-3">
+                    <div class="bento-header">
+                        <span class="bento-level-badge">Level 3</span>
+                        <h3>📙 Olah Data</h3>
+                    </div>
+                    <p class="bento-desc">Kelola dan bersihkan data dengan efisien.</p>
+                    <ul class="bento-topics">
+                        <li>🔤 Sorting (Pengurutan)</li>
+                        <li>🔎 Filtering (Penyaringan)</li>
+                        <li>✅ Data Validation</li>
+                        <li>🧹 Remove Duplicates</li>
+                    </ul>
+                    <a href="olahdata.html" class="bento-link">Pelajari Olah Data →</a>
+                </div>
+
+                <!-- Level 4: Visualisasi & Pelaporan -->
+                <div class="bento-card bento-level-4">
+                    <div class="bento-header">
+                        <span class="bento-level-badge">Level 4</span>
+                        <h3>📕 Visualisasi &amp; Pelaporan</h3>
+                    </div>
+                    <p class="bento-desc">Sajikan data dalam bentuk visual yang mudah dipahami.</p>
+                    <ul class="bento-topics">
+                        <li>📈 Chart (Grafik &amp; Diagram)</li>
+                        <li>📋 Pivot Table</li>
+                    </ul>
+                    <a href="visualisasi.html" class="bento-link">Pelajari Visualisasi →</a>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Quick Access Cards -->
+    <section class="quick-access-section">
+        <div class="container-main">
+            <h2 class="section-title">⚡ Akses Cepat</h2>
+            <div class="quick-cards-grid">
+                <div class="quick-card quick-card-shortcut">
+                    <div class="quick-card-icon">⌨️</div>
+                    <h3>Shortcut Cheat-Sheet</h3>
+                    <p>Kumpulan shortcut keyboard Excel yang paling sering digunakan. Hemat waktu dan tingkatkan produktivitas.</p>
+                    <a href="shortcut.html" class="btn btn-primary">Lihat Shortcut</a>
+                </div>
+                <div class="quick-card quick-card-template">
+                    <div class="quick-card-icon">📥</div>
+                    <h3>Download Template Latihan</h3>
+                    <p>File Excel siap pakai untuk berlatih langsung. Praktikkan setiap materi dengan contoh nyata.</p>
+                    <a href="latihan.html" class="btn btn-secondary">Download Template</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats Section -->
     <section class="stats-section">
         <div class="container-main">
+            <h2 class="section-title">📊 ExcelKu dalam Angka</h2>
             <div class="stats-grid">
                 <div class="stat-card">
-                    <span class="stat-number">10+</span>
-                    <span class="stat-label">Rumus Lengkap</span>
+                    <span class="stat-number">4</span>
+                    <span class="stat-label">Level Pembelajaran</span>
+                </div>
+                <div class="stat-card">
+                    <span class="stat-number">20+</span>
+                    <span class="stat-label">Rumus &amp; Fungsi</span>
                 </div>
                 <div class="stat-card">
                     <span class="stat-number">50+</span>
                     <span class="stat-label">Shortcut Keyboard</span>
                 </div>
                 <div class="stat-card">
-                    <span class="stat-number">9</span>
-                    <span class="stat-label">Kategori</span>
-                </div>
-                <div class="stat-card">
                     <span class="stat-number">100%</span>
-                    <span class="stat-label">Gratis</span>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Rumus Populer -->
-    <section class="popular-section">
-        <div class="container-main">
-            <h2 class="section-title">🔥 Rumus Populer</h2>
-            <div class="cards-grid">
-                <div class="formula-card card-logic">
-                    <div class="card-icon">🔀</div>
-                    <h3>IF</h3>
-                    <p>Membuat keputusan logika berdasarkan kondisi benar atau salah.</p>
-                    <code>=IF(kondisi, nilai_benar, nilai_salah)</code>
-                    <a href="rumus.html#if" class="card-link">Pelajari →</a>
-                </div>
-                <div class="formula-card card-reference">
-                    <div class="card-icon">🔍</div>
-                    <h3>VLOOKUP</h3>
-                    <p>Mencari data secara vertikal dalam tabel berdasarkan nilai kunci.</p>
-                    <code>=VLOOKUP(nilai, tabel, kolom, [tipe])</code>
-                    <a href="rumus.html#vlookup" class="card-link">Pelajari →</a>
-                </div>
-                <div class="formula-card card-reference">
-                    <div class="card-icon">↔️</div>
-                    <h3>HLOOKUP</h3>
-                    <p>Mencari data secara horizontal dalam tabel berdasarkan nilai kunci.</p>
-                    <code>=HLOOKUP(nilai, tabel, baris, [tipe])</code>
-                    <a href="rumus.html#hlookup" class="card-link">Pelajari →</a>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Tips Cepat -->
-    <section class="tips-section">
-        <div class="container-main">
-            <h2 class="section-title">💡 6 Tips Cepat Excel</h2>
-            <div class="tips-grid">
-                <div class="tip-item">
-                    <span class="tip-number">1</span>
-                    <p>Gunakan <kbd>Ctrl</kbd>+<kbd>;</kbd> untuk memasukkan tanggal hari ini secara cepat.</p>
-                </div>
-                <div class="tip-item">
-                    <span class="tip-number">2</span>
-                    <p>Tekan <kbd>F4</kbd> setelah mengetik referensi sel untuk mengunci (absolute reference).</p>
-                </div>
-                <div class="tip-item">
-                    <span class="tip-number">3</span>
-                    <p>Double-click pada sudut kanan bawah sel untuk AutoFill ke bawah secara otomatis.</p>
-                </div>
-                <div class="tip-item">
-                    <span class="tip-number">4</span>
-                    <p>Gunakan <kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>L</kbd> untuk mengaktifkan filter cepat.</p>
-                </div>
-                <div class="tip-item">
-                    <span class="tip-number">5</span>
-                    <p>Tekan <kbd>Alt</kbd>+<kbd>=</kbd> untuk AutoSum pada sel yang dipilih.</p>
-                </div>
-                <div class="tip-item">
-                    <span class="tip-number">6</span>
-                    <p>Gunakan Flash Fill (<kbd>Ctrl</kbd>+<kbd>E</kbd>) untuk mengisi pola data otomatis.</p>
+                    <span class="stat-label">Gratis &amp; Terbuka</span>
                 </div>
             </div>
         </div>
@@ -130,22 +190,32 @@
             <div class="footer-grid">
                 <div class="footer-col">
                     <h4>📊 ExcelKu</h4>
-                    <p>Platform belajar Microsoft Excel gratis untuk semua level.</p>
+                    <p>Platform belajar Microsoft Excel gratis untuk semua level. Dari pemula hingga mahir, semua bisa belajar di sini.</p>
                 </div>
                 <div class="footer-col">
                     <h4>Navigasi</h4>
                     <ul>
                         <li><a href="index.html">Beranda</a></li>
-                        <li><a href="rumus.html">Rumus & Fungsi</a></li>
-                        <li><a href="shortcut.html">Shortcut Keyboard</a></li>
+                        <li><a href="dasar.html">Dasar Excel</a></li>
+                        <li><a href="rumus.html">Rumus &amp; Fungsi</a></li>
+                        <li><a href="olahdata.html">Olah Data</a></li>
                     </ul>
                 </div>
                 <div class="footer-col">
-                    <h4>Kategori Rumus</h4>
+                    <h4>Lainnya</h4>
                     <ul>
-                        <li><a href="rumus.html#if">Logika (IF)</a></li>
-                        <li><a href="rumus.html#vlookup">Referensi (VLOOKUP)</a></li>
-                        <li><a href="rumus.html#pivot">Pivot Table</a></li>
+                        <li><a href="visualisasi.html">Visualisasi</a></li>
+                        <li><a href="shortcut.html">Shortcut</a></li>
+                        <li><a href="latihan.html">Latihan</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Learning Path</h4>
+                    <ul>
+                        <li><a href="dasar.html">Level 1 — Dasar</a></li>
+                        <li><a href="rumus.html">Level 2 — Rumus</a></li>
+                        <li><a href="olahdata.html">Level 3 — Olah Data</a></li>
+                        <li><a href="visualisasi.html">Level 4 — Visualisasi</a></li>
                     </ul>
                 </div>
             </div>
