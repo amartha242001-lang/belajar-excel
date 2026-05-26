@@ -81,7 +81,7 @@ document.addEventListener('DOMContentLoaded', function() {
     if (searchShortcut) {
         searchShortcut.addEventListener('input', function() {
             const query = this.value.toLowerCase();
-            const items = document.querySelectorAll('.shortcut-item');
+            const items = document.querySelectorAll('.shortcut-item-interactive');
             const categories = document.querySelectorAll('.shortcut-category');
 
             if (query === '') {
@@ -102,7 +102,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
                 // Sembunyikan kategori yang semua itemnya tersembunyi
                 categories.forEach(cat => {
-                    const visibleItems = cat.querySelectorAll('.shortcut-item:not([style*="display: none"])');
+                    const visibleItems = cat.querySelectorAll('.shortcut-item-interactive:not([style*="display: none"])');
                     if (visibleItems.length === 0) {
                         cat.classList.add('hidden');
                     }
@@ -133,6 +133,20 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 });
+
+// ========== TOGGLE DEMO FOR SHORTCUT ITEMS ==========
+function toggleDemo(element) {
+    // Jika sudah active, tutup
+    if (element.classList.contains('active')) {
+        element.classList.remove('active');
+    } else {
+        // Tutup semua demo lain yang terbuka (opsional, bisa dihapus jika ingin banyak terbuka)
+        // document.querySelectorAll('.shortcut-item-interactive.active').forEach(item => {
+        //     item.classList.remove('active');
+        // });
+        element.classList.add('active');
+    }
+}
 
 // ========== COPY CODE FUNCTION ==========
 function copyCode(button) {

@@ -1034,3 +1034,284 @@ footer {
         font-size: 0.75em;
     }
 }
+
+
+/* ========== INTERACTIVE SHORTCUT ITEMS (Click to show demo) ========== */
+.shortcut-list-interactive {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.shortcut-item-interactive {
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+    overflow: hidden;
+    transition: box-shadow 0.3s;
+    cursor: pointer;
+}
+
+.shortcut-item-interactive:hover {
+    box-shadow: 0 4px 12px rgba(0,0,0,0.12);
+}
+
+.shortcut-item-interactive.active {
+    box-shadow: 0 4px 15px rgba(0, 123, 255, 0.2);
+    border: 1px solid #007bff;
+}
+
+.shortcut-main {
+    display: flex;
+    align-items: center;
+    padding: 14px 20px;
+    gap: 15px;
+}
+
+.shortcut-main .shortcut-keys {
+    flex-shrink: 0;
+}
+
+.shortcut-main .shortcut-desc {
+    flex: 1;
+    text-align: left;
+    color: #555;
+}
+
+.demo-toggle-icon {
+    font-size: 0.8em;
+    color: #999;
+    transition: transform 0.3s;
+    flex-shrink: 0;
+}
+
+.shortcut-item-interactive.active .demo-toggle-icon {
+    transform: rotate(90deg);
+    color: #007bff;
+}
+
+/* Demo panel (hidden by default) */
+.shortcut-demo {
+    display: none;
+    padding: 15px 20px;
+    background: #f0f7ff;
+    border-top: 1px solid #e0e8f0;
+    animation: slideDown 0.3s ease;
+}
+
+.shortcut-item-interactive.active .shortcut-demo {
+    display: block;
+}
+
+@keyframes slideDown {
+    from { opacity: 0; max-height: 0; }
+    to { opacity: 1; max-height: 300px; }
+}
+
+/* Mini Excel Sheet for demos */
+.mini-excel {
+    background: #fff;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    overflow: hidden;
+    margin-bottom: 10px;
+}
+
+.mini-excel.mini-dialog {
+    background: #f8f9fa;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+
+.mini-row {
+    display: flex;
+    border-bottom: 1px solid #e9ecef;
+}
+
+.mini-row:last-child {
+    border-bottom: none;
+}
+
+.mini-row.mini-tabs {
+    background: #e8e8e8;
+    border-bottom: 2px solid #007bff;
+}
+
+.mini-cell {
+    flex: 1;
+    padding: 10px 12px;
+    text-align: center;
+    font-size: 0.85em;
+    border-right: 1px solid #e9ecef;
+    transition: all 0.3s;
+}
+
+.mini-cell:last-child {
+    border-right: none;
+}
+
+.mini-header {
+    background: #e2e8f0;
+    font-weight: bold;
+    color: #555;
+    font-size: 0.8em;
+}
+
+.mini-active {
+    background: #cce5ff;
+    font-weight: 600;
+    color: #004085;
+    animation: miniPulse 2s ease-in-out infinite;
+}
+
+@keyframes miniPulse {
+    0%, 100% { background: #cce5ff; }
+    50% { background: #99ccff; }
+}
+
+.mini-prev {
+    background: #fff3cd;
+    color: #856404;
+    font-style: italic;
+}
+
+.mini-empty {
+    background: #f8f9fa;
+    color: #ccc;
+    font-style: italic;
+}
+
+.mini-selected {
+    background: #b3d9ff;
+    border: 1px solid #007bff;
+    font-weight: 500;
+    animation: miniSelect 2s ease-in-out infinite;
+}
+
+@keyframes miniSelect {
+    0%, 100% { background: #b3d9ff; }
+    50% { background: #80bfff; }
+}
+
+.mini-copy {
+    background: #d4edda;
+    color: #155724;
+    border: 2px dashed #28a745;
+    animation: miniDash 1.5s linear infinite;
+}
+
+@keyframes miniDash {
+    0% { border-color: #28a745; }
+    50% { border-color: transparent; }
+    100% { border-color: #28a745; }
+}
+
+.mini-cut {
+    background: #f8d7da;
+    color: #721c24;
+    text-decoration: line-through;
+}
+
+.mini-hidden {
+    background: #e2e3e5;
+    color: #999;
+    font-size: 0.75em;
+    height: 8px;
+    padding: 2px;
+    overflow: hidden;
+}
+
+.mini-arrow {
+    background: transparent;
+    color: #007bff;
+    font-weight: bold;
+    flex: 0.5;
+}
+
+.mini-border {
+    border: 2px solid #333 !important;
+    font-weight: 600;
+}
+
+.mini-table-header {
+    background: #007bff;
+    color: #fff;
+    font-weight: bold;
+}
+
+.mini-table-row1 {
+    background: #e8f4fd;
+}
+
+.mini-table-row2 {
+    background: #fff;
+}
+
+/* Dialog box style */
+.dialog-box {
+    background: #fff;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.15);
+    text-align: center;
+    min-width: 250px;
+}
+
+.dialog-title {
+    font-weight: bold;
+    font-size: 1em;
+    margin-bottom: 10px;
+    color: #333;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 8px;
+}
+
+.dialog-input {
+    font-size: 0.85em;
+    color: #555;
+    margin-bottom: 12px;
+    padding: 8px;
+    background: #f8f9fa;
+    border-radius: 4px;
+}
+
+.dialog-btn {
+    display: inline-block;
+    background: #007bff;
+    color: #fff;
+    padding: 6px 20px;
+    border-radius: 4px;
+    font-size: 0.85em;
+    font-weight: 600;
+}
+
+/* Demo caption */
+.demo-caption {
+    font-size: 0.85em;
+    color: #555;
+    font-style: italic;
+    text-align: center;
+    padding: 5px 0;
+}
+
+/* Responsive for interactive shortcuts */
+@media (max-width: 768px) {
+    .shortcut-main {
+        flex-wrap: wrap;
+        gap: 8px;
+        padding: 12px 15px;
+    }
+
+    .shortcut-main .shortcut-desc {
+        width: 100%;
+        order: 3;
+    }
+
+    .mini-cell {
+        padding: 8px 6px;
+        font-size: 0.75em;
+    }
+}

@@ -8,40 +8,34 @@
 </head>
 <body>
 
-    <!-- Navbar -->
     <nav class="navbar">
         <div class="nav-container">
             <a href="index.html" class="nav-logo">📊 ExcelKu</a>
             <button class="hamburger" id="hamburger">
-                <span></span>
-                <span></span>
-                <span></span>
+                <span></span><span></span><span></span>
             </button>
             <ul class="nav-menu" id="navMenu">
                 <li><a href="index.html" class="nav-link">Beranda</a></li>
-                <li><a href="rumus.html" class="nav-link">Rumus & Fungsi</a></li>
+                <li><a href="rumus.html" class="nav-link">Rumus &amp; Fungsi</a></li>
                 <li><a href="shortcut.html" class="nav-link active">Shortcut Keyboard</a></li>
             </ul>
         </div>
     </nav>
 
-    <!-- Header -->
     <section class="page-header page-header-shortcut">
         <h1>⌨️ Shortcut Keyboard Excel</h1>
-        <p>50+ shortcut keyboard untuk mempercepat pekerjaan Anda di Microsoft Excel.</p>
+        <p>50+ shortcut keyboard untuk mempercepat pekerjaan Anda. Klik setiap shortcut untuk melihat demo animasi.</p>
     </section>
 
-    <!-- Panduan -->
     <section class="guide-section">
         <div class="container-main">
             <div class="guide-box">
-                <h3>📖 Cara Menggunakan Shortcut</h3>
-                <p>Tekan tombol secara bersamaan. Contoh: <kbd>Ctrl</kbd>+<kbd>C</kbd> berarti tekan dan tahan tombol <kbd>Ctrl</kbd>, lalu tekan <kbd>C</kbd>, kemudian lepaskan keduanya.</p>
+                <h3>📖 Cara Menggunakan</h3>
+                <p>Klik pada shortcut manapun untuk melihat demo animasi cara kerjanya di Excel. Tekan tombol secara bersamaan saat praktik.</p>
             </div>
         </div>
     </section>
 
-    <!-- Filter & Search -->
     <section class="filter-section">
         <div class="container-main">
             <div class="filter-bar">
@@ -50,11 +44,11 @@
                     <button class="filter-btn active" data-category="all">Semua</button>
                     <button class="filter-btn" data-category="navigasi">Navigasi</button>
                     <button class="filter-btn" data-category="seleksi">Seleksi</button>
-                    <button class="filter-btn" data-category="copypaste">Copy & Paste</button>
+                    <button class="filter-btn" data-category="copypaste">Copy &amp; Paste</button>
                     <button class="filter-btn" data-category="format">Format</button>
                     <button class="filter-btn" data-category="rumus">Rumus</button>
                     <button class="filter-btn" data-category="file">File</button>
-                    <button class="filter-btn" data-category="bariskolom">Baris & Kolom</button>
+                    <button class="filter-btn" data-category="bariskolom">Baris &amp; Kolom</button>
                     <button class="filter-btn" data-category="sheet">Sheet</button>
                     <button class="filter-btn" data-category="lainnya">Lain-lain</button>
                 </div>
@@ -62,418 +56,1044 @@
         </div>
     </section>
 
-    <!-- Shortcut Content -->
     <section class="shortcuts-section">
         <div class="container-main">
 
-            <!-- Navigasi -->
+            <!-- NAVIGASI -->
             <div class="shortcut-category" data-category="navigasi">
                 <h2 class="category-title cat-navigasi">🧭 Navigasi</h2>
-                <div class="shortcut-grid">
-                    <div class="shortcut-item">
-                        <div class="shortcut-keys"><kbd>Ctrl</kbd>+<kbd>Home</kbd></div>
-                        <div class="shortcut-desc">Pindah ke sel A1</div>
-                    </div>
-                    <div class="shortcut-item">
-                        <div class="shortcut-keys"><kbd>Ctrl</kbd>+<kbd>End</kbd></div>
-                        <div class="shortcut-desc">Pindah ke sel terakhir yang berisi data</div>
-                    </div>
-                    <div class="shortcut-item">
-                        <div class="shortcut-keys"><kbd>Ctrl</kbd>+<kbd>→</kbd></div>
-                        <div class="shortcut-desc">Pindah ke sel terisi berikutnya (kanan)</div>
-                    </div>
-                    <div class="shortcut-item">
-                        <div class="shortcut-keys"><kbd>Ctrl</kbd>+<kbd>←</kbd></div>
-                        <div class="shortcut-desc">Pindah ke sel terisi berikutnya (kiri)</div>
-                    </div>
-                    <div class="shortcut-item">
-                        <div class="shortcut-keys"><kbd>Ctrl</kbd>+<kbd>↑</kbd></div>
-                        <div class="shortcut-desc">Pindah ke sel terisi berikutnya (atas)</div>
-                    </div>
-                    <div class="shortcut-item">
-                        <div class="shortcut-keys"><kbd>Ctrl</kbd>+<kbd>↓</kbd></div>
-                        <div class="shortcut-desc">Pindah ke sel terisi berikutnya (bawah)</div>
-                    </div>
-                    <div class="shortcut-item">
-                        <div class="shortcut-keys"><kbd>Ctrl</kbd>+<kbd>G</kbd></div>
-                        <div class="shortcut-desc">Buka dialog Go To</div>
-                    </div>
-                </div>
-                <div class="demo-animation">
-                    <h4>🎬 Demo Animasi Navigasi:</h4>
-                    <div class="excel-sheet-demo">
-                        <div class="sheet-header">
-                            <span class="sheet-cell header-cell">A</span>
-                            <span class="sheet-cell header-cell">B</span>
-                            <span class="sheet-cell header-cell">C</span>
-                            <span class="sheet-cell header-cell">D</span>
+                <div class="shortcut-list-interactive">
+
+                    <div class="shortcut-item-interactive" onclick="toggleDemo(this)">
+                        <div class="shortcut-main">
+                            <div class="shortcut-keys"><kbd>Ctrl</kbd>+<kbd>Home</kbd></div>
+                            <div class="shortcut-desc">Pindah ke sel A1</div>
+                            <span class="demo-toggle-icon">▶</span>
                         </div>
-                        <div class="sheet-row">
-                            <span class="sheet-cell active-cell anim-move-right">📍</span>
-                            <span class="sheet-cell">Data</span>
-                            <span class="sheet-cell">Data</span>
-                            <span class="sheet-cell">Data</span>
-                        </div>
-                        <div class="sheet-row">
-                            <span class="sheet-cell">Data</span>
-                            <span class="sheet-cell">Data</span>
-                            <span class="sheet-cell">Data</span>
-                            <span class="sheet-cell">Data</span>
-                        </div>
-                        <div class="formula-bar-demo">
-                            <span class="fx-label">⌨️</span>
-                            <span class="fx-formula">Ctrl+→ melompat ke sel terisi berikutnya secara instan!</span>
+                        <div class="shortcut-demo">
+                            <div class="mini-excel">
+                                <div class="mini-row"><span class="mini-cell mini-header">A</span><span class="mini-cell mini-header">B</span><span class="mini-cell mini-header">C</span><span class="mini-cell mini-header">D</span></div>
+                                <div class="mini-row"><span class="mini-cell mini-active">📍A1</span><span class="mini-cell">B1</span><span class="mini-cell">C1</span><span class="mini-cell">D1</span></div>
+                                <div class="mini-row"><span class="mini-cell">A2</span><span class="mini-cell">B2</span><span class="mini-cell">C2</span><span class="mini-cell">D2</span></div>
+                                <div class="mini-row"><span class="mini-cell">A3</span><span class="mini-cell">B3</span><span class="mini-cell">C3</span><span class="mini-cell mini-prev">sebelumnya</span></div>
+                            </div>
+                            <div class="demo-caption">Kursor langsung melompat ke sel A1 dari posisi manapun</div>
                         </div>
                     </div>
+
+                    <div class="shortcut-item-interactive" onclick="toggleDemo(this)">
+                        <div class="shortcut-main">
+                            <div class="shortcut-keys"><kbd>Ctrl</kbd>+<kbd>End</kbd></div>
+                            <div class="shortcut-desc">Pindah ke sel terakhir yang berisi data</div>
+                            <span class="demo-toggle-icon">▶</span>
+                        </div>
+                        <div class="shortcut-demo">
+                            <div class="mini-excel">
+                                <div class="mini-row"><span class="mini-cell mini-header">A</span><span class="mini-cell mini-header">B</span><span class="mini-cell mini-header">C</span></div>
+                                <div class="mini-row"><span class="mini-cell mini-prev">mulai</span><span class="mini-cell">Data</span><span class="mini-cell">Data</span></div>
+                                <div class="mini-row"><span class="mini-cell">Data</span><span class="mini-cell">Data</span><span class="mini-cell">Data</span></div>
+                                <div class="mini-row"><span class="mini-cell">Data</span><span class="mini-cell">Data</span><span class="mini-cell mini-active">📍Akhir</span></div>
+                            </div>
+                            <div class="demo-caption">Kursor melompat ke sel paling kanan bawah yang berisi data</div>
+                        </div>
+                    </div>
+
+                    <div class="shortcut-item-interactive" onclick="toggleDemo(this)">
+                        <div class="shortcut-main">
+                            <div class="shortcut-keys"><kbd>Ctrl</kbd>+<kbd>→</kbd></div>
+                            <div class="shortcut-desc">Pindah ke sel terisi berikutnya (kanan)</div>
+                            <span class="demo-toggle-icon">▶</span>
+                        </div>
+                        <div class="shortcut-demo">
+                            <div class="mini-excel">
+                                <div class="mini-row"><span class="mini-cell mini-header">A</span><span class="mini-cell mini-header">B</span><span class="mini-cell mini-header">C</span><span class="mini-cell mini-header">D</span></div>
+                                <div class="mini-row"><span class="mini-cell mini-prev">mulai</span><span class="mini-cell mini-empty"></span><span class="mini-cell mini-empty"></span><span class="mini-cell mini-active">📍tujuan</span></div>
+                            </div>
+                            <div class="demo-caption">Melompati sel kosong, langsung ke sel berisi data berikutnya di kanan →</div>
+                        </div>
+                    </div>
+
+                    <div class="shortcut-item-interactive" onclick="toggleDemo(this)">
+                        <div class="shortcut-main">
+                            <div class="shortcut-keys"><kbd>Ctrl</kbd>+<kbd>←</kbd></div>
+                            <div class="shortcut-desc">Pindah ke sel terisi berikutnya (kiri)</div>
+                            <span class="demo-toggle-icon">▶</span>
+                        </div>
+                        <div class="shortcut-demo">
+                            <div class="mini-excel">
+                                <div class="mini-row"><span class="mini-cell mini-header">A</span><span class="mini-cell mini-header">B</span><span class="mini-cell mini-header">C</span><span class="mini-cell mini-header">D</span></div>
+                                <div class="mini-row"><span class="mini-cell mini-active">📍tujuan</span><span class="mini-cell mini-empty"></span><span class="mini-cell mini-empty"></span><span class="mini-cell mini-prev">mulai</span></div>
+                            </div>
+                            <div class="demo-caption">Melompati sel kosong, langsung ke sel berisi data berikutnya di kiri ←</div>
+                        </div>
+                    </div>
+
+                    <div class="shortcut-item-interactive" onclick="toggleDemo(this)">
+                        <div class="shortcut-main">
+                            <div class="shortcut-keys"><kbd>Ctrl</kbd>+<kbd>↑</kbd></div>
+                            <div class="shortcut-desc">Pindah ke sel terisi berikutnya (atas)</div>
+                            <span class="demo-toggle-icon">▶</span>
+                        </div>
+                        <div class="shortcut-demo">
+                            <div class="mini-excel">
+                                <div class="mini-row"><span class="mini-cell mini-header">A</span></div>
+                                <div class="mini-row"><span class="mini-cell mini-active">📍tujuan</span></div>
+                                <div class="mini-row"><span class="mini-cell mini-empty"></span></div>
+                                <div class="mini-row"><span class="mini-cell mini-empty"></span></div>
+                                <div class="mini-row"><span class="mini-cell mini-prev">mulai</span></div>
+                            </div>
+                            <div class="demo-caption">Melompat ke atas melewati sel kosong ke sel berisi data ↑</div>
+                        </div>
+                    </div>
+
+                    <div class="shortcut-item-interactive" onclick="toggleDemo(this)">
+                        <div class="shortcut-main">
+                            <div class="shortcut-keys"><kbd>Ctrl</kbd>+<kbd>↓</kbd></div>
+                            <div class="shortcut-desc">Pindah ke sel terisi berikutnya (bawah)</div>
+                            <span class="demo-toggle-icon">▶</span>
+                        </div>
+                        <div class="shortcut-demo">
+                            <div class="mini-excel">
+                                <div class="mini-row"><span class="mini-cell mini-header">A</span></div>
+                                <div class="mini-row"><span class="mini-cell mini-prev">mulai</span></div>
+                                <div class="mini-row"><span class="mini-cell mini-empty"></span></div>
+                                <div class="mini-row"><span class="mini-cell mini-empty"></span></div>
+                                <div class="mini-row"><span class="mini-cell mini-active">📍tujuan</span></div>
+                            </div>
+                            <div class="demo-caption">Melompat ke bawah melewati sel kosong ke sel berisi data ↓</div>
+                        </div>
+                    </div>
+
+                    <div class="shortcut-item-interactive" onclick="toggleDemo(this)">
+                        <div class="shortcut-main">
+                            <div class="shortcut-keys"><kbd>Ctrl</kbd>+<kbd>G</kbd></div>
+                            <div class="shortcut-desc">Buka dialog Go To</div>
+                            <span class="demo-toggle-icon">▶</span>
+                        </div>
+                        <div class="shortcut-demo">
+                            <div class="mini-excel mini-dialog">
+                                <div class="dialog-box">
+                                    <div class="dialog-title">Go To</div>
+                                    <div class="dialog-input">Reference: <span class="mini-active">D15</span></div>
+                                    <div class="dialog-btn">OK</div>
+                                </div>
+                            </div>
+                            <div class="demo-caption">Membuka dialog untuk langsung menuju sel tertentu (misal D15)</div>
+                        </div>
+                    </div>
+
                 </div>
             </div>
 
-            <!-- Seleksi -->
+            <!-- SELEKSI -->
             <div class="shortcut-category" data-category="seleksi">
                 <h2 class="category-title cat-seleksi">🖱️ Seleksi</h2>
-                <div class="shortcut-grid">
-                    <div class="shortcut-item">
-                        <div class="shortcut-keys"><kbd>Ctrl</kbd>+<kbd>A</kbd></div>
-                        <div class="shortcut-desc">Pilih semua sel</div>
-                    </div>
-                    <div class="shortcut-item">
-                        <div class="shortcut-keys"><kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>End</kbd></div>
-                        <div class="shortcut-desc">Pilih dari sel aktif sampai sel terakhir</div>
-                    </div>
-                    <div class="shortcut-item">
-                        <div class="shortcut-keys"><kbd>Ctrl</kbd>+<kbd>Space</kbd></div>
-                        <div class="shortcut-desc">Pilih seluruh kolom</div>
-                    </div>
-                    <div class="shortcut-item">
-                        <div class="shortcut-keys"><kbd>Shift</kbd>+<kbd>Space</kbd></div>
-                        <div class="shortcut-desc">Pilih seluruh baris</div>
-                    </div>
-                    <div class="shortcut-item">
-                        <div class="shortcut-keys"><kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>→</kbd></div>
-                        <div class="shortcut-desc">Pilih sampai sel terisi terakhir (kanan)</div>
-                    </div>
-                    <div class="shortcut-item">
-                        <div class="shortcut-keys"><kbd>Shift</kbd>+<kbd>Click</kbd></div>
-                        <div class="shortcut-desc">Pilih range dari sel aktif ke sel yang diklik</div>
-                    </div>
-                </div>
-                <div class="demo-animation">
-                    <h4>🎬 Demo Animasi Seleksi:</h4>
-                    <div class="excel-sheet-demo">
-                        <div class="sheet-header">
-                            <span class="sheet-cell header-cell">A</span>
-                            <span class="sheet-cell header-cell">B</span>
-                            <span class="sheet-cell header-cell">C</span>
+                <div class="shortcut-list-interactive">
+
+                    <div class="shortcut-item-interactive" onclick="toggleDemo(this)">
+                        <div class="shortcut-main">
+                            <div class="shortcut-keys"><kbd>Ctrl</kbd>+<kbd>A</kbd></div>
+                            <div class="shortcut-desc">Pilih semua sel</div>
+                            <span class="demo-toggle-icon">▶</span>
                         </div>
-                        <div class="sheet-row">
-                            <span class="sheet-cell selected-cell anim-select">Data 1</span>
-                            <span class="sheet-cell selected-cell anim-select delay-1">Data 2</span>
-                            <span class="sheet-cell selected-cell anim-select delay-2">Data 3</span>
-                        </div>
-                        <div class="sheet-row">
-                            <span class="sheet-cell selected-cell anim-select delay-1">Data 4</span>
-                            <span class="sheet-cell selected-cell anim-select delay-2">Data 5</span>
-                            <span class="sheet-cell selected-cell anim-select delay-2">Data 6</span>
-                        </div>
-                        <div class="formula-bar-demo">
-                            <span class="fx-label">⌨️</span>
-                            <span class="fx-formula">Ctrl+A memilih semua sel sekaligus!</span>
+                        <div class="shortcut-demo">
+                            <div class="mini-excel">
+                                <div class="mini-row"><span class="mini-cell mini-selected">A1</span><span class="mini-cell mini-selected">B1</span><span class="mini-cell mini-selected">C1</span></div>
+                                <div class="mini-row"><span class="mini-cell mini-selected">A2</span><span class="mini-cell mini-selected">B2</span><span class="mini-cell mini-selected">C2</span></div>
+                                <div class="mini-row"><span class="mini-cell mini-selected">A3</span><span class="mini-cell mini-selected">B3</span><span class="mini-cell mini-selected">C3</span></div>
+                            </div>
+                            <div class="demo-caption">Semua sel ter-highlight biru (terpilih semua)</div>
                         </div>
                     </div>
+
+                    <div class="shortcut-item-interactive" onclick="toggleDemo(this)">
+                        <div class="shortcut-main">
+                            <div class="shortcut-keys"><kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>End</kbd></div>
+                            <div class="shortcut-desc">Pilih dari sel aktif sampai sel terakhir</div>
+                            <span class="demo-toggle-icon">▶</span>
+                        </div>
+                        <div class="shortcut-demo">
+                            <div class="mini-excel">
+                                <div class="mini-row"><span class="mini-cell">A1</span><span class="mini-cell mini-selected">B1</span><span class="mini-cell mini-selected">C1</span></div>
+                                <div class="mini-row"><span class="mini-cell">A2</span><span class="mini-cell mini-selected">B2</span><span class="mini-cell mini-selected">C2</span></div>
+                                <div class="mini-row"><span class="mini-cell">A3</span><span class="mini-cell mini-selected">B3</span><span class="mini-cell mini-selected">C3 akhir</span></div>
+                            </div>
+                            <div class="demo-caption">Memilih dari posisi kursor (B1) sampai sel data terakhir (C3)</div>
+                        </div>
+                    </div>
+
+                    <div class="shortcut-item-interactive" onclick="toggleDemo(this)">
+                        <div class="shortcut-main">
+                            <div class="shortcut-keys"><kbd>Ctrl</kbd>+<kbd>Space</kbd></div>
+                            <div class="shortcut-desc">Pilih seluruh kolom</div>
+                            <span class="demo-toggle-icon">▶</span>
+                        </div>
+                        <div class="shortcut-demo">
+                            <div class="mini-excel">
+                                <div class="mini-row"><span class="mini-cell">A1</span><span class="mini-cell mini-selected">B1</span><span class="mini-cell">C1</span></div>
+                                <div class="mini-row"><span class="mini-cell">A2</span><span class="mini-cell mini-selected">B2</span><span class="mini-cell">C2</span></div>
+                                <div class="mini-row"><span class="mini-cell">A3</span><span class="mini-cell mini-selected">B3</span><span class="mini-cell">C3</span></div>
+                                <div class="mini-row"><span class="mini-cell">A4</span><span class="mini-cell mini-selected">B4</span><span class="mini-cell">C4</span></div>
+                            </div>
+                            <div class="demo-caption">Seluruh kolom B terpilih (dari atas sampai bawah)</div>
+                        </div>
+                    </div>
+
+                    <div class="shortcut-item-interactive" onclick="toggleDemo(this)">
+                        <div class="shortcut-main">
+                            <div class="shortcut-keys"><kbd>Shift</kbd>+<kbd>Space</kbd></div>
+                            <div class="shortcut-desc">Pilih seluruh baris</div>
+                            <span class="demo-toggle-icon">▶</span>
+                        </div>
+                        <div class="shortcut-demo">
+                            <div class="mini-excel">
+                                <div class="mini-row"><span class="mini-cell">A1</span><span class="mini-cell">B1</span><span class="mini-cell">C1</span></div>
+                                <div class="mini-row"><span class="mini-cell mini-selected">A2</span><span class="mini-cell mini-selected">B2</span><span class="mini-cell mini-selected">C2</span></div>
+                                <div class="mini-row"><span class="mini-cell">A3</span><span class="mini-cell">B3</span><span class="mini-cell">C3</span></div>
+                            </div>
+                            <div class="demo-caption">Seluruh baris 2 terpilih (dari kiri sampai kanan)</div>
+                        </div>
+                    </div>
+
+                    <div class="shortcut-item-interactive" onclick="toggleDemo(this)">
+                        <div class="shortcut-main">
+                            <div class="shortcut-keys"><kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>→</kbd></div>
+                            <div class="shortcut-desc">Pilih sampai sel terisi terakhir (kanan)</div>
+                            <span class="demo-toggle-icon">▶</span>
+                        </div>
+                        <div class="shortcut-demo">
+                            <div class="mini-excel">
+                                <div class="mini-row"><span class="mini-cell mini-header">A</span><span class="mini-cell mini-header">B</span><span class="mini-cell mini-header">C</span><span class="mini-cell mini-header">D</span></div>
+                                <div class="mini-row"><span class="mini-cell mini-selected">A1</span><span class="mini-cell mini-selected">B1</span><span class="mini-cell mini-selected">C1</span><span class="mini-cell mini-selected">D1</span></div>
+                            </div>
+                            <div class="demo-caption">Dari A1, memilih semua sel ke kanan sampai data terakhir</div>
+                        </div>
+                    </div>
+
+                    <div class="shortcut-item-interactive" onclick="toggleDemo(this)">
+                        <div class="shortcut-main">
+                            <div class="shortcut-keys"><kbd>Shift</kbd>+<kbd>Click</kbd></div>
+                            <div class="shortcut-desc">Pilih range dari sel aktif ke sel yang diklik</div>
+                            <span class="demo-toggle-icon">▶</span>
+                        </div>
+                        <div class="shortcut-demo">
+                            <div class="mini-excel">
+                                <div class="mini-row"><span class="mini-cell mini-selected">A1 mulai</span><span class="mini-cell mini-selected">B1</span><span class="mini-cell">C1</span></div>
+                                <div class="mini-row"><span class="mini-cell mini-selected">A2</span><span class="mini-cell mini-selected">B2 klik</span><span class="mini-cell">C2</span></div>
+                            </div>
+                            <div class="demo-caption">Tahan Shift lalu klik sel tujuan untuk memilih range A1:B2</div>
+                        </div>
+                    </div>
+
                 </div>
             </div>
 
-            <!-- Copy & Paste -->
+            <!-- COPY & PASTE -->
             <div class="shortcut-category" data-category="copypaste">
-                <h2 class="category-title cat-copypaste">📋 Copy & Paste</h2>
-                <div class="shortcut-grid">
-                    <div class="shortcut-item">
-                        <div class="shortcut-keys"><kbd>Ctrl</kbd>+<kbd>C</kbd></div>
-                        <div class="shortcut-desc">Copy (salin)</div>
-                    </div>
-                    <div class="shortcut-item">
-                        <div class="shortcut-keys"><kbd>Ctrl</kbd>+<kbd>X</kbd></div>
-                        <div class="shortcut-desc">Cut (potong)</div>
-                    </div>
-                    <div class="shortcut-item">
-                        <div class="shortcut-keys"><kbd>Ctrl</kbd>+<kbd>V</kbd></div>
-                        <div class="shortcut-desc">Paste (tempel)</div>
-                    </div>
-                    <div class="shortcut-item">
-                        <div class="shortcut-keys"><kbd>Ctrl</kbd>+<kbd>Alt</kbd>+<kbd>V</kbd></div>
-                        <div class="shortcut-desc">Paste Special (pilih format paste)</div>
-                    </div>
-                    <div class="shortcut-item">
-                        <div class="shortcut-keys"><kbd>Ctrl</kbd>+<kbd>D</kbd></div>
-                        <div class="shortcut-desc">Fill Down (isi ke bawah)</div>
-                    </div>
-                    <div class="shortcut-item">
-                        <div class="shortcut-keys"><kbd>Ctrl</kbd>+<kbd>R</kbd></div>
-                        <div class="shortcut-desc">Fill Right (isi ke kanan)</div>
-                    </div>
-                </div>
-                <div class="demo-animation">
-                    <h4>🎬 Demo Animasi Copy & Paste:</h4>
-                    <div class="excel-sheet-demo">
-                        <div class="sheet-header">
-                            <span class="sheet-cell header-cell">A</span>
-                            <span class="sheet-cell header-cell">B</span>
+                <h2 class="category-title cat-copypaste">📋 Copy &amp; Paste</h2>
+                <div class="shortcut-list-interactive">
+
+                    <div class="shortcut-item-interactive" onclick="toggleDemo(this)">
+                        <div class="shortcut-main">
+                            <div class="shortcut-keys"><kbd>Ctrl</kbd>+<kbd>C</kbd></div>
+                            <div class="shortcut-desc">Copy (salin)</div>
+                            <span class="demo-toggle-icon">▶</span>
                         </div>
-                        <div class="sheet-row">
-                            <span class="sheet-cell highlight-cell anim-pulse">Hello</span>
-                            <span class="sheet-cell label-cell">← Ctrl+C</span>
-                        </div>
-                        <div class="sheet-row">
-                            <span class="sheet-cell result-cell anim-typing delay-1">Hello</span>
-                            <span class="sheet-cell label-cell">← Ctrl+V</span>
-                        </div>
-                        <div class="sheet-row">
-                            <span class="sheet-cell result-cell anim-typing delay-2">Hello</span>
-                            <span class="sheet-cell label-cell">← Ctrl+V</span>
-                        </div>
-                        <div class="formula-bar-demo">
-                            <span class="fx-label">⌨️</span>
-                            <span class="fx-formula">Copy sekali, paste berkali-kali ke sel manapun!</span>
+                        <div class="shortcut-demo">
+                            <div class="mini-excel">
+                                <div class="mini-row"><span class="mini-cell mini-header">A</span></div>
+                                <div class="mini-row"><span class="mini-cell mini-copy">Hello ✂️ (tersalin)</span></div>
+                            </div>
+                            <div class="demo-caption">Sel berkedip garis putus-putus menandakan data sudah di-copy ke clipboard</div>
                         </div>
                     </div>
+
+                    <div class="shortcut-item-interactive" onclick="toggleDemo(this)">
+                        <div class="shortcut-main">
+                            <div class="shortcut-keys"><kbd>Ctrl</kbd>+<kbd>X</kbd></div>
+                            <div class="shortcut-desc">Cut (potong)</div>
+                            <span class="demo-toggle-icon">▶</span>
+                        </div>
+                        <div class="shortcut-demo">
+                            <div class="mini-excel">
+                                <div class="mini-row"><span class="mini-cell mini-header">A</span><span class="mini-cell mini-header">B</span></div>
+                                <div class="mini-row"><span class="mini-cell mini-cut">Data ✂️</span><span class="mini-cell mini-empty">(kosong)</span></div>
+                                <div class="mini-row"><span class="mini-cell mini-empty"></span><span class="mini-cell mini-active">Data 📍</span></div>
+                            </div>
+                            <div class="demo-caption">Data dipotong dari sel asal dan dipindahkan ke sel tujuan (paste)</div>
+                        </div>
+                    </div>
+
+                    <div class="shortcut-item-interactive" onclick="toggleDemo(this)">
+                        <div class="shortcut-main">
+                            <div class="shortcut-keys"><kbd>Ctrl</kbd>+<kbd>V</kbd></div>
+                            <div class="shortcut-desc">Paste (tempel)</div>
+                            <span class="demo-toggle-icon">▶</span>
+                        </div>
+                        <div class="shortcut-demo">
+                            <div class="mini-excel">
+                                <div class="mini-row"><span class="mini-cell mini-header">A</span></div>
+                                <div class="mini-row"><span class="mini-cell mini-copy">Hello (sumber)</span></div>
+                                <div class="mini-row"><span class="mini-cell mini-active">Hello ✓ (ditempel)</span></div>
+                            </div>
+                            <div class="demo-caption">Data yang sudah di-copy ditempelkan ke sel aktif</div>
+                        </div>
+                    </div>
+
+                    <div class="shortcut-item-interactive" onclick="toggleDemo(this)">
+                        <div class="shortcut-main">
+                            <div class="shortcut-keys"><kbd>Ctrl</kbd>+<kbd>Alt</kbd>+<kbd>V</kbd></div>
+                            <div class="shortcut-desc">Paste Special (pilih format paste)</div>
+                            <span class="demo-toggle-icon">▶</span>
+                        </div>
+                        <div class="shortcut-demo">
+                            <div class="mini-excel mini-dialog">
+                                <div class="dialog-box">
+                                    <div class="dialog-title">Paste Special</div>
+                                    <div class="dialog-input">☑ Values ☐ Formulas ☐ Formats</div>
+                                    <div class="dialog-btn">OK</div>
+                                </div>
+                            </div>
+                            <div class="demo-caption">Pilih apa yang ingin di-paste: nilai saja, rumus, format, dll</div>
+                        </div>
+                    </div>
+
+                    <div class="shortcut-item-interactive" onclick="toggleDemo(this)">
+                        <div class="shortcut-main">
+                            <div class="shortcut-keys"><kbd>Ctrl</kbd>+<kbd>D</kbd></div>
+                            <div class="shortcut-desc">Fill Down (isi ke bawah)</div>
+                            <span class="demo-toggle-icon">▶</span>
+                        </div>
+                        <div class="shortcut-demo">
+                            <div class="mini-excel">
+                                <div class="mini-row"><span class="mini-cell mini-header">A</span></div>
+                                <div class="mini-row"><span class="mini-cell mini-copy">100 (sumber)</span></div>
+                                <div class="mini-row"><span class="mini-cell mini-active">100 ↓</span></div>
+                                <div class="mini-row"><span class="mini-cell mini-active">100 ↓</span></div>
+                            </div>
+                            <div class="demo-caption">Mengisi sel di bawah dengan nilai/rumus dari sel di atasnya</div>
+                        </div>
+                    </div>
+
+                    <div class="shortcut-item-interactive" onclick="toggleDemo(this)">
+                        <div class="shortcut-main">
+                            <div class="shortcut-keys"><kbd>Ctrl</kbd>+<kbd>R</kbd></div>
+                            <div class="shortcut-desc">Fill Right (isi ke kanan)</div>
+                            <span class="demo-toggle-icon">▶</span>
+                        </div>
+                        <div class="shortcut-demo">
+                            <div class="mini-excel">
+                                <div class="mini-row"><span class="mini-cell mini-header">A</span><span class="mini-cell mini-header">B</span><span class="mini-cell mini-header">C</span></div>
+                                <div class="mini-row"><span class="mini-cell mini-copy">100</span><span class="mini-cell mini-active">100 →</span><span class="mini-cell mini-active">100 →</span></div>
+                            </div>
+                            <div class="demo-caption">Mengisi sel di kanan dengan nilai/rumus dari sel di kirinya</div>
+                        </div>
+                    </div>
+
                 </div>
             </div>
 
-            <!-- Format -->
+
+            <!-- FORMAT -->
             <div class="shortcut-category" data-category="format">
                 <h2 class="category-title cat-format">🎨 Format</h2>
-                <div class="shortcut-grid">
-                    <div class="shortcut-item">
-                        <div class="shortcut-keys"><kbd>Ctrl</kbd>+<kbd>B</kbd></div>
-                        <div class="shortcut-desc">Bold (tebal)</div>
-                    </div>
-                    <div class="shortcut-item">
-                        <div class="shortcut-keys"><kbd>Ctrl</kbd>+<kbd>I</kbd></div>
-                        <div class="shortcut-desc">Italic (miring)</div>
-                    </div>
-                    <div class="shortcut-item">
-                        <div class="shortcut-keys"><kbd>Ctrl</kbd>+<kbd>U</kbd></div>
-                        <div class="shortcut-desc">Underline (garis bawah)</div>
-                    </div>
-                    <div class="shortcut-item">
-                        <div class="shortcut-keys"><kbd>Ctrl</kbd>+<kbd>1</kbd></div>
-                        <div class="shortcut-desc">Buka Format Cells dialog</div>
-                    </div>
-                    <div class="shortcut-item">
-                        <div class="shortcut-keys"><kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>!</kbd></div>
-                        <div class="shortcut-desc">Format angka dengan 2 desimal</div>
-                    </div>
-                    <div class="shortcut-item">
-                        <div class="shortcut-keys"><kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>$</kbd></div>
-                        <div class="shortcut-desc">Format mata uang</div>
-                    </div>
-                    <div class="shortcut-item">
-                        <div class="shortcut-keys"><kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>%</kbd></div>
-                        <div class="shortcut-desc">Format persen</div>
-                    </div>
-                    <div class="shortcut-item">
-                        <div class="shortcut-keys"><kbd>Alt</kbd>+<kbd>H</kbd>+<kbd>B</kbd></div>
-                        <div class="shortcut-desc">Tambah border</div>
-                    </div>
-                </div>
-                <div class="demo-animation">
-                    <h4>🎬 Demo Animasi Format:</h4>
-                    <div class="excel-sheet-demo">
-                        <div class="sheet-row">
-                            <span class="sheet-cell">Teks biasa</span>
-                            <span class="sheet-cell label-cell">→ Ctrl+B →</span>
-                            <span class="sheet-cell anim-format-bold"><strong>Teks tebal</strong></span>
+                <div class="shortcut-list-interactive">
+
+                    <div class="shortcut-item-interactive" onclick="toggleDemo(this)">
+                        <div class="shortcut-main">
+                            <div class="shortcut-keys"><kbd>Ctrl</kbd>+<kbd>B</kbd></div>
+                            <div class="shortcut-desc">Bold (tebal)</div>
+                            <span class="demo-toggle-icon">▶</span>
                         </div>
-                        <div class="sheet-row delay-1">
-                            <span class="sheet-cell">Teks biasa</span>
-                            <span class="sheet-cell label-cell">→ Ctrl+I →</span>
-                            <span class="sheet-cell anim-format-bold delay-1"><em>Teks miring</em></span>
-                        </div>
-                        <div class="sheet-row delay-2">
-                            <span class="sheet-cell">1000000</span>
-                            <span class="sheet-cell label-cell">→ Ctrl+Shift+$ →</span>
-                            <span class="sheet-cell result-cell anim-typing delay-2">$1,000,000</span>
-                        </div>
-                        <div class="formula-bar-demo">
-                            <span class="fx-label">⌨️</span>
-                            <span class="fx-formula">Format teks dan angka secara instan tanpa mouse!</span>
+                        <div class="shortcut-demo">
+                            <div class="mini-excel">
+                                <div class="mini-row"><span class="mini-cell">Teks biasa</span><span class="mini-cell mini-arrow">→</span><span class="mini-cell mini-active"><strong>Teks tebal</strong></span></div>
+                            </div>
+                            <div class="demo-caption">Teks berubah menjadi tebal (bold)</div>
                         </div>
                     </div>
+
+                    <div class="shortcut-item-interactive" onclick="toggleDemo(this)">
+                        <div class="shortcut-main">
+                            <div class="shortcut-keys"><kbd>Ctrl</kbd>+<kbd>I</kbd></div>
+                            <div class="shortcut-desc">Italic (miring)</div>
+                            <span class="demo-toggle-icon">▶</span>
+                        </div>
+                        <div class="shortcut-demo">
+                            <div class="mini-excel">
+                                <div class="mini-row"><span class="mini-cell">Teks biasa</span><span class="mini-cell mini-arrow">→</span><span class="mini-cell mini-active"><em>Teks miring</em></span></div>
+                            </div>
+                            <div class="demo-caption">Teks berubah menjadi miring (italic)</div>
+                        </div>
+                    </div>
+
+                    <div class="shortcut-item-interactive" onclick="toggleDemo(this)">
+                        <div class="shortcut-main">
+                            <div class="shortcut-keys"><kbd>Ctrl</kbd>+<kbd>U</kbd></div>
+                            <div class="shortcut-desc">Underline (garis bawah)</div>
+                            <span class="demo-toggle-icon">▶</span>
+                        </div>
+                        <div class="shortcut-demo">
+                            <div class="mini-excel">
+                                <div class="mini-row"><span class="mini-cell">Teks biasa</span><span class="mini-cell mini-arrow">→</span><span class="mini-cell mini-active"><u>Teks bergaris bawah</u></span></div>
+                            </div>
+                            <div class="demo-caption">Teks mendapat garis bawah (underline)</div>
+                        </div>
+                    </div>
+
+                    <div class="shortcut-item-interactive" onclick="toggleDemo(this)">
+                        <div class="shortcut-main">
+                            <div class="shortcut-keys"><kbd>Ctrl</kbd>+<kbd>1</kbd></div>
+                            <div class="shortcut-desc">Buka Format Cells dialog</div>
+                            <span class="demo-toggle-icon">▶</span>
+                        </div>
+                        <div class="shortcut-demo">
+                            <div class="mini-excel mini-dialog">
+                                <div class="dialog-box">
+                                    <div class="dialog-title">Format Cells</div>
+                                    <div class="dialog-input">Number | Alignment | Font | Border | Fill</div>
+                                    <div class="dialog-btn">OK</div>
+                                </div>
+                            </div>
+                            <div class="demo-caption">Membuka dialog lengkap untuk mengatur format sel (angka, font, border, dll)</div>
+                        </div>
+                    </div>
+
+                    <div class="shortcut-item-interactive" onclick="toggleDemo(this)">
+                        <div class="shortcut-main">
+                            <div class="shortcut-keys"><kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>!</kbd></div>
+                            <div class="shortcut-desc">Format angka dengan 2 desimal</div>
+                            <span class="demo-toggle-icon">▶</span>
+                        </div>
+                        <div class="shortcut-demo">
+                            <div class="mini-excel">
+                                <div class="mini-row"><span class="mini-cell">1234.5</span><span class="mini-cell mini-arrow">→</span><span class="mini-cell mini-active">1,234.50</span></div>
+                            </div>
+                            <div class="demo-caption">Angka diformat dengan pemisah ribuan dan 2 angka desimal</div>
+                        </div>
+                    </div>
+
+                    <div class="shortcut-item-interactive" onclick="toggleDemo(this)">
+                        <div class="shortcut-main">
+                            <div class="shortcut-keys"><kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>$</kbd></div>
+                            <div class="shortcut-desc">Format mata uang</div>
+                            <span class="demo-toggle-icon">▶</span>
+                        </div>
+                        <div class="shortcut-demo">
+                            <div class="mini-excel">
+                                <div class="mini-row"><span class="mini-cell">50000</span><span class="mini-cell mini-arrow">→</span><span class="mini-cell mini-active">$50,000.00</span></div>
+                            </div>
+                            <div class="demo-caption">Angka diformat sebagai mata uang dengan simbol $ dan desimal</div>
+                        </div>
+                    </div>
+
+                    <div class="shortcut-item-interactive" onclick="toggleDemo(this)">
+                        <div class="shortcut-main">
+                            <div class="shortcut-keys"><kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>%</kbd></div>
+                            <div class="shortcut-desc">Format persen</div>
+                            <span class="demo-toggle-icon">▶</span>
+                        </div>
+                        <div class="shortcut-demo">
+                            <div class="mini-excel">
+                                <div class="mini-row"><span class="mini-cell">0.85</span><span class="mini-cell mini-arrow">→</span><span class="mini-cell mini-active">85%</span></div>
+                            </div>
+                            <div class="demo-caption">Angka desimal dikonversi ke format persen (0.85 → 85%)</div>
+                        </div>
+                    </div>
+
+                    <div class="shortcut-item-interactive" onclick="toggleDemo(this)">
+                        <div class="shortcut-main">
+                            <div class="shortcut-keys"><kbd>Alt</kbd>+<kbd>H</kbd>+<kbd>B</kbd></div>
+                            <div class="shortcut-desc">Tambah border</div>
+                            <span class="demo-toggle-icon">▶</span>
+                        </div>
+                        <div class="shortcut-demo">
+                            <div class="mini-excel">
+                                <div class="mini-row"><span class="mini-cell">Tanpa border</span><span class="mini-cell mini-arrow">→</span><span class="mini-cell mini-border">Dengan border</span></div>
+                            </div>
+                            <div class="demo-caption">Menambahkan garis tepi (border) pada sel yang dipilih</div>
+                        </div>
+                    </div>
+
                 </div>
             </div>
 
-            <!-- Rumus -->
+            <!-- RUMUS -->
             <div class="shortcut-category" data-category="rumus">
                 <h2 class="category-title cat-rumus">📐 Rumus</h2>
-                <div class="shortcut-grid">
-                    <div class="shortcut-item">
-                        <div class="shortcut-keys"><kbd>Alt</kbd>+<kbd>=</kbd></div>
-                        <div class="shortcut-desc">AutoSum</div>
+                <div class="shortcut-list-interactive">
+
+                    <div class="shortcut-item-interactive" onclick="toggleDemo(this)">
+                        <div class="shortcut-main">
+                            <div class="shortcut-keys"><kbd>Alt</kbd>+<kbd>=</kbd></div>
+                            <div class="shortcut-desc">AutoSum</div>
+                            <span class="demo-toggle-icon">▶</span>
+                        </div>
+                        <div class="shortcut-demo">
+                            <div class="mini-excel">
+                                <div class="mini-row"><span class="mini-cell mini-header">A</span></div>
+                                <div class="mini-row"><span class="mini-cell">10</span></div>
+                                <div class="mini-row"><span class="mini-cell">20</span></div>
+                                <div class="mini-row"><span class="mini-cell">30</span></div>
+                                <div class="mini-row"><span class="mini-cell mini-active">=SUM(A1:A3) → 60</span></div>
+                            </div>
+                            <div class="demo-caption">Otomatis memasukkan rumus SUM untuk menjumlahkan sel di atasnya</div>
+                        </div>
                     </div>
-                    <div class="shortcut-item">
-                        <div class="shortcut-keys"><kbd>F4</kbd></div>
-                        <div class="shortcut-desc">Toggle absolute/relative reference ($)</div>
+
+                    <div class="shortcut-item-interactive" onclick="toggleDemo(this)">
+                        <div class="shortcut-main">
+                            <div class="shortcut-keys"><kbd>F4</kbd></div>
+                            <div class="shortcut-desc">Toggle absolute/relative reference ($)</div>
+                            <span class="demo-toggle-icon">▶</span>
+                        </div>
+                        <div class="shortcut-demo">
+                            <div class="mini-excel">
+                                <div class="mini-row"><span class="mini-cell">A1</span><span class="mini-cell mini-arrow">F4→</span><span class="mini-cell mini-active">$A$1</span></div>
+                                <div class="mini-row"><span class="mini-cell">$A$1</span><span class="mini-cell mini-arrow">F4→</span><span class="mini-cell mini-active">A$1</span></div>
+                                <div class="mini-row"><span class="mini-cell">A$1</span><span class="mini-cell mini-arrow">F4→</span><span class="mini-cell mini-active">$A1</span></div>
+                                <div class="mini-row"><span class="mini-cell">$A1</span><span class="mini-cell mini-arrow">F4→</span><span class="mini-cell mini-active">A1</span></div>
+                            </div>
+                            <div class="demo-caption">Tekan F4 berulang untuk toggle: A1 → $A$1 → A$1 → $A1 → A1</div>
+                        </div>
                     </div>
-                    <div class="shortcut-item">
-                        <div class="shortcut-keys"><kbd>Ctrl</kbd>+<kbd>`</kbd></div>
-                        <div class="shortcut-desc">Tampilkan/sembunyikan rumus di sel</div>
+
+                    <div class="shortcut-item-interactive" onclick="toggleDemo(this)">
+                        <div class="shortcut-main">
+                            <div class="shortcut-keys"><kbd>Ctrl</kbd>+<kbd>`</kbd></div>
+                            <div class="shortcut-desc">Tampilkan/sembunyikan rumus di sel</div>
+                            <span class="demo-toggle-icon">▶</span>
+                        </div>
+                        <div class="shortcut-demo">
+                            <div class="mini-excel">
+                                <div class="mini-row"><span class="mini-cell mini-header">Normal</span><span class="mini-cell mini-arrow">→</span><span class="mini-cell mini-header">Show Formula</span></div>
+                                <div class="mini-row"><span class="mini-cell">60</span><span class="mini-cell mini-arrow">→</span><span class="mini-cell mini-active">=SUM(A1:A3)</span></div>
+                                <div class="mini-row"><span class="mini-cell">Lulus</span><span class="mini-cell mini-arrow">→</span><span class="mini-cell mini-active">=IF(B2>75,"Lulus")</span></div>
+                            </div>
+                            <div class="demo-caption">Menampilkan rumus asli di setiap sel, bukan hasilnya</div>
+                        </div>
                     </div>
-                    <div class="shortcut-item">
-                        <div class="shortcut-keys"><kbd>F2</kbd></div>
-                        <div class="shortcut-desc">Edit sel aktif (masuk mode edit)</div>
+
+                    <div class="shortcut-item-interactive" onclick="toggleDemo(this)">
+                        <div class="shortcut-main">
+                            <div class="shortcut-keys"><kbd>F2</kbd></div>
+                            <div class="shortcut-desc">Edit sel aktif (masuk mode edit)</div>
+                            <span class="demo-toggle-icon">▶</span>
+                        </div>
+                        <div class="shortcut-demo">
+                            <div class="mini-excel">
+                                <div class="mini-row"><span class="mini-cell mini-active" style="border: 2px solid #007bff;">|Hello World_ (editing)</span></div>
+                            </div>
+                            <div class="demo-caption">Kursor masuk ke dalam sel untuk mengedit isi tanpa menghapus data lama</div>
+                        </div>
                     </div>
-                    <div class="shortcut-item">
-                        <div class="shortcut-keys"><kbd>Tab</kbd></div>
-                        <div class="shortcut-desc">Pilih saran autocomplete rumus</div>
+
+                    <div class="shortcut-item-interactive" onclick="toggleDemo(this)">
+                        <div class="shortcut-main">
+                            <div class="shortcut-keys"><kbd>Tab</kbd></div>
+                            <div class="shortcut-desc">Pilih saran autocomplete rumus</div>
+                            <span class="demo-toggle-icon">▶</span>
+                        </div>
+                        <div class="shortcut-demo">
+                            <div class="mini-excel">
+                                <div class="mini-row"><span class="mini-cell mini-active">=VL</span></div>
+                                <div class="mini-row"><span class="mini-cell mini-selected">VLOOKUP ← Tab</span></div>
+                                <div class="mini-row"><span class="mini-cell">VALUE</span></div>
+                            </div>
+                            <div class="demo-caption">Saat mengetik rumus, tekan Tab untuk memilih saran dari daftar autocomplete</div>
+                        </div>
                     </div>
-                    <div class="shortcut-item">
-                        <div class="shortcut-keys"><kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>Enter</kbd></div>
-                        <div class="shortcut-desc">Masukkan rumus array (CSE)</div>
+
+                    <div class="shortcut-item-interactive" onclick="toggleDemo(this)">
+                        <div class="shortcut-main">
+                            <div class="shortcut-keys"><kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>Enter</kbd></div>
+                            <div class="shortcut-desc">Masukkan rumus array (CSE)</div>
+                            <span class="demo-toggle-icon">▶</span>
+                        </div>
+                        <div class="shortcut-demo">
+                            <div class="mini-excel">
+                                <div class="mini-row"><span class="mini-cell mini-active">{=SUM(A1:A3*B1:B3)}</span></div>
+                            </div>
+                            <div class="demo-caption">Rumus diapit kurung kurawal {} menandakan rumus array (CSE formula)</div>
+                        </div>
                     </div>
-                    <div class="shortcut-item">
-                        <div class="shortcut-keys"><kbd>F9</kbd></div>
-                        <div class="shortcut-desc">Hitung ulang semua workbook</div>
+
+                    <div class="shortcut-item-interactive" onclick="toggleDemo(this)">
+                        <div class="shortcut-main">
+                            <div class="shortcut-keys"><kbd>F9</kbd></div>
+                            <div class="shortcut-desc">Hitung ulang semua workbook</div>
+                            <span class="demo-toggle-icon">▶</span>
+                        </div>
+                        <div class="shortcut-demo">
+                            <div class="mini-excel">
+                                <div class="mini-row"><span class="mini-cell">Rumus lama: 100</span><span class="mini-cell mini-arrow">F9→</span><span class="mini-cell mini-active">Hasil baru: 150</span></div>
+                            </div>
+                            <div class="demo-caption">Semua rumus di workbook dihitung ulang (berguna jika auto-calculate dimatikan)</div>
+                        </div>
                     </div>
+
                 </div>
             </div>
 
-            <!-- File -->
+
+            <!-- FILE -->
             <div class="shortcut-category" data-category="file">
                 <h2 class="category-title cat-file">💾 File</h2>
-                <div class="shortcut-grid">
-                    <div class="shortcut-item">
-                        <div class="shortcut-keys"><kbd>Ctrl</kbd>+<kbd>S</kbd></div>
-                        <div class="shortcut-desc">Simpan file</div>
+                <div class="shortcut-list-interactive">
+
+                    <div class="shortcut-item-interactive" onclick="toggleDemo(this)">
+                        <div class="shortcut-main">
+                            <div class="shortcut-keys"><kbd>Ctrl</kbd>+<kbd>S</kbd></div>
+                            <div class="shortcut-desc">Simpan file</div>
+                            <span class="demo-toggle-icon">▶</span>
+                        </div>
+                        <div class="shortcut-demo">
+                            <div class="mini-excel">
+                                <div class="mini-row"><span class="mini-cell mini-active">💾 File tersimpan! (title bar: Laporan.xlsx)</span></div>
+                            </div>
+                            <div class="demo-caption">File langsung tersimpan ke lokasi terakhir tanpa dialog</div>
+                        </div>
                     </div>
-                    <div class="shortcut-item">
-                        <div class="shortcut-keys"><kbd>Ctrl</kbd>+<kbd>N</kbd></div>
-                        <div class="shortcut-desc">Buat workbook baru</div>
+
+                    <div class="shortcut-item-interactive" onclick="toggleDemo(this)">
+                        <div class="shortcut-main">
+                            <div class="shortcut-keys"><kbd>Ctrl</kbd>+<kbd>N</kbd></div>
+                            <div class="shortcut-desc">Buat workbook baru</div>
+                            <span class="demo-toggle-icon">▶</span>
+                        </div>
+                        <div class="shortcut-demo">
+                            <div class="mini-excel">
+                                <div class="mini-row"><span class="mini-cell mini-active">📄 Book2 - Workbook baru terbuka!</span></div>
+                            </div>
+                            <div class="demo-caption">Membuka workbook kosong baru secara instan</div>
+                        </div>
                     </div>
-                    <div class="shortcut-item">
-                        <div class="shortcut-keys"><kbd>Ctrl</kbd>+<kbd>O</kbd></div>
-                        <div class="shortcut-desc">Buka file</div>
+
+                    <div class="shortcut-item-interactive" onclick="toggleDemo(this)">
+                        <div class="shortcut-main">
+                            <div class="shortcut-keys"><kbd>Ctrl</kbd>+<kbd>O</kbd></div>
+                            <div class="shortcut-desc">Buka file</div>
+                            <span class="demo-toggle-icon">▶</span>
+                        </div>
+                        <div class="shortcut-demo">
+                            <div class="mini-excel mini-dialog">
+                                <div class="dialog-box">
+                                    <div class="dialog-title">Open File</div>
+                                    <div class="dialog-input">📁 Pilih file Excel (.xlsx, .xls, .csv)</div>
+                                    <div class="dialog-btn">Open</div>
+                                </div>
+                            </div>
+                            <div class="demo-caption">Membuka dialog untuk memilih dan membuka file Excel</div>
+                        </div>
                     </div>
-                    <div class="shortcut-item">
-                        <div class="shortcut-keys"><kbd>Ctrl</kbd>+<kbd>P</kbd></div>
-                        <div class="shortcut-desc">Print (cetak)</div>
+
+                    <div class="shortcut-item-interactive" onclick="toggleDemo(this)">
+                        <div class="shortcut-main">
+                            <div class="shortcut-keys"><kbd>Ctrl</kbd>+<kbd>P</kbd></div>
+                            <div class="shortcut-desc">Print (cetak)</div>
+                            <span class="demo-toggle-icon">▶</span>
+                        </div>
+                        <div class="shortcut-demo">
+                            <div class="mini-excel mini-dialog">
+                                <div class="dialog-box">
+                                    <div class="dialog-title">🖨️ Print Preview</div>
+                                    <div class="dialog-input">Printer: HP LaserJet | Copies: 1 | Pages: All</div>
+                                    <div class="dialog-btn">Print</div>
+                                </div>
+                            </div>
+                            <div class="demo-caption">Membuka dialog print untuk mencetak spreadsheet</div>
+                        </div>
                     </div>
-                    <div class="shortcut-item">
-                        <div class="shortcut-keys"><kbd>Ctrl</kbd>+<kbd>W</kbd></div>
-                        <div class="shortcut-desc">Tutup workbook aktif</div>
+
+                    <div class="shortcut-item-interactive" onclick="toggleDemo(this)">
+                        <div class="shortcut-main">
+                            <div class="shortcut-keys"><kbd>Ctrl</kbd>+<kbd>W</kbd></div>
+                            <div class="shortcut-desc">Tutup workbook aktif</div>
+                            <span class="demo-toggle-icon">▶</span>
+                        </div>
+                        <div class="shortcut-demo">
+                            <div class="mini-excel">
+                                <div class="mini-row"><span class="mini-cell mini-cut">Laporan.xlsx ✕ (ditutup)</span></div>
+                            </div>
+                            <div class="demo-caption">Menutup workbook yang sedang aktif (Excel tetap terbuka)</div>
+                        </div>
                     </div>
-                    <div class="shortcut-item">
-                        <div class="shortcut-keys"><kbd>F12</kbd></div>
-                        <div class="shortcut-desc">Save As (simpan sebagai)</div>
+
+                    <div class="shortcut-item-interactive" onclick="toggleDemo(this)">
+                        <div class="shortcut-main">
+                            <div class="shortcut-keys"><kbd>F12</kbd></div>
+                            <div class="shortcut-desc">Save As (simpan sebagai)</div>
+                            <span class="demo-toggle-icon">▶</span>
+                        </div>
+                        <div class="shortcut-demo">
+                            <div class="mini-excel mini-dialog">
+                                <div class="dialog-box">
+                                    <div class="dialog-title">Save As</div>
+                                    <div class="dialog-input">📁 Nama: Laporan_v2.xlsx | Lokasi: Documents/</div>
+                                    <div class="dialog-btn">Save</div>
+                                </div>
+                            </div>
+                            <div class="demo-caption">Membuka dialog Save As untuk menyimpan dengan nama/lokasi baru</div>
+                        </div>
                     </div>
+
                 </div>
             </div>
 
-            <!-- Baris & Kolom -->
+            <!-- BARIS & KOLOM -->
             <div class="shortcut-category" data-category="bariskolom">
-                <h2 class="category-title cat-bariskolom">📏 Baris & Kolom</h2>
-                <div class="shortcut-grid">
-                    <div class="shortcut-item">
-                        <div class="shortcut-keys"><kbd>Ctrl</kbd>+<kbd>+</kbd></div>
-                        <div class="shortcut-desc">Sisipkan baris/kolom</div>
+                <h2 class="category-title cat-bariskolom">📏 Baris &amp; Kolom</h2>
+                <div class="shortcut-list-interactive">
+
+                    <div class="shortcut-item-interactive" onclick="toggleDemo(this)">
+                        <div class="shortcut-main">
+                            <div class="shortcut-keys"><kbd>Ctrl</kbd>+<kbd>+</kbd></div>
+                            <div class="shortcut-desc">Sisipkan baris/kolom</div>
+                            <span class="demo-toggle-icon">▶</span>
+                        </div>
+                        <div class="shortcut-demo">
+                            <div class="mini-excel">
+                                <div class="mini-row"><span class="mini-cell">Baris 1</span></div>
+                                <div class="mini-row"><span class="mini-cell mini-active">✨ Baris baru (disisipkan)</span></div>
+                                <div class="mini-row"><span class="mini-cell">Baris 2 (bergeser ke bawah)</span></div>
+                            </div>
+                            <div class="demo-caption">Baris/kolom baru disisipkan, data yang ada bergeser ke bawah/kanan</div>
+                        </div>
                     </div>
-                    <div class="shortcut-item">
-                        <div class="shortcut-keys"><kbd>Ctrl</kbd>+<kbd>-</kbd></div>
-                        <div class="shortcut-desc">Hapus baris/kolom</div>
+
+                    <div class="shortcut-item-interactive" onclick="toggleDemo(this)">
+                        <div class="shortcut-main">
+                            <div class="shortcut-keys"><kbd>Ctrl</kbd>+<kbd>-</kbd></div>
+                            <div class="shortcut-desc">Hapus baris/kolom</div>
+                            <span class="demo-toggle-icon">▶</span>
+                        </div>
+                        <div class="shortcut-demo">
+                            <div class="mini-excel">
+                                <div class="mini-row"><span class="mini-cell">Baris 1</span></div>
+                                <div class="mini-row"><span class="mini-cell mini-cut">Baris 2 ✕ (dihapus)</span></div>
+                                <div class="mini-row"><span class="mini-cell">Baris 3 (naik ke atas)</span></div>
+                            </div>
+                            <div class="demo-caption">Baris/kolom terpilih dihapus, data di bawah/kanan bergeser mengisi</div>
+                        </div>
                     </div>
-                    <div class="shortcut-item">
-                        <div class="shortcut-keys"><kbd>Alt</kbd>+<kbd>H</kbd>+<kbd>O</kbd>+<kbd>I</kbd></div>
-                        <div class="shortcut-desc">Auto-fit lebar kolom</div>
+
+                    <div class="shortcut-item-interactive" onclick="toggleDemo(this)">
+                        <div class="shortcut-main">
+                            <div class="shortcut-keys"><kbd>Alt</kbd>+<kbd>H</kbd>+<kbd>O</kbd>+<kbd>I</kbd></div>
+                            <div class="shortcut-desc">Auto-fit lebar kolom</div>
+                            <span class="demo-toggle-icon">▶</span>
+                        </div>
+                        <div class="shortcut-demo">
+                            <div class="mini-excel">
+                                <div class="mini-row"><span class="mini-cell" style="width:50px">Te...</span><span class="mini-cell mini-arrow">→</span><span class="mini-cell mini-active" style="width:auto">Teks Panjang Sekali</span></div>
+                            </div>
+                            <div class="demo-caption">Lebar kolom otomatis menyesuaikan isi teks terpanjang</div>
+                        </div>
                     </div>
-                    <div class="shortcut-item">
-                        <div class="shortcut-keys"><kbd>Ctrl</kbd>+<kbd>9</kbd></div>
-                        <div class="shortcut-desc">Sembunyikan baris terpilih</div>
+
+                    <div class="shortcut-item-interactive" onclick="toggleDemo(this)">
+                        <div class="shortcut-main">
+                            <div class="shortcut-keys"><kbd>Ctrl</kbd>+<kbd>9</kbd></div>
+                            <div class="shortcut-desc">Sembunyikan baris terpilih</div>
+                            <span class="demo-toggle-icon">▶</span>
+                        </div>
+                        <div class="shortcut-demo">
+                            <div class="mini-excel">
+                                <div class="mini-row"><span class="mini-cell">Baris 1 (terlihat)</span></div>
+                                <div class="mini-row"><span class="mini-cell mini-hidden">Baris 2 ▬▬ (tersembunyi)</span></div>
+                                <div class="mini-row"><span class="mini-cell">Baris 3 (terlihat)</span></div>
+                            </div>
+                            <div class="demo-caption">Baris terpilih disembunyikan (masih ada tapi tidak terlihat)</div>
+                        </div>
                     </div>
-                    <div class="shortcut-item">
-                        <div class="shortcut-keys"><kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>9</kbd></div>
-                        <div class="shortcut-desc">Tampilkan baris tersembunyi</div>
+
+                    <div class="shortcut-item-interactive" onclick="toggleDemo(this)">
+                        <div class="shortcut-main">
+                            <div class="shortcut-keys"><kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>9</kbd></div>
+                            <div class="shortcut-desc">Tampilkan baris tersembunyi</div>
+                            <span class="demo-toggle-icon">▶</span>
+                        </div>
+                        <div class="shortcut-demo">
+                            <div class="mini-excel">
+                                <div class="mini-row"><span class="mini-cell">Baris 1</span></div>
+                                <div class="mini-row"><span class="mini-cell mini-active">Baris 2 ✓ (muncul kembali!)</span></div>
+                                <div class="mini-row"><span class="mini-cell">Baris 3</span></div>
+                            </div>
+                            <div class="demo-caption">Baris yang tersembunyi ditampilkan kembali</div>
+                        </div>
                     </div>
-                    <div class="shortcut-item">
-                        <div class="shortcut-keys"><kbd>Ctrl</kbd>+<kbd>0</kbd></div>
-                        <div class="shortcut-desc">Sembunyikan kolom terpilih</div>
+
+                    <div class="shortcut-item-interactive" onclick="toggleDemo(this)">
+                        <div class="shortcut-main">
+                            <div class="shortcut-keys"><kbd>Ctrl</kbd>+<kbd>0</kbd></div>
+                            <div class="shortcut-desc">Sembunyikan kolom terpilih</div>
+                            <span class="demo-toggle-icon">▶</span>
+                        </div>
+                        <div class="shortcut-demo">
+                            <div class="mini-excel">
+                                <div class="mini-row"><span class="mini-cell mini-header">A</span><span class="mini-cell mini-hidden">B ▬</span><span class="mini-cell mini-header">C</span></div>
+                                <div class="mini-row"><span class="mini-cell">Data A</span><span class="mini-cell mini-hidden">hidden</span><span class="mini-cell">Data C</span></div>
+                            </div>
+                            <div class="demo-caption">Kolom B disembunyikan, kolom A langsung bersebelahan dengan C</div>
+                        </div>
                     </div>
+
                 </div>
             </div>
 
-            <!-- Sheet -->
+            <!-- SHEET -->
             <div class="shortcut-category" data-category="sheet">
                 <h2 class="category-title cat-sheet">📄 Sheet</h2>
-                <div class="shortcut-grid">
-                    <div class="shortcut-item">
-                        <div class="shortcut-keys"><kbd>Ctrl</kbd>+<kbd>Page Up</kbd></div>
-                        <div class="shortcut-desc">Pindah ke sheet sebelumnya</div>
+                <div class="shortcut-list-interactive">
+
+                    <div class="shortcut-item-interactive" onclick="toggleDemo(this)">
+                        <div class="shortcut-main">
+                            <div class="shortcut-keys"><kbd>Ctrl</kbd>+<kbd>Page Up</kbd></div>
+                            <div class="shortcut-desc">Pindah ke sheet sebelumnya</div>
+                            <span class="demo-toggle-icon">▶</span>
+                        </div>
+                        <div class="shortcut-demo">
+                            <div class="mini-excel">
+                                <div class="mini-row mini-tabs"><span class="mini-cell mini-active">◀ Sheet1</span><span class="mini-cell mini-prev">Sheet2</span><span class="mini-cell">Sheet3</span></div>
+                            </div>
+                            <div class="demo-caption">Berpindah ke tab sheet sebelumnya (ke kiri)</div>
+                        </div>
                     </div>
-                    <div class="shortcut-item">
-                        <div class="shortcut-keys"><kbd>Ctrl</kbd>+<kbd>Page Down</kbd></div>
-                        <div class="shortcut-desc">Pindah ke sheet berikutnya</div>
+
+                    <div class="shortcut-item-interactive" onclick="toggleDemo(this)">
+                        <div class="shortcut-main">
+                            <div class="shortcut-keys"><kbd>Ctrl</kbd>+<kbd>Page Down</kbd></div>
+                            <div class="shortcut-desc">Pindah ke sheet berikutnya</div>
+                            <span class="demo-toggle-icon">▶</span>
+                        </div>
+                        <div class="shortcut-demo">
+                            <div class="mini-excel">
+                                <div class="mini-row mini-tabs"><span class="mini-cell">Sheet1</span><span class="mini-cell mini-prev">Sheet2</span><span class="mini-cell mini-active">Sheet3 ▶</span></div>
+                            </div>
+                            <div class="demo-caption">Berpindah ke tab sheet berikutnya (ke kanan)</div>
+                        </div>
                     </div>
-                    <div class="shortcut-item">
-                        <div class="shortcut-keys"><kbd>Shift</kbd>+<kbd>F11</kbd></div>
-                        <div class="shortcut-desc">Sisipkan sheet baru</div>
+
+                    <div class="shortcut-item-interactive" onclick="toggleDemo(this)">
+                        <div class="shortcut-main">
+                            <div class="shortcut-keys"><kbd>Shift</kbd>+<kbd>F11</kbd></div>
+                            <div class="shortcut-desc">Sisipkan sheet baru</div>
+                            <span class="demo-toggle-icon">▶</span>
+                        </div>
+                        <div class="shortcut-demo">
+                            <div class="mini-excel">
+                                <div class="mini-row mini-tabs"><span class="mini-cell">Sheet1</span><span class="mini-cell mini-active">✨ Sheet2 (baru!)</span><span class="mini-cell">Sheet3</span></div>
+                            </div>
+                            <div class="demo-caption">Sheet baru disisipkan sebelum sheet yang aktif</div>
+                        </div>
                     </div>
-                    <div class="shortcut-item">
-                        <div class="shortcut-keys"><kbd>Alt</kbd>+<kbd>H</kbd>+<kbd>D</kbd>+<kbd>S</kbd></div>
-                        <div class="shortcut-desc">Hapus sheet aktif</div>
+
+                    <div class="shortcut-item-interactive" onclick="toggleDemo(this)">
+                        <div class="shortcut-main">
+                            <div class="shortcut-keys"><kbd>Alt</kbd>+<kbd>H</kbd>+<kbd>D</kbd>+<kbd>S</kbd></div>
+                            <div class="shortcut-desc">Hapus sheet aktif</div>
+                            <span class="demo-toggle-icon">▶</span>
+                        </div>
+                        <div class="shortcut-demo">
+                            <div class="mini-excel">
+                                <div class="mini-row mini-tabs"><span class="mini-cell">Sheet1</span><span class="mini-cell mini-cut">Sheet2 ✕</span><span class="mini-cell mini-active">Sheet3</span></div>
+                            </div>
+                            <div class="demo-caption">Sheet yang aktif dihapus permanen (tidak bisa di-undo!)</div>
+                        </div>
                     </div>
-                    <div class="shortcut-item">
-                        <div class="shortcut-keys"><kbd>Alt</kbd>+<kbd>H</kbd>+<kbd>O</kbd>+<kbd>R</kbd></div>
-                        <div class="shortcut-desc">Rename sheet aktif</div>
+
+                    <div class="shortcut-item-interactive" onclick="toggleDemo(this)">
+                        <div class="shortcut-main">
+                            <div class="shortcut-keys"><kbd>Alt</kbd>+<kbd>H</kbd>+<kbd>O</kbd>+<kbd>R</kbd></div>
+                            <div class="shortcut-desc">Rename sheet aktif</div>
+                            <span class="demo-toggle-icon">▶</span>
+                        </div>
+                        <div class="shortcut-demo">
+                            <div class="mini-excel">
+                                <div class="mini-row mini-tabs"><span class="mini-cell">Sheet1</span><span class="mini-cell mini-active" style="border:2px dashed #007bff">|Laporan_2026|</span><span class="mini-cell">Sheet3</span></div>
+                            </div>
+                            <div class="demo-caption">Nama sheet bisa langsung diedit (ketik nama baru lalu Enter)</div>
+                        </div>
                     </div>
+
                 </div>
             </div>
 
-            <!-- Lain-lain -->
+
+            <!-- LAIN-LAIN -->
             <div class="shortcut-category" data-category="lainnya">
                 <h2 class="category-title cat-lainnya">⚡ Lain-lain</h2>
-                <div class="shortcut-grid">
-                    <div class="shortcut-item">
-                        <div class="shortcut-keys"><kbd>Ctrl</kbd>+<kbd>Z</kbd></div>
-                        <div class="shortcut-desc">Undo (batalkan)</div>
+                <div class="shortcut-list-interactive">
+
+                    <div class="shortcut-item-interactive" onclick="toggleDemo(this)">
+                        <div class="shortcut-main">
+                            <div class="shortcut-keys"><kbd>Ctrl</kbd>+<kbd>Z</kbd></div>
+                            <div class="shortcut-desc">Undo (batalkan)</div>
+                            <span class="demo-toggle-icon">▶</span>
+                        </div>
+                        <div class="shortcut-demo">
+                            <div class="mini-excel">
+                                <div class="mini-row"><span class="mini-cell mini-cut">Salah hapus!</span><span class="mini-cell mini-arrow">Ctrl+Z→</span><span class="mini-cell mini-active">Data kembali! ↩️</span></div>
+                            </div>
+                            <div class="demo-caption">Membatalkan aksi terakhir (bisa berkali-kali untuk undo bertingkat)</div>
+                        </div>
                     </div>
-                    <div class="shortcut-item">
-                        <div class="shortcut-keys"><kbd>Ctrl</kbd>+<kbd>Y</kbd></div>
-                        <div class="shortcut-desc">Redo (ulangi)</div>
+
+                    <div class="shortcut-item-interactive" onclick="toggleDemo(this)">
+                        <div class="shortcut-main">
+                            <div class="shortcut-keys"><kbd>Ctrl</kbd>+<kbd>Y</kbd></div>
+                            <div class="shortcut-desc">Redo (ulangi)</div>
+                            <span class="demo-toggle-icon">▶</span>
+                        </div>
+                        <div class="shortcut-demo">
+                            <div class="mini-excel">
+                                <div class="mini-row"><span class="mini-cell">Setelah Undo</span><span class="mini-cell mini-arrow">Ctrl+Y→</span><span class="mini-cell mini-active">Aksi diulangi! ↪️</span></div>
+                            </div>
+                            <div class="demo-caption">Mengulangi aksi yang baru saja di-undo</div>
+                        </div>
                     </div>
-                    <div class="shortcut-item">
-                        <div class="shortcut-keys"><kbd>Ctrl</kbd>+<kbd>F</kbd></div>
-                        <div class="shortcut-desc">Find (cari)</div>
+
+                    <div class="shortcut-item-interactive" onclick="toggleDemo(this)">
+                        <div class="shortcut-main">
+                            <div class="shortcut-keys"><kbd>Ctrl</kbd>+<kbd>F</kbd></div>
+                            <div class="shortcut-desc">Find (cari)</div>
+                            <span class="demo-toggle-icon">▶</span>
+                        </div>
+                        <div class="shortcut-demo">
+                            <div class="mini-excel mini-dialog">
+                                <div class="dialog-box">
+                                    <div class="dialog-title">🔍 Find</div>
+                                    <div class="dialog-input">Find what: <span class="mini-active">Jakarta</span></div>
+                                    <div class="dialog-btn">Find Next</div>
+                                </div>
+                            </div>
+                            <div class="demo-caption">Membuka dialog pencarian untuk menemukan teks dalam spreadsheet</div>
+                        </div>
                     </div>
-                    <div class="shortcut-item">
-                        <div class="shortcut-keys"><kbd>Ctrl</kbd>+<kbd>H</kbd></div>
-                        <div class="shortcut-desc">Find & Replace</div>
+
+                    <div class="shortcut-item-interactive" onclick="toggleDemo(this)">
+                        <div class="shortcut-main">
+                            <div class="shortcut-keys"><kbd>Ctrl</kbd>+<kbd>H</kbd></div>
+                            <div class="shortcut-desc">Find &amp; Replace</div>
+                            <span class="demo-toggle-icon">▶</span>
+                        </div>
+                        <div class="shortcut-demo">
+                            <div class="mini-excel mini-dialog">
+                                <div class="dialog-box">
+                                    <div class="dialog-title">🔄 Find & Replace</div>
+                                    <div class="dialog-input">Find: "Jakarta" → Replace: "Bandung"</div>
+                                    <div class="dialog-btn">Replace All</div>
+                                </div>
+                            </div>
+                            <div class="demo-caption">Mencari dan mengganti teks secara massal di seluruh sheet</div>
+                        </div>
                     </div>
-                    <div class="shortcut-item">
-                        <div class="shortcut-keys"><kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>L</kbd></div>
-                        <div class="shortcut-desc">Toggle AutoFilter</div>
+
+                    <div class="shortcut-item-interactive" onclick="toggleDemo(this)">
+                        <div class="shortcut-main">
+                            <div class="shortcut-keys"><kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>L</kbd></div>
+                            <div class="shortcut-desc">Toggle AutoFilter</div>
+                            <span class="demo-toggle-icon">▶</span>
+                        </div>
+                        <div class="shortcut-demo">
+                            <div class="mini-excel">
+                                <div class="mini-row"><span class="mini-cell mini-active">Nama ▼</span><span class="mini-cell mini-active">Kota ▼</span><span class="mini-cell mini-active">Nilai ▼</span></div>
+                                <div class="mini-row"><span class="mini-cell">Andi</span><span class="mini-cell">Jakarta</span><span class="mini-cell">85</span></div>
+                                <div class="mini-row"><span class="mini-cell">Budi</span><span class="mini-cell">Bandung</span><span class="mini-cell">90</span></div>
+                            </div>
+                            <div class="demo-caption">Tombol dropdown filter ▼ muncul di header untuk menyaring data</div>
+                        </div>
                     </div>
-                    <div class="shortcut-item">
-                        <div class="shortcut-keys"><kbd>Ctrl</kbd>+<kbd>T</kbd></div>
-                        <div class="shortcut-desc">Buat Table dari data</div>
+
+                    <div class="shortcut-item-interactive" onclick="toggleDemo(this)">
+                        <div class="shortcut-main">
+                            <div class="shortcut-keys"><kbd>Ctrl</kbd>+<kbd>T</kbd></div>
+                            <div class="shortcut-desc">Buat Table dari data</div>
+                            <span class="demo-toggle-icon">▶</span>
+                        </div>
+                        <div class="shortcut-demo">
+                            <div class="mini-excel">
+                                <div class="mini-row"><span class="mini-cell mini-table-header">Nama</span><span class="mini-cell mini-table-header">Nilai</span></div>
+                                <div class="mini-row"><span class="mini-cell mini-table-row1">Andi</span><span class="mini-cell mini-table-row1">85</span></div>
+                                <div class="mini-row"><span class="mini-cell mini-table-row2">Budi</span><span class="mini-cell mini-table-row2">90</span></div>
+                            </div>
+                            <div class="demo-caption">Data berubah menjadi Table dengan format bergaris (banded rows) dan filter otomatis</div>
+                        </div>
                     </div>
-                    <div class="shortcut-item">
-                        <div class="shortcut-keys"><kbd>Ctrl</kbd>+<kbd>;</kbd></div>
-                        <div class="shortcut-desc">Masukkan tanggal hari ini</div>
+
+                    <div class="shortcut-item-interactive" onclick="toggleDemo(this)">
+                        <div class="shortcut-main">
+                            <div class="shortcut-keys"><kbd>Ctrl</kbd>+<kbd>;</kbd></div>
+                            <div class="shortcut-desc">Masukkan tanggal hari ini</div>
+                            <span class="demo-toggle-icon">▶</span>
+                        </div>
+                        <div class="shortcut-demo">
+                            <div class="mini-excel">
+                                <div class="mini-row"><span class="mini-cell mini-empty">(sel kosong)</span><span class="mini-cell mini-arrow">Ctrl+;→</span><span class="mini-cell mini-active">26/05/2026</span></div>
+                            </div>
+                            <div class="demo-caption">Tanggal hari ini langsung dimasukkan sebagai nilai statis (tidak berubah)</div>
+                        </div>
                     </div>
-                    <div class="shortcut-item">
-                        <div class="shortcut-keys"><kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>;</kbd></div>
-                        <div class="shortcut-desc">Masukkan waktu saat ini</div>
+
+                    <div class="shortcut-item-interactive" onclick="toggleDemo(this)">
+                        <div class="shortcut-main">
+                            <div class="shortcut-keys"><kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>;</kbd></div>
+                            <div class="shortcut-desc">Masukkan waktu saat ini</div>
+                            <span class="demo-toggle-icon">▶</span>
+                        </div>
+                        <div class="shortcut-demo">
+                            <div class="mini-excel">
+                                <div class="mini-row"><span class="mini-cell mini-empty">(sel kosong)</span><span class="mini-cell mini-arrow">→</span><span class="mini-cell mini-active">13:45:00</span></div>
+                            </div>
+                            <div class="demo-caption">Waktu saat ini langsung dimasukkan sebagai nilai statis</div>
+                        </div>
                     </div>
-                    <div class="shortcut-item">
-                        <div class="shortcut-keys"><kbd>Ctrl</kbd>+<kbd>E</kbd></div>
-                        <div class="shortcut-desc">Flash Fill</div>
+
+                    <div class="shortcut-item-interactive" onclick="toggleDemo(this)">
+                        <div class="shortcut-main">
+                            <div class="shortcut-keys"><kbd>Ctrl</kbd>+<kbd>E</kbd></div>
+                            <div class="shortcut-desc">Flash Fill</div>
+                            <span class="demo-toggle-icon">▶</span>
+                        </div>
+                        <div class="shortcut-demo">
+                            <div class="mini-excel">
+                                <div class="mini-row"><span class="mini-cell mini-header">A (Sumber)</span><span class="mini-cell mini-header">B (Hasil)</span></div>
+                                <div class="mini-row"><span class="mini-cell">Andi Pratama</span><span class="mini-cell mini-copy">Andi</span></div>
+                                <div class="mini-row"><span class="mini-cell">Budi Santoso</span><span class="mini-cell mini-active">Budi ✨</span></div>
+                                <div class="mini-row"><span class="mini-cell">Citra Dewi</span><span class="mini-cell mini-active">Citra ✨</span></div>
+                            </div>
+                            <div class="demo-caption">Excel mengenali pola dari contoh pertama dan mengisi sisanya otomatis!</div>
+                        </div>
                     </div>
-                    <div class="shortcut-item">
-                        <div class="shortcut-keys"><kbd>Alt</kbd>+<kbd>F1</kbd></div>
-                        <div class="shortcut-desc">Buat chart dari data terpilih</div>
+
+                    <div class="shortcut-item-interactive" onclick="toggleDemo(this)">
+                        <div class="shortcut-main">
+                            <div class="shortcut-keys"><kbd>Alt</kbd>+<kbd>F1</kbd></div>
+                            <div class="shortcut-desc">Buat chart dari data terpilih</div>
+                            <span class="demo-toggle-icon">▶</span>
+                        </div>
+                        <div class="shortcut-demo">
+                            <div class="mini-excel">
+                                <div class="mini-row"><span class="mini-cell">Data terpilih</span><span class="mini-cell mini-arrow">Alt+F1→</span><span class="mini-cell mini-active">📊 Chart muncul!</span></div>
+                            </div>
+                            <div class="demo-caption">Chart/grafik langsung dibuat dari data yang sedang dipilih</div>
+                        </div>
                     </div>
-                    <div class="shortcut-item">
-                        <div class="shortcut-keys"><kbd>Esc</kbd></div>
-                        <div class="shortcut-desc">Batalkan input / tutup dialog</div>
+
+                    <div class="shortcut-item-interactive" onclick="toggleDemo(this)">
+                        <div class="shortcut-main">
+                            <div class="shortcut-keys"><kbd>Esc</kbd></div>
+                            <div class="shortcut-desc">Batalkan input / tutup dialog</div>
+                            <span class="demo-toggle-icon">▶</span>
+                        </div>
+                        <div class="shortcut-demo">
+                            <div class="mini-excel">
+                                <div class="mini-row"><span class="mini-cell mini-active">Sedang mengetik...</span><span class="mini-cell mini-arrow">Esc→</span><span class="mini-cell">Kembali ke nilai awal</span></div>
+                            </div>
+                            <div class="demo-caption">Membatalkan input yang sedang diketik atau menutup dialog yang terbuka</div>
+                        </div>
                     </div>
+
                 </div>
             </div>
 
@@ -492,16 +1112,16 @@
                     <h4>Navigasi</h4>
                     <ul>
                         <li><a href="index.html">Beranda</a></li>
-                        <li><a href="rumus.html">Rumus & Fungsi</a></li>
+                        <li><a href="rumus.html">Rumus &amp; Fungsi</a></li>
                         <li><a href="shortcut.html">Shortcut Keyboard</a></li>
                     </ul>
                 </div>
                 <div class="footer-col">
                     <h4>Kategori Shortcut</h4>
                     <ul>
-                        <li><a href="#navigasi">Navigasi</a></li>
-                        <li><a href="#format">Format</a></li>
-                        <li><a href="#rumus">Rumus</a></li>
+                        <li><a href="#">Navigasi</a></li>
+                        <li><a href="#">Format</a></li>
+                        <li><a href="#">Rumus</a></li>
                     </ul>
                 </div>
             </div>
