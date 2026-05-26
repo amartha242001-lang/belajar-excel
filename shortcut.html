@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shortcut Keyboard Excel - CyberNeurova</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="nav-logo">📊 CyberNeurova</a>
+            <button class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="index.html" class="nav-link">Beranda</a></li>
+                <li><a href="rumus.html" class="nav-link">Rumus & Fungsi</a></li>
+                <li><a href="shortcut.html" class="nav-link active">Shortcut Keyboard</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Header -->
+    <section class="page-header page-header-shortcut">
+        <h1>⌨️ Shortcut Keyboard Excel</h1>
+        <p>50+ shortcut keyboard untuk mempercepat pekerjaan Anda di Microsoft Excel.</p>
+    </section>
+
+    <!-- Panduan -->
+    <section class="guide-section">
+        <div class="container-main">
+            <div class="guide-box">
+                <h3>📖 Cara Menggunakan Shortcut</h3>
+                <p>Tekan tombol secara bersamaan. Contoh: <kbd>Ctrl</kbd>+<kbd>C</kbd> berarti tekan dan tahan tombol <kbd>Ctrl</kbd>, lalu tekan <kbd>C</kbd>, kemudian lepaskan keduanya.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Filter & Search -->
+    <section class="filter-section">
+        <div class="container-main">
+            <div class="filter-bar">
+                <input type="text" id="searchShortcut" placeholder="🔍 Cari shortcut..." class="search-input">
+                <div class="filter-buttons">
+                    <button class="filter-btn active" data-category="all">Semua</button>
+                    <button class="filter-btn" data-category="navigasi">Navigasi</button>
+                    <button class="filter-btn" data-category="seleksi">Seleksi</button>
+                    <button class="filter-btn" data-category="copypaste">Copy & Paste</button>
+                    <button class="filter-btn" data-category="format">Format</button>
+                    <button class="filter-btn" data-category="rumus">Rumus</button>
+                    <button class="filter-btn" data-category="file">File</button>
+                    <button class="filter-btn" data-category="bariskolom">Baris & Kolom</button>
+                    <button class="filter-btn" data-category="sheet">Sheet</button>
+                    <button class="filter-btn" data-category="lainnya">Lain-lain</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Shortcut Content -->
+    <section class="shortcuts-section">
+        <div class="container-main">
+
+            <!-- Navigasi -->
+            <div class="shortcut-category" data-category="navigasi">
+                <h2 class="category-title cat-navigasi">🧭 Navigasi</h2>
+                <div class="shortcut-grid">
+                    <div class="shortcut-item">
+                        <div class="shortcut-keys"><kbd>Ctrl</kbd>+<kbd>Home</kbd></div>
+                        <div class="shortcut-desc">Pindah ke sel A1</div>
+                    </div>
+                    <div class="shortcut-item">
+                        <div class="shortcut-keys"><kbd>Ctrl</kbd>+<kbd>End</kbd></div>
+                        <div class="shortcut-desc">Pindah ke sel terakhir yang berisi data</div>
+                    </div>
+                    <div class="shortcut-item">
+                        <div class="shortcut-keys"><kbd>Ctrl</kbd>+<kbd>→</kbd></div>
+                        <div class="shortcut-desc">Pindah ke sel terisi berikutnya (kanan)</div>
+                    </div>
+                    <div class="shortcut-item">
+                        <div class="shortcut-keys"><kbd>Ctrl</kbd>+<kbd>←</kbd></div>
+                        <div class="shortcut-desc">Pindah ke sel terisi berikutnya (kiri)</div>
+                    </div>
+                    <div class="shortcut-item">
+                        <div class="shortcut-keys"><kbd>Ctrl</kbd>+<kbd>↑</kbd></div>
+                        <div class="shortcut-desc">Pindah ke sel terisi berikutnya (atas)</div>
+                    </div>
+                    <div class="shortcut-item">
+                        <div class="shortcut-keys"><kbd>Ctrl</kbd>+<kbd>↓</kbd></div>
+                        <div class="shortcut-desc">Pindah ke sel terisi berikutnya (bawah)</div>
+                    </div>
+                    <div class="shortcut-item">
+                        <div class="shortcut-keys"><kbd>Ctrl</kbd>+<kbd>G</kbd></div>
+                        <div class="shortcut-desc">Buka dialog Go To</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Seleksi -->
+            <div class="shortcut-category" data-category="seleksi">
+                <h2 class="category-title cat-seleksi">🖱️ Seleksi</h2>
+                <div class="shortcut-grid">
+                    <div class="shortcut-item">
+                        <div class="shortcut-keys"><kbd>Ctrl</kbd>+<kbd>A</kbd></div>
+                        <div class="shortcut-desc">Pilih semua sel</div>
+                    </div>
+                    <div class="shortcut-item">
+                        <div class="shortcut-keys"><kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>End</kbd></div>
+                        <div class="shortcut-desc">Pilih dari sel aktif sampai sel terakhir</div>
+                    </div>
+                    <div class="shortcut-item">
+                        <div class="shortcut-keys"><kbd>Ctrl</kbd>+<kbd>Space</kbd></div>
+                        <div class="shortcut-desc">Pilih seluruh kolom</div>
+                    </div>
+                    <div class="shortcut-item">
+                        <div class="shortcut-keys"><kbd>Shift</kbd>+<kbd>Space</kbd></div>
+                        <div class="shortcut-desc">Pilih seluruh baris</div>
+                    </div>
+                    <div class="shortcut-item">
+                        <div class="shortcut-keys"><kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>→</kbd></div>
+                        <div class="shortcut-desc">Pilih sampai sel terisi terakhir (kanan)</div>
+                    </div>
+                    <div class="shortcut-item">
+                        <div class="shortcut-keys"><kbd>Shift</kbd>+<kbd>Click</kbd></div>
+                        <div class="shortcut-desc">Pilih range dari sel aktif ke sel yang diklik</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Copy & Paste -->
+            <div class="shortcut-category" data-category="copypaste">
+                <h2 class="category-title cat-copypaste">📋 Copy & Paste</h2>
+                <div class="shortcut-grid">
+                    <div class="shortcut-item">
+                        <div class="shortcut-keys"><kbd>Ctrl</kbd>+<kbd>C</kbd></div>
+                        <div class="shortcut-desc">Copy (salin)</div>
+                    </div>
+                    <div class="shortcut-item">
+                        <div class="shortcut-keys"><kbd>Ctrl</kbd>+<kbd>X</kbd></div>
+                        <div class="shortcut-desc">Cut (potong)</div>
+                    </div>
+                    <div class="shortcut-item">
+                        <div class="shortcut-keys"><kbd>Ctrl</kbd>+<kbd>V</kbd></div>
+                        <div class="shortcut-desc">Paste (tempel)</div>
+                    </div>
+                    <div class="shortcut-item">
+                        <div class="shortcut-keys"><kbd>Ctrl</kbd>+<kbd>Alt</kbd>+<kbd>V</kbd></div>
+                        <div class="shortcut-desc">Paste Special (pilih format paste)</div>
+                    </div>
+                    <div class="shortcut-item">
+                        <div class="shortcut-keys"><kbd>Ctrl</kbd>+<kbd>D</kbd></div>
+                        <div class="shortcut-desc">Fill Down (isi ke bawah)</div>
+                    </div>
+                    <div class="shortcut-item">
+                        <div class="shortcut-keys"><kbd>Ctrl</kbd>+<kbd>R</kbd></div>
+                        <div class="shortcut-desc">Fill Right (isi ke kanan)</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Format -->
+            <div class="shortcut-category" data-category="format">
+                <h2 class="category-title cat-format">🎨 Format</h2>
+                <div class="shortcut-grid">
+                    <div class="shortcut-item">
+                        <div class="shortcut-keys"><kbd>Ctrl</kbd>+<kbd>B</kbd></div>
+                        <div class="shortcut-desc">Bold (tebal)</div>
+                    </div>
+                    <div class="shortcut-item">
+                        <div class="shortcut-keys"><kbd>Ctrl</kbd>+<kbd>I</kbd></div>
+                        <div class="shortcut-desc">Italic (miring)</div>
+                    </div>
+                    <div class="shortcut-item">
+                        <div class="shortcut-keys"><kbd>Ctrl</kbd>+<kbd>U</kbd></div>
+                        <div class="shortcut-desc">Underline (garis bawah)</div>
+                    </div>
+                    <div class="shortcut-item">
+                        <div class="shortcut-keys"><kbd>Ctrl</kbd>+<kbd>1</kbd></div>
+                        <div class="shortcut-desc">Buka Format Cells dialog</div>
+                    </div>
+                    <div class="shortcut-item">
+                        <div class="shortcut-keys"><kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>!</kbd></div>
+                        <div class="shortcut-desc">Format angka dengan 2 desimal</div>
+                    </div>
+                    <div class="shortcut-item">
+                        <div class="shortcut-keys"><kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>$</kbd></div>
+                        <div class="shortcut-desc">Format mata uang</div>
+                    </div>
+                    <div class="shortcut-item">
+                        <div class="shortcut-keys"><kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>%</kbd></div>
+                        <div class="shortcut-desc">Format persen</div>
+                    </div>
+                    <div class="shortcut-item">
+                        <div class="shortcut-keys"><kbd>Alt</kbd>+<kbd>H</kbd>+<kbd>B</kbd></div>
+                        <div class="shortcut-desc">Tambah border</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Rumus -->
+            <div class="shortcut-category" data-category="rumus">
+                <h2 class="category-title cat-rumus">📐 Rumus</h2>
+                <div class="shortcut-grid">
+                    <div class="shortcut-item">
+                        <div class="shortcut-keys"><kbd>Alt</kbd>+<kbd>=</kbd></div>
+                        <div class="shortcut-desc">AutoSum</div>
+                    </div>
+                    <div class="shortcut-item">
+                        <div class="shortcut-keys"><kbd>F4</kbd></div>
+                        <div class="shortcut-desc">Toggle absolute/relative reference ($)</div>
+                    </div>
+                    <div class="shortcut-item">
+                        <div class="shortcut-keys"><kbd>Ctrl</kbd>+<kbd>`</kbd></div>
+                        <div class="shortcut-desc">Tampilkan/sembunyikan rumus di sel</div>
+                    </div>
+                    <div class="shortcut-item">
+                        <div class="shortcut-keys"><kbd>F2</kbd></div>
+                        <div class="shortcut-desc">Edit sel aktif (masuk mode edit)</div>
+                    </div>
+                    <div class="shortcut-item">
+                        <div class="shortcut-keys"><kbd>Tab</kbd></div>
+                        <div class="shortcut-desc">Pilih saran autocomplete rumus</div>
+                    </div>
+                    <div class="shortcut-item">
+                        <div class="shortcut-keys"><kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>Enter</kbd></div>
+                        <div class="shortcut-desc">Masukkan rumus array (CSE)</div>
+                    </div>
+                    <div class="shortcut-item">
+                        <div class="shortcut-keys"><kbd>F9</kbd></div>
+                        <div class="shortcut-desc">Hitung ulang semua workbook</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- File -->
+            <div class="shortcut-category" data-category="file">
+                <h2 class="category-title cat-file">💾 File</h2>
+                <div class="shortcut-grid">
+                    <div class="shortcut-item">
+                        <div class="shortcut-keys"><kbd>Ctrl</kbd>+<kbd>S</kbd></div>
+                        <div class="shortcut-desc">Simpan file</div>
+                    </div>
+                    <div class="shortcut-item">
+                        <div class="shortcut-keys"><kbd>Ctrl</kbd>+<kbd>N</kbd></div>
+                        <div class="shortcut-desc">Buat workbook baru</div>
+                    </div>
+                    <div class="shortcut-item">
+                        <div class="shortcut-keys"><kbd>Ctrl</kbd>+<kbd>O</kbd></div>
+                        <div class="shortcut-desc">Buka file</div>
+                    </div>
+                    <div class="shortcut-item">
+                        <div class="shortcut-keys"><kbd>Ctrl</kbd>+<kbd>P</kbd></div>
+                        <div class="shortcut-desc">Print (cetak)</div>
+                    </div>
+                    <div class="shortcut-item">
+                        <div class="shortcut-keys"><kbd>Ctrl</kbd>+<kbd>W</kbd></div>
+                        <div class="shortcut-desc">Tutup workbook aktif</div>
+                    </div>
+                    <div class="shortcut-item">
+                        <div class="shortcut-keys"><kbd>F12</kbd></div>
+                        <div class="shortcut-desc">Save As (simpan sebagai)</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Baris & Kolom -->
+            <div class="shortcut-category" data-category="bariskolom">
+                <h2 class="category-title cat-bariskolom">📏 Baris & Kolom</h2>
+                <div class="shortcut-grid">
+                    <div class="shortcut-item">
+                        <div class="shortcut-keys"><kbd>Ctrl</kbd>+<kbd>+</kbd></div>
+                        <div class="shortcut-desc">Sisipkan baris/kolom</div>
+                    </div>
+                    <div class="shortcut-item">
+                        <div class="shortcut-keys"><kbd>Ctrl</kbd>+<kbd>-</kbd></div>
+                        <div class="shortcut-desc">Hapus baris/kolom</div>
+                    </div>
+                    <div class="shortcut-item">
+                        <div class="shortcut-keys"><kbd>Alt</kbd>+<kbd>H</kbd>+<kbd>O</kbd>+<kbd>I</kbd></div>
+                        <div class="shortcut-desc">Auto-fit lebar kolom</div>
+                    </div>
+                    <div class="shortcut-item">
+                        <div class="shortcut-keys"><kbd>Ctrl</kbd>+<kbd>9</kbd></div>
+                        <div class="shortcut-desc">Sembunyikan baris terpilih</div>
+                    </div>
+                    <div class="shortcut-item">
+                        <div class="shortcut-keys"><kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>9</kbd></div>
+                        <div class="shortcut-desc">Tampilkan baris tersembunyi</div>
+                    </div>
+                    <div class="shortcut-item">
+                        <div class="shortcut-keys"><kbd>Ctrl</kbd>+<kbd>0</kbd></div>
+                        <div class="shortcut-desc">Sembunyikan kolom terpilih</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Sheet -->
+            <div class="shortcut-category" data-category="sheet">
+                <h2 class="category-title cat-sheet">📄 Sheet</h2>
+                <div class="shortcut-grid">
+                    <div class="shortcut-item">
+                        <div class="shortcut-keys"><kbd>Ctrl</kbd>+<kbd>Page Up</kbd></div>
+                        <div class="shortcut-desc">Pindah ke sheet sebelumnya</div>
+                    </div>
+                    <div class="shortcut-item">
+                        <div class="shortcut-keys"><kbd>Ctrl</kbd>+<kbd>Page Down</kbd></div>
+                        <div class="shortcut-desc">Pindah ke sheet berikutnya</div>
+                    </div>
+                    <div class="shortcut-item">
+                        <div class="shortcut-keys"><kbd>Shift</kbd>+<kbd>F11</kbd></div>
+                        <div class="shortcut-desc">Sisipkan sheet baru</div>
+                    </div>
+                    <div class="shortcut-item">
+                        <div class="shortcut-keys"><kbd>Alt</kbd>+<kbd>H</kbd>+<kbd>D</kbd>+<kbd>S</kbd></div>
+                        <div class="shortcut-desc">Hapus sheet aktif</div>
+                    </div>
+                    <div class="shortcut-item">
+                        <div class="shortcut-keys"><kbd>Alt</kbd>+<kbd>H</kbd>+<kbd>O</kbd>+<kbd>R</kbd></div>
+                        <div class="shortcut-desc">Rename sheet aktif</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Lain-lain -->
+            <div class="shortcut-category" data-category="lainnya">
+                <h2 class="category-title cat-lainnya">⚡ Lain-lain</h2>
+                <div class="shortcut-grid">
+                    <div class="shortcut-item">
+                        <div class="shortcut-keys"><kbd>Ctrl</kbd>+<kbd>Z</kbd></div>
+                        <div class="shortcut-desc">Undo (batalkan)</div>
+                    </div>
+                    <div class="shortcut-item">
+                        <div class="shortcut-keys"><kbd>Ctrl</kbd>+<kbd>Y</kbd></div>
+                        <div class="shortcut-desc">Redo (ulangi)</div>
+                    </div>
+                    <div class="shortcut-item">
+                        <div class="shortcut-keys"><kbd>Ctrl</kbd>+<kbd>F</kbd></div>
+                        <div class="shortcut-desc">Find (cari)</div>
+                    </div>
+                    <div class="shortcut-item">
+                        <div class="shortcut-keys"><kbd>Ctrl</kbd>+<kbd>H</kbd></div>
+                        <div class="shortcut-desc">Find & Replace</div>
+                    </div>
+                    <div class="shortcut-item">
+                        <div class="shortcut-keys"><kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>L</kbd></div>
+                        <div class="shortcut-desc">Toggle AutoFilter</div>
+                    </div>
+                    <div class="shortcut-item">
+                        <div class="shortcut-keys"><kbd>Ctrl</kbd>+<kbd>T</kbd></div>
+                        <div class="shortcut-desc">Buat Table dari data</div>
+                    </div>
+                    <div class="shortcut-item">
+                        <div class="shortcut-keys"><kbd>Ctrl</kbd>+<kbd>;</kbd></div>
+                        <div class="shortcut-desc">Masukkan tanggal hari ini</div>
+                    </div>
+                    <div class="shortcut-item">
+                        <div class="shortcut-keys"><kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>;</kbd></div>
+                        <div class="shortcut-desc">Masukkan waktu saat ini</div>
+                    </div>
+                    <div class="shortcut-item">
+                        <div class="shortcut-keys"><kbd>Ctrl</kbd>+<kbd>E</kbd></div>
+                        <div class="shortcut-desc">Flash Fill</div>
+                    </div>
+                    <div class="shortcut-item">
+                        <div class="shortcut-keys"><kbd>Alt</kbd>+<kbd>F1</kbd></div>
+                        <div class="shortcut-desc">Buat chart dari data terpilih</div>
+                    </div>
+                    <div class="shortcut-item">
+                        <div class="shortcut-keys"><kbd>Esc</kbd></div>
+                        <div class="shortcut-desc">Batalkan input / tutup dialog</div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container-main">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h4>📊 CyberNeurova</h4>
+                    <p>Platform belajar Microsoft Excel gratis untuk semua level.</p>
+                </div>
+                <div class="footer-col">
+                    <h4>Navigasi</h4>
+                    <ul>
+                        <li><a href="index.html">Beranda</a></li>
+                        <li><a href="rumus.html">Rumus & Fungsi</a></li>
+                        <li><a href="shortcut.html">Shortcut Keyboard</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Kategori Shortcut</h4>
+                    <ul>
+                        <li><a href="#navigasi">Navigasi</a></li>
+                        <li><a href="#format">Format</a></li>
+                        <li><a href="#rumus">Rumus</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 CyberNeurova. Semua hak dilindungi.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

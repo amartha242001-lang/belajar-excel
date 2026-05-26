@@ -1,0 +1,798 @@
+/* === CSS untuk Website Tutorial Excel (CyberNeurova) === */
+
+/* Reset & Global */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f4f7f9;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+ul {
+    list-style: none;
+}
+
+/* Container */
+.container-main {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* ========== NAVBAR ========== */
+.navbar {
+    background: #0056b3;
+    padding: 15px 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+.nav-container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-logo {
+    color: #fff;
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+.nav-menu {
+    display: flex;
+    gap: 30px;
+}
+
+.nav-link {
+    color: #fff;
+    font-size: 1em;
+    padding: 8px 16px;
+    border-radius: 5px;
+    transition: background 0.3s;
+}
+
+.nav-link:hover,
+.nav-link.active {
+    background: rgba(255,255,255,0.2);
+}
+
+/* Hamburger */
+.hamburger {
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 5px;
+}
+
+.hamburger span {
+    width: 25px;
+    height: 3px;
+    background: #fff;
+    border-radius: 3px;
+    transition: 0.3s;
+}
+
+/* ========== HERO ========== */
+.hero {
+    background: linear-gradient(135deg, #0056b3 0%, #007bff 50%, #28a745 100%);
+    color: #fff;
+    padding: 80px 20px;
+    text-align: center;
+}
+
+.hero h1 {
+    font-size: 2.8em;
+    margin-bottom: 15px;
+}
+
+.hero p {
+    font-size: 1.2em;
+    margin-bottom: 30px;
+    opacity: 0.9;
+}
+
+.hero-buttons {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.btn {
+    padding: 14px 28px;
+    border-radius: 8px;
+    font-size: 1.1em;
+    font-weight: 600;
+    transition: transform 0.2s, box-shadow 0.2s;
+    display: inline-block;
+}
+
+.btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+.btn-primary {
+    background: #fff;
+    color: #0056b3;
+}
+
+.btn-secondary {
+    background: rgba(255,255,255,0.15);
+    color: #fff;
+    border: 2px solid #fff;
+}
+
+/* ========== STATS ========== */
+.stats-section {
+    padding: 50px 0;
+    background: #fff;
+}
+
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+    text-align: center;
+}
+
+.stat-card {
+    padding: 30px 20px;
+    border-radius: 10px;
+    background: #f8f9fa;
+    border: 1px solid #e9ecef;
+}
+
+.stat-number {
+    display: block;
+    font-size: 2.5em;
+    font-weight: bold;
+    color: #0056b3;
+}
+
+.stat-label {
+    display: block;
+    margin-top: 5px;
+    color: #666;
+    font-size: 1em;
+}
+
+/* ========== SECTION TITLES ========== */
+.section-title {
+    text-align: center;
+    font-size: 1.8em;
+    color: #0056b3;
+    margin-bottom: 30px;
+}
+
+/* ========== POPULAR FORMULAS ========== */
+.popular-section {
+    padding: 60px 0;
+}
+
+.cards-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 25px;
+}
+
+.formula-card {
+    background: #fff;
+    border-radius: 12px;
+    padding: 30px;
+    box-shadow: 0 3px 15px rgba(0,0,0,0.08);
+    transition: transform 0.3s, box-shadow 0.3s;
+    border-top: 4px solid #ccc;
+}
+
+.formula-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0,0,0,0.12);
+}
+
+.card-logic {
+    border-top-color: #ffc107;
+}
+
+.card-reference {
+    border-top-color: #007bff;
+}
+
+.card-icon {
+    font-size: 2em;
+    margin-bottom: 10px;
+}
+
+.formula-card h3 {
+    font-size: 1.4em;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.formula-card p {
+    color: #666;
+    margin-bottom: 15px;
+}
+
+.formula-card code {
+    display: block;
+    background: #e9ecef;
+    padding: 10px;
+    border-radius: 5px;
+    font-family: 'Consolas', monospace;
+    font-size: 0.9em;
+    margin-bottom: 15px;
+    color: #d63384;
+}
+
+.card-link {
+    color: #007bff;
+    font-weight: 600;
+    transition: color 0.3s;
+}
+
+.card-link:hover {
+    color: #0056b3;
+}
+
+/* ========== TIPS ========== */
+.tips-section {
+    padding: 60px 0;
+    background: #fff;
+}
+
+.tips-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+.tip-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 15px;
+    padding: 20px;
+    background: #f8f9fa;
+    border-radius: 10px;
+    border-left: 4px solid #28a745;
+}
+
+.tip-number {
+    background: #28a745;
+    color: #fff;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    flex-shrink: 0;
+}
+
+.tip-item p {
+    color: #555;
+}
+
+kbd {
+    background: #333;
+    color: #fff;
+    padding: 2px 8px;
+    border-radius: 4px;
+    font-size: 0.85em;
+    font-family: 'Consolas', monospace;
+    box-shadow: 0 2px 0 #111;
+}
+
+/* ========== PAGE HEADER ========== */
+.page-header {
+    background: linear-gradient(135deg, #0056b3, #007bff);
+    color: #fff;
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.page-header-shortcut {
+    background: linear-gradient(135deg, #1a7a3a, #28a745);
+}
+
+.page-header h1 {
+    font-size: 2.2em;
+    margin-bottom: 10px;
+}
+
+.page-header p {
+    font-size: 1.1em;
+    opacity: 0.9;
+}
+
+/* ========== FILTER BAR ========== */
+.filter-section {
+    padding: 30px 0;
+    background: #fff;
+    border-bottom: 1px solid #e9ecef;
+    position: sticky;
+    top: 60px;
+    z-index: 100;
+}
+
+.filter-bar {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.search-input {
+    width: 100%;
+    padding: 12px 20px;
+    border: 2px solid #e9ecef;
+    border-radius: 8px;
+    font-size: 1em;
+    transition: border-color 0.3s;
+}
+
+.search-input:focus {
+    outline: none;
+    border-color: #007bff;
+}
+
+.filter-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.filter-btn {
+    padding: 8px 16px;
+    border: 2px solid #e9ecef;
+    background: #fff;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 0.9em;
+    transition: all 0.3s;
+}
+
+.filter-btn:hover {
+    border-color: #007bff;
+    color: #007bff;
+}
+
+.filter-btn.active {
+    background: #007bff;
+    color: #fff;
+    border-color: #007bff;
+}
+
+/* ========== FORMULA ARTICLES ========== */
+.formulas-section {
+    padding: 40px 0;
+}
+
+.formula-article {
+    background: #fff;
+    border-radius: 12px;
+    margin-bottom: 30px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.06);
+    overflow: hidden;
+    transition: box-shadow 0.3s;
+}
+
+.formula-article:hover {
+    box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+}
+
+.formula-header {
+    padding: 20px 30px;
+    border-bottom: 1px solid #e9ecef;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.formula-header h2 {
+    font-size: 1.4em;
+    color: #333;
+}
+
+.category-badge {
+    padding: 4px 12px;
+    border-radius: 15px;
+    font-size: 0.8em;
+    font-weight: 600;
+    color: #fff;
+}
+
+.badge-logika { background: #ffc107; color: #333; }
+.badge-referensi { background: #007bff; }
+.badge-statistik { background: #6f42c1; }
+.badge-teks { background: #fd7e14; }
+.badge-tanggal { background: #20c997; }
+.badge-data { background: #e83e8c; }
+
+.formula-body {
+    padding: 30px;
+}
+
+.syntax-box {
+    background: #1e1e1e;
+    padding: 20px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    position: relative;
+    overflow-x: auto;
+}
+
+.syntax-label {
+    color: #888;
+    font-size: 0.85em;
+    margin-bottom: 8px;
+}
+
+.syntax-box code {
+    color: #4ec9b0;
+    font-family: 'Consolas', 'Monaco', monospace;
+    font-size: 1.05em;
+    white-space: pre-wrap;
+}
+
+.copy-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: #333;
+    color: #fff;
+    border: 1px solid #555;
+    padding: 5px 12px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 0.8em;
+    transition: background 0.3s;
+}
+
+.copy-btn:hover {
+    background: #007bff;
+}
+
+.params-table {
+    margin-bottom: 20px;
+}
+
+.params-table h4 {
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.params-table table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.params-table th,
+.params-table td {
+    padding: 10px 15px;
+    text-align: left;
+    border: 1px solid #e9ecef;
+}
+
+.params-table th {
+    background: #f8f9fa;
+    font-weight: 600;
+}
+
+.explanation {
+    margin-bottom: 20px;
+}
+
+.explanation h4 {
+    margin-bottom: 8px;
+    color: #333;
+}
+
+.example-box {
+    background: #f0f7ff;
+    border: 1px solid #b8daff;
+    padding: 20px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+
+.example-box h4 {
+    color: #004085;
+    margin-bottom: 10px;
+}
+
+.example-box code {
+    display: block;
+    background: #e2f0ff;
+    padding: 10px;
+    border-radius: 5px;
+    font-family: 'Consolas', monospace;
+    margin: 10px 0;
+    color: #0056b3;
+}
+
+.tips-box {
+    background: #d4edda;
+    border: 1px solid #c3e6cb;
+    padding: 20px;
+    border-radius: 8px;
+}
+
+.tips-box h4 {
+    color: #155724;
+    margin-bottom: 10px;
+}
+
+.tips-box ul {
+    padding-left: 20px;
+}
+
+.tips-box li {
+    list-style: disc;
+    margin-bottom: 5px;
+    color: #155724;
+}
+
+/* ========== SHORTCUT SECTION ========== */
+.guide-section {
+    padding: 30px 0;
+}
+
+.guide-box {
+    background: #fff3cd;
+    border: 1px solid #ffc107;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.guide-box h3 {
+    margin-bottom: 10px;
+    color: #856404;
+}
+
+.guide-box p {
+    color: #856404;
+}
+
+.shortcuts-section {
+    padding: 40px 0;
+}
+
+.shortcut-category {
+    margin-bottom: 40px;
+}
+
+.category-title {
+    font-size: 1.4em;
+    padding: 12px 20px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    color: #fff;
+}
+
+.cat-navigasi { background: #007bff; }
+.cat-seleksi { background: #6f42c1; }
+.cat-copypaste { background: #fd7e14; }
+.cat-format { background: #e83e8c; }
+.cat-rumus { background: #20c997; }
+.cat-file { background: #6c757d; }
+.cat-bariskolom { background: #17a2b8; }
+.cat-sheet { background: #28a745; }
+.cat-lainnya { background: #ffc107; color: #333; }
+
+.shortcut-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 12px;
+}
+
+.shortcut-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #fff;
+    padding: 15px 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+    transition: transform 0.2s;
+}
+
+.shortcut-item:hover {
+    transform: translateX(5px);
+    box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+}
+
+.shortcut-keys {
+    display: flex;
+    gap: 5px;
+    flex-shrink: 0;
+}
+
+.shortcut-keys kbd {
+    background: #2d2d2d;
+    color: #fff;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 0.85em;
+    box-shadow: 0 3px 0 #111, 0 4px 5px rgba(0,0,0,0.2);
+    min-width: 30px;
+    text-align: center;
+}
+
+.shortcut-desc {
+    color: #555;
+    font-size: 0.95em;
+    text-align: right;
+    margin-left: 15px;
+}
+
+/* ========== FOOTER ========== */
+footer {
+    background: #1a1a2e;
+    color: #ccc;
+    padding: 50px 0 20px;
+    margin-top: 60px;
+}
+
+.footer-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+    margin-bottom: 30px;
+}
+
+.footer-col h4 {
+    color: #fff;
+    margin-bottom: 15px;
+    font-size: 1.1em;
+}
+
+.footer-col p {
+    color: #aaa;
+    font-size: 0.95em;
+}
+
+.footer-col ul li {
+    margin-bottom: 8px;
+}
+
+.footer-col ul li a {
+    color: #aaa;
+    transition: color 0.3s;
+}
+
+.footer-col ul li a:hover {
+    color: #007bff;
+}
+
+.footer-bottom {
+    text-align: center;
+    padding-top: 20px;
+    border-top: 1px solid #333;
+    color: #666;
+    font-size: 0.9em;
+}
+
+/* ========== RESPONSIVE ========== */
+@media (max-width: 768px) {
+    .hamburger {
+        display: flex;
+    }
+
+    .nav-menu {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background: #0056b3;
+        flex-direction: column;
+        padding: 20px;
+        gap: 10px;
+        box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+    }
+
+    .nav-menu.active {
+        display: flex;
+    }
+
+    .hero h1 {
+        font-size: 2em;
+    }
+
+    .hero p {
+        font-size: 1em;
+    }
+
+    .shortcut-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .shortcut-item {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+    }
+
+    .shortcut-desc {
+        text-align: left;
+        margin-left: 0;
+    }
+
+    .filter-section {
+        position: static;
+    }
+
+    .cards-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .formula-body {
+        padding: 20px;
+    }
+
+    .formula-header {
+        padding: 15px 20px;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 8px;
+    }
+}
+
+/* ========== ANIMATIONS ========== */
+.formula-article,
+.shortcut-item,
+.formula-card,
+.tip-item {
+    animation: fadeInUp 0.5s ease forwards;
+    opacity: 0;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Stagger animation */
+.formula-article:nth-child(1) { animation-delay: 0.1s; }
+.formula-article:nth-child(2) { animation-delay: 0.2s; }
+.formula-article:nth-child(3) { animation-delay: 0.3s; }
+.formula-article:nth-child(4) { animation-delay: 0.4s; }
+.formula-article:nth-child(5) { animation-delay: 0.5s; }
+
+.shortcut-category { animation: fadeInUp 0.5s ease forwards; opacity: 0; }
+.shortcut-category:nth-child(1) { animation-delay: 0.1s; }
+.shortcut-category:nth-child(2) { animation-delay: 0.2s; }
+.shortcut-category:nth-child(3) { animation-delay: 0.3s; }
+
+/* Hidden class for filter */
+.hidden {
+    display: none !important;
+}

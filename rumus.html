@@ -1,0 +1,512 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rumus & Fungsi Excel - CyberNeurova</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="nav-logo">📊 CyberNeurova</a>
+            <button class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="index.html" class="nav-link">Beranda</a></li>
+                <li><a href="rumus.html" class="nav-link active">Rumus & Fungsi</a></li>
+                <li><a href="shortcut.html" class="nav-link">Shortcut Keyboard</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Header -->
+    <section class="page-header">
+        <h1>📘 Rumus & Fungsi Excel</h1>
+        <p>Pelajari 10 rumus Excel paling penting dengan penjelasan lengkap, sintaks, dan contoh nyata.</p>
+    </section>
+
+    <!-- Filter & Search -->
+    <section class="filter-section">
+        <div class="container-main">
+            <div class="filter-bar">
+                <input type="text" id="searchFormula" placeholder="🔍 Cari rumus..." class="search-input">
+                <div class="filter-buttons">
+                    <button class="filter-btn active" data-category="all">Semua</button>
+                    <button class="filter-btn" data-category="logika">Logika</button>
+                    <button class="filter-btn" data-category="referensi">Referensi</button>
+                    <button class="filter-btn" data-category="statistik">Statistik</button>
+                    <button class="filter-btn" data-category="teks">Teks</button>
+                    <button class="filter-btn" data-category="tanggal">Tanggal</button>
+                    <button class="filter-btn" data-category="data">Data</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Rumus Content -->
+    <section class="formulas-section">
+        <div class="container-main">
+
+            <!-- 1. IF -->
+            <article class="formula-article" id="if" data-category="logika">
+                <div class="formula-header">
+                    <span class="category-badge badge-logika">Logika</span>
+                    <h2>1. Fungsi IF</h2>
+                </div>
+                <div class="formula-body">
+                    <div class="syntax-box">
+                        <div class="syntax-label">Sintaks:</div>
+                        <code>=IF(logical_test, value_if_true, value_if_false)</code>
+                        <button class="copy-btn" onclick="copyCode(this)">📋 Salin</button>
+                    </div>
+                    <div class="params-table">
+                        <h4>Parameter:</h4>
+                        <table>
+                            <tr><th>Parameter</th><th>Keterangan</th></tr>
+                            <tr><td>logical_test</td><td>Kondisi yang akan dievaluasi (TRUE/FALSE)</td></tr>
+                            <tr><td>value_if_true</td><td>Nilai yang dikembalikan jika kondisi TRUE</td></tr>
+                            <tr><td>value_if_false</td><td>Nilai yang dikembalikan jika kondisi FALSE</td></tr>
+                        </table>
+                    </div>
+                    <div class="explanation">
+                        <h4>Penjelasan:</h4>
+                        <p>Fungsi IF digunakan untuk membuat keputusan logika. Excel akan mengevaluasi kondisi, jika hasilnya benar maka mengembalikan nilai pertama, jika salah mengembalikan nilai kedua.</p>
+                    </div>
+                    <div class="example-box">
+                        <h4>Contoh Nyata:</h4>
+                        <code>=IF(B2>=75, "Lulus", "Tidak Lulus")</code>
+                        <p>Jika nilai di B2 lebih dari atau sama dengan 75, hasilnya "Lulus". Jika tidak, hasilnya "Tidak Lulus".</p>
+                    </div>
+                    <div class="tips-box">
+                        <h4>💡 Tips:</h4>
+                        <ul>
+                            <li>Anda bisa menggabungkan beberapa IF (nested IF) untuk kondisi bertingkat.</li>
+                            <li>Gunakan IFS di Excel 2019+ untuk menghindari nested IF yang rumit.</li>
+                            <li>Kombinasikan dengan AND/OR untuk kondisi majemuk.</li>
+                        </ul>
+                    </div>
+                </div>
+            </article>
+
+            <!-- 2. VLOOKUP -->
+            <article class="formula-article" id="vlookup" data-category="referensi">
+                <div class="formula-header">
+                    <span class="category-badge badge-referensi">Referensi</span>
+                    <h2>2. Fungsi VLOOKUP</h2>
+                </div>
+                <div class="formula-body">
+                    <div class="syntax-box">
+                        <div class="syntax-label">Sintaks:</div>
+                        <code>=VLOOKUP(lookup_value, table_array, col_index_num, [range_lookup])</code>
+                        <button class="copy-btn" onclick="copyCode(this)">📋 Salin</button>
+                    </div>
+                    <div class="params-table">
+                        <h4>Parameter:</h4>
+                        <table>
+                            <tr><th>Parameter</th><th>Keterangan</th></tr>
+                            <tr><td>lookup_value</td><td>Nilai yang dicari di kolom pertama tabel</td></tr>
+                            <tr><td>table_array</td><td>Range tabel tempat pencarian dilakukan</td></tr>
+                            <tr><td>col_index_num</td><td>Nomor kolom dalam tabel yang berisi nilai hasil</td></tr>
+                            <tr><td>range_lookup</td><td>TRUE (perkiraan) atau FALSE (tepat)</td></tr>
+                        </table>
+                    </div>
+                    <div class="explanation">
+                        <h4>Penjelasan:</h4>
+                        <p>VLOOKUP mencari nilai di kolom pertama sebuah tabel, lalu mengembalikan nilai dari kolom lain di baris yang sama. "V" berarti Vertical karena pencarian dilakukan dari atas ke bawah.</p>
+                    </div>
+                    <div class="example-box">
+                        <h4>Contoh Nyata:</h4>
+                        <code>=VLOOKUP(A2, $D$2:$F$10, 3, FALSE)</code>
+                        <p>Mencari nilai A2 di kolom pertama range D2:F10, lalu mengembalikan nilai dari kolom ke-3 dengan pencocokan tepat.</p>
+                    </div>
+                    <div class="tips-box">
+                        <h4>💡 Tips:</h4>
+                        <ul>
+                            <li>Selalu gunakan FALSE untuk pencocokan tepat agar tidak salah hasil.</li>
+                            <li>Kunci range tabel dengan $ (absolute reference) agar tidak bergeser saat di-copy.</li>
+                            <li>VLOOKUP hanya bisa mencari ke kanan. Gunakan INDEX+MATCH untuk pencarian ke kiri.</li>
+                        </ul>
+                    </div>
+                </div>
+            </article>
+
+            <!-- 3. HLOOKUP -->
+            <article class="formula-article" id="hlookup" data-category="referensi">
+                <div class="formula-header">
+                    <span class="category-badge badge-referensi">Referensi</span>
+                    <h2>3. Fungsi HLOOKUP</h2>
+                </div>
+                <div class="formula-body">
+                    <div class="syntax-box">
+                        <div class="syntax-label">Sintaks:</div>
+                        <code>=HLOOKUP(lookup_value, table_array, row_index_num, [range_lookup])</code>
+                        <button class="copy-btn" onclick="copyCode(this)">📋 Salin</button>
+                    </div>
+                    <div class="params-table">
+                        <h4>Parameter:</h4>
+                        <table>
+                            <tr><th>Parameter</th><th>Keterangan</th></tr>
+                            <tr><td>lookup_value</td><td>Nilai yang dicari di baris pertama tabel</td></tr>
+                            <tr><td>table_array</td><td>Range tabel tempat pencarian dilakukan</td></tr>
+                            <tr><td>row_index_num</td><td>Nomor baris dalam tabel yang berisi nilai hasil</td></tr>
+                            <tr><td>range_lookup</td><td>TRUE (perkiraan) atau FALSE (tepat)</td></tr>
+                        </table>
+                    </div>
+                    <div class="explanation">
+                        <h4>Penjelasan:</h4>
+                        <p>HLOOKUP sama seperti VLOOKUP, tetapi pencarian dilakukan secara horizontal (dari kiri ke kanan) di baris pertama tabel. "H" berarti Horizontal.</p>
+                    </div>
+                    <div class="example-box">
+                        <h4>Contoh Nyata:</h4>
+                        <code>=HLOOKUP("Januari", A1:L3, 3, FALSE)</code>
+                        <p>Mencari "Januari" di baris pertama, lalu mengembalikan nilai dari baris ke-3 di kolom yang sama.</p>
+                    </div>
+                    <div class="tips-box">
+                        <h4>💡 Tips:</h4>
+                        <ul>
+                            <li>Cocok untuk tabel yang disusun horizontal (bulan, kuartal, dll).</li>
+                            <li>Gunakan FALSE untuk pencocokan tepat.</li>
+                            <li>Pertimbangkan INDEX+MATCH sebagai alternatif yang lebih fleksibel.</li>
+                        </ul>
+                    </div>
+                </div>
+            </article>
+
+            <!-- 4. SUMIF -->
+            <article class="formula-article" id="sumif" data-category="statistik">
+                <div class="formula-header">
+                    <span class="category-badge badge-statistik">Statistik</span>
+                    <h2>4. Fungsi SUMIF</h2>
+                </div>
+                <div class="formula-body">
+                    <div class="syntax-box">
+                        <div class="syntax-label">Sintaks:</div>
+                        <code>=SUMIF(range, criteria, [sum_range])</code>
+                        <button class="copy-btn" onclick="copyCode(this)">📋 Salin</button>
+                    </div>
+                    <div class="params-table">
+                        <h4>Parameter:</h4>
+                        <table>
+                            <tr><th>Parameter</th><th>Keterangan</th></tr>
+                            <tr><td>range</td><td>Range sel yang dievaluasi berdasarkan kriteria</td></tr>
+                            <tr><td>criteria</td><td>Kondisi/kriteria yang menentukan sel mana yang dijumlahkan</td></tr>
+                            <tr><td>sum_range</td><td>(Opsional) Range sel yang akan dijumlahkan</td></tr>
+                        </table>
+                    </div>
+                    <div class="explanation">
+                        <h4>Penjelasan:</h4>
+                        <p>SUMIF menjumlahkan sel-sel yang memenuhi kriteria tertentu. Sangat berguna untuk menjumlahkan data berdasarkan kategori atau kondisi.</p>
+                    </div>
+                    <div class="example-box">
+                        <h4>Contoh Nyata:</h4>
+                        <code>=SUMIF(A2:A100, "Jakarta", C2:C100)</code>
+                        <p>Menjumlahkan semua nilai di kolom C yang baris-nya memiliki "Jakarta" di kolom A.</p>
+                    </div>
+                    <div class="tips-box">
+                        <h4>💡 Tips:</h4>
+                        <ul>
+                            <li>Gunakan wildcard (* dan ?) untuk kriteria yang fleksibel.</li>
+                            <li>Untuk beberapa kriteria, gunakan SUMIFS.</li>
+                            <li>Kriteria bisa berupa angka, teks, atau ekspresi seperti ">100".</li>
+                        </ul>
+                    </div>
+                </div>
+            </article>
+
+            <!-- 5. COUNTIF -->
+            <article class="formula-article" id="countif" data-category="statistik">
+                <div class="formula-header">
+                    <span class="category-badge badge-statistik">Statistik</span>
+                    <h2>5. Fungsi COUNTIF</h2>
+                </div>
+                <div class="formula-body">
+                    <div class="syntax-box">
+                        <div class="syntax-label">Sintaks:</div>
+                        <code>=COUNTIF(range, criteria)</code>
+                        <button class="copy-btn" onclick="copyCode(this)">📋 Salin</button>
+                    </div>
+                    <div class="params-table">
+                        <h4>Parameter:</h4>
+                        <table>
+                            <tr><th>Parameter</th><th>Keterangan</th></tr>
+                            <tr><td>range</td><td>Range sel yang akan dihitung</td></tr>
+                            <tr><td>criteria</td><td>Kondisi yang menentukan sel mana yang dihitung</td></tr>
+                        </table>
+                    </div>
+                    <div class="explanation">
+                        <h4>Penjelasan:</h4>
+                        <p>COUNTIF menghitung jumlah sel dalam range yang memenuhi kriteria tertentu. Berguna untuk menghitung frekuensi data.</p>
+                    </div>
+                    <div class="example-box">
+                        <h4>Contoh Nyata:</h4>
+                        <code>=COUNTIF(B2:B50, "Lulus")</code>
+                        <p>Menghitung berapa banyak sel di range B2:B50 yang berisi teks "Lulus".</p>
+                    </div>
+                    <div class="tips-box">
+                        <h4>💡 Tips:</h4>
+                        <ul>
+                            <li>Gunakan COUNTIFS untuk beberapa kriteria sekaligus.</li>
+                            <li>Wildcard: =COUNTIF(A:A, "Jaka*") menghitung semua yang dimulai "Jaka".</li>
+                            <li>Untuk menghitung sel kosong, gunakan COUNTBLANK.</li>
+                        </ul>
+                    </div>
+                </div>
+            </article>
+
+            <!-- 6. INDEX + MATCH -->
+            <article class="formula-article" id="indexmatch" data-category="referensi">
+                <div class="formula-header">
+                    <span class="category-badge badge-referensi">Referensi</span>
+                    <h2>6. Fungsi INDEX + MATCH</h2>
+                </div>
+                <div class="formula-body">
+                    <div class="syntax-box">
+                        <div class="syntax-label">Sintaks:</div>
+                        <code>=INDEX(array, MATCH(lookup_value, lookup_array, match_type))</code>
+                        <button class="copy-btn" onclick="copyCode(this)">📋 Salin</button>
+                    </div>
+                    <div class="params-table">
+                        <h4>Parameter:</h4>
+                        <table>
+                            <tr><th>Parameter</th><th>Keterangan</th></tr>
+                            <tr><td>array</td><td>Range yang berisi nilai hasil (INDEX)</td></tr>
+                            <tr><td>lookup_value</td><td>Nilai yang dicari (MATCH)</td></tr>
+                            <tr><td>lookup_array</td><td>Range tempat pencarian dilakukan (MATCH)</td></tr>
+                            <tr><td>match_type</td><td>0 = tepat, 1 = kurang dari, -1 = lebih dari</td></tr>
+                        </table>
+                    </div>
+                    <div class="explanation">
+                        <h4>Penjelasan:</h4>
+                        <p>Kombinasi INDEX+MATCH adalah alternatif VLOOKUP yang lebih fleksibel. MATCH mencari posisi nilai, lalu INDEX mengembalikan nilai dari posisi tersebut. Bisa mencari ke kiri maupun ke kanan.</p>
+                    </div>
+                    <div class="example-box">
+                        <h4>Contoh Nyata:</h4>
+                        <code>=INDEX(C2:C100, MATCH(F1, A2:A100, 0))</code>
+                        <p>Mencari nilai F1 di kolom A, lalu mengembalikan nilai dari kolom C di baris yang sama.</p>
+                    </div>
+                    <div class="tips-box">
+                        <h4>💡 Tips:</h4>
+                        <ul>
+                            <li>Lebih cepat dari VLOOKUP pada dataset besar.</li>
+                            <li>Bisa mencari ke segala arah (kiri, kanan, atas, bawah).</li>
+                            <li>Gunakan match_type 0 untuk pencocokan tepat.</li>
+                        </ul>
+                    </div>
+                </div>
+            </article>
+
+            <!-- 7. Pivot Table -->
+            <article class="formula-article" id="pivot" data-category="data">
+                <div class="formula-header">
+                    <span class="category-badge badge-data">Data</span>
+                    <h2>7. Pivot Table</h2>
+                </div>
+                <div class="formula-body">
+                    <div class="syntax-box">
+                        <div class="syntax-label">Cara Membuat:</div>
+                        <code>Pilih data → Insert → PivotTable → Pilih lokasi → OK</code>
+                        <button class="copy-btn" onclick="copyCode(this)">📋 Salin</button>
+                    </div>
+                    <div class="params-table">
+                        <h4>Komponen Pivot Table:</h4>
+                        <table>
+                            <tr><th>Area</th><th>Fungsi</th></tr>
+                            <tr><td>Rows</td><td>Mengelompokkan data berdasarkan kategori baris</td></tr>
+                            <tr><td>Columns</td><td>Mengelompokkan data berdasarkan kategori kolom</td></tr>
+                            <tr><td>Values</td><td>Data yang dihitung (SUM, COUNT, AVERAGE, dll)</td></tr>
+                            <tr><td>Filters</td><td>Menyaring data yang ditampilkan</td></tr>
+                        </table>
+                    </div>
+                    <div class="explanation">
+                        <h4>Penjelasan:</h4>
+                        <p>Pivot Table adalah fitur paling powerful di Excel untuk menganalisis data besar. Anda bisa merangkum, mengelompokkan, dan menganalisis ribuan baris data hanya dengan drag-and-drop.</p>
+                    </div>
+                    <div class="example-box">
+                        <h4>Contoh Penggunaan:</h4>
+                        <p><strong>Kasus:</strong> Anda punya data penjualan 1000 baris dengan kolom: Tanggal, Produk, Kota, Jumlah, Total.</p>
+                        <p><strong>Pivot:</strong> Drag "Kota" ke Rows, "Produk" ke Columns, "Total" ke Values → Langsung terlihat total penjualan per kota per produk!</p>
+                    </div>
+                    <div class="tips-box">
+                        <h4>💡 Tips:</h4>
+                        <ul>
+                            <li>Pastikan data sumber tidak ada baris/kolom kosong.</li>
+                            <li>Gunakan Ctrl+Alt+L untuk refresh Pivot Table.</li>
+                            <li>Klik kanan pada Pivot → "Group" untuk mengelompokkan tanggal per bulan/kuartal.</li>
+                        </ul>
+                    </div>
+                </div>
+            </article>
+
+            <!-- 8. CONCATENATE / CONCAT -->
+            <article class="formula-article" id="concatenate" data-category="teks">
+                <div class="formula-header">
+                    <span class="category-badge badge-teks">Teks</span>
+                    <h2>8. Fungsi CONCATENATE / CONCAT</h2>
+                </div>
+                <div class="formula-body">
+                    <div class="syntax-box">
+                        <div class="syntax-label">Sintaks:</div>
+                        <code>=CONCATENATE(teks1, teks2, ...) atau =CONCAT(teks1, teks2, ...)</code>
+                        <button class="copy-btn" onclick="copyCode(this)">📋 Salin</button>
+                    </div>
+                    <div class="params-table">
+                        <h4>Parameter:</h4>
+                        <table>
+                            <tr><th>Parameter</th><th>Keterangan</th></tr>
+                            <tr><td>teks1, teks2, ...</td><td>Teks atau referensi sel yang akan digabungkan</td></tr>
+                        </table>
+                    </div>
+                    <div class="explanation">
+                        <h4>Penjelasan:</h4>
+                        <p>Menggabungkan beberapa teks atau nilai sel menjadi satu string. Di Excel 2019+, gunakan CONCAT atau operator & sebagai pengganti CONCATENATE.</p>
+                    </div>
+                    <div class="example-box">
+                        <h4>Contoh Nyata:</h4>
+                        <code>=CONCATENATE(A2, " ", B2)</code>
+                        <p>Menggabungkan nama depan (A2) dan nama belakang (B2) dengan spasi di antaranya.</p>
+                        <code>=A2 & " - " & B2</code>
+                        <p>Alternatif menggunakan operator &.</p>
+                    </div>
+                    <div class="tips-box">
+                        <h4>💡 Tips:</h4>
+                        <ul>
+                            <li>Gunakan TEXTJOIN untuk menggabungkan dengan delimiter tertentu.</li>
+                            <li>Operator & lebih ringkas dan mudah dibaca.</li>
+                            <li>Tambahkan CHAR(10) untuk line break dalam satu sel (aktifkan Wrap Text).</li>
+                        </ul>
+                    </div>
+                </div>
+            </article>
+
+            <!-- 9. LEFT / RIGHT / MID -->
+            <article class="formula-article" id="leftmid" data-category="teks">
+                <div class="formula-header">
+                    <span class="category-badge badge-teks">Teks</span>
+                    <h2>9. Fungsi LEFT / RIGHT / MID</h2>
+                </div>
+                <div class="formula-body">
+                    <div class="syntax-box">
+                        <div class="syntax-label">Sintaks:</div>
+                        <code>=LEFT(teks, jumlah_karakter)
+=RIGHT(teks, jumlah_karakter)
+=MID(teks, posisi_awal, jumlah_karakter)</code>
+                        <button class="copy-btn" onclick="copyCode(this)">📋 Salin</button>
+                    </div>
+                    <div class="params-table">
+                        <h4>Parameter:</h4>
+                        <table>
+                            <tr><th>Fungsi</th><th>Keterangan</th></tr>
+                            <tr><td>LEFT</td><td>Mengambil karakter dari kiri</td></tr>
+                            <tr><td>RIGHT</td><td>Mengambil karakter dari kanan</td></tr>
+                            <tr><td>MID</td><td>Mengambil karakter dari posisi tertentu</td></tr>
+                        </table>
+                    </div>
+                    <div class="explanation">
+                        <h4>Penjelasan:</h4>
+                        <p>Ketiga fungsi ini digunakan untuk mengekstrak sebagian teks dari sebuah string. Sangat berguna untuk memproses kode, nomor ID, atau data teks lainnya.</p>
+                    </div>
+                    <div class="example-box">
+                        <h4>Contoh Nyata:</h4>
+                        <code>=LEFT("EXCEL2024", 5)  → "EXCEL"
+=RIGHT("EXCEL2024", 4) → "2024"
+=MID("EXCEL2024", 6, 4) → "2024"</code>
+                    </div>
+                    <div class="tips-box">
+                        <h4>💡 Tips:</h4>
+                        <ul>
+                            <li>Kombinasikan dengan FIND/SEARCH untuk posisi dinamis.</li>
+                            <li>Gunakan LEN untuk menghitung panjang teks.</li>
+                            <li>Berguna untuk memisahkan kode produk, NIK, atau nomor telepon.</li>
+                        </ul>
+                    </div>
+                </div>
+            </article>
+
+            <!-- 10. Fungsi Tanggal -->
+            <article class="formula-article" id="tanggal" data-category="tanggal">
+                <div class="formula-header">
+                    <span class="category-badge badge-tanggal">Tanggal</span>
+                    <h2>10. Fungsi Tanggal (TODAY, NOW, DATEDIF)</h2>
+                </div>
+                <div class="formula-body">
+                    <div class="syntax-box">
+                        <div class="syntax-label">Sintaks:</div>
+                        <code>=TODAY()
+=NOW()
+=DATEDIF(tanggal_awal, tanggal_akhir, satuan)</code>
+                        <button class="copy-btn" onclick="copyCode(this)">📋 Salin</button>
+                    </div>
+                    <div class="params-table">
+                        <h4>Parameter DATEDIF:</h4>
+                        <table>
+                            <tr><th>Satuan</th><th>Keterangan</th></tr>
+                            <tr><td>"Y"</td><td>Selisih dalam tahun</td></tr>
+                            <tr><td>"M"</td><td>Selisih dalam bulan</td></tr>
+                            <tr><td>"D"</td><td>Selisih dalam hari</td></tr>
+                            <tr><td>"YM"</td><td>Selisih bulan (mengabaikan tahun)</td></tr>
+                            <tr><td>"MD"</td><td>Selisih hari (mengabaikan bulan & tahun)</td></tr>
+                        </table>
+                    </div>
+                    <div class="explanation">
+                        <h4>Penjelasan:</h4>
+                        <p>TODAY() mengembalikan tanggal hari ini, NOW() mengembalikan tanggal dan waktu saat ini, dan DATEDIF menghitung selisih antara dua tanggal.</p>
+                    </div>
+                    <div class="example-box">
+                        <h4>Contoh Nyata:</h4>
+                        <code>=DATEDIF(A2, TODAY(), "Y")</code>
+                        <p>Menghitung umur seseorang berdasarkan tanggal lahir di A2 sampai hari ini dalam tahun.</p>
+                    </div>
+                    <div class="tips-box">
+                        <h4>💡 Tips:</h4>
+                        <ul>
+                            <li>TODAY() dan NOW() otomatis update setiap file dibuka.</li>
+                            <li>DATEDIF tidak muncul di autocomplete tapi tetap berfungsi.</li>
+                            <li>Gunakan TEXT(NOW(), "DD/MM/YYYY") untuk format tanggal custom.</li>
+                        </ul>
+                    </div>
+                </div>
+            </article>
+
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container-main">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h4>📊 CyberNeurova</h4>
+                    <p>Platform belajar Microsoft Excel gratis untuk semua level.</p>
+                </div>
+                <div class="footer-col">
+                    <h4>Navigasi</h4>
+                    <ul>
+                        <li><a href="index.html">Beranda</a></li>
+                        <li><a href="rumus.html">Rumus & Fungsi</a></li>
+                        <li><a href="shortcut.html">Shortcut Keyboard</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Kategori Rumus</h4>
+                    <ul>
+                        <li><a href="#if">Logika (IF)</a></li>
+                        <li><a href="#vlookup">Referensi (VLOOKUP)</a></li>
+                        <li><a href="#pivot">Pivot Table</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 CyberNeurova. Semua hak dilindungi.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
