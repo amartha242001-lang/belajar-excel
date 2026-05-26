@@ -91,6 +91,40 @@
                             <li>Kombinasikan dengan AND/OR untuk kondisi majemuk.</li>
                         </ul>
                     </div>
+                    <div class="demo-animation">
+                        <h4>🎬 Demo Animasi:</h4>
+                        <div class="excel-sheet-demo">
+                            <div class="sheet-header">
+                                <span class="sheet-cell header-cell">A</span>
+                                <span class="sheet-cell header-cell">B</span>
+                                <span class="sheet-cell header-cell">C</span>
+                            </div>
+                            <div class="sheet-row">
+                                <span class="sheet-cell label-cell">Nama</span>
+                                <span class="sheet-cell label-cell">Nilai</span>
+                                <span class="sheet-cell label-cell">Status</span>
+                            </div>
+                            <div class="sheet-row demo-if-row">
+                                <span class="sheet-cell">Andi</span>
+                                <span class="sheet-cell highlight-cell anim-pulse">80</span>
+                                <span class="sheet-cell result-cell anim-typing">Lulus ✓</span>
+                            </div>
+                            <div class="sheet-row demo-if-row delay-1">
+                                <span class="sheet-cell">Budi</span>
+                                <span class="sheet-cell highlight-cell anim-pulse">60</span>
+                                <span class="sheet-cell result-cell-fail anim-typing">Tidak Lulus ✗</span>
+                            </div>
+                            <div class="sheet-row demo-if-row delay-2">
+                                <span class="sheet-cell">Citra</span>
+                                <span class="sheet-cell highlight-cell anim-pulse">75</span>
+                                <span class="sheet-cell result-cell anim-typing">Lulus ✓</span>
+                            </div>
+                            <div class="formula-bar-demo">
+                                <span class="fx-label">fx</span>
+                                <span class="fx-formula">=IF(B2>=75, "Lulus", "Tidak Lulus")</span>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </article>
 
@@ -132,6 +166,40 @@
                             <li>Kunci range tabel dengan $ (absolute reference) agar tidak bergeser saat di-copy.</li>
                             <li>VLOOKUP hanya bisa mencari ke kanan. Gunakan INDEX+MATCH untuk pencarian ke kiri.</li>
                         </ul>
+                    </div>
+                    <div class="demo-animation">
+                        <h4>🎬 Demo Animasi:</h4>
+                        <div class="excel-sheet-demo">
+                            <div class="sheet-header">
+                                <span class="sheet-cell header-cell">D</span>
+                                <span class="sheet-cell header-cell">E</span>
+                                <span class="sheet-cell header-cell">F</span>
+                            </div>
+                            <div class="sheet-row">
+                                <span class="sheet-cell label-cell">Kode</span>
+                                <span class="sheet-cell label-cell">Produk</span>
+                                <span class="sheet-cell label-cell">Harga</span>
+                            </div>
+                            <div class="sheet-row">
+                                <span class="sheet-cell">A01</span>
+                                <span class="sheet-cell">Laptop</span>
+                                <span class="sheet-cell">8.000.000</span>
+                            </div>
+                            <div class="sheet-row anim-vlookup-highlight">
+                                <span class="sheet-cell highlight-cell anim-pulse">B02</span>
+                                <span class="sheet-cell">Mouse</span>
+                                <span class="sheet-cell result-cell anim-typing">150.000</span>
+                            </div>
+                            <div class="sheet-row">
+                                <span class="sheet-cell">C03</span>
+                                <span class="sheet-cell">Keyboard</span>
+                                <span class="sheet-cell">350.000</span>
+                            </div>
+                            <div class="formula-bar-demo">
+                                <span class="fx-label">fx</span>
+                                <span class="fx-formula">=VLOOKUP("B02", D2:F4, 3, FALSE) → 150.000</span>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </article>
@@ -175,6 +243,33 @@
                             <li>Pertimbangkan INDEX+MATCH sebagai alternatif yang lebih fleksibel.</li>
                         </ul>
                     </div>
+                    <div class="demo-animation">
+                        <h4>🎬 Demo Animasi:</h4>
+                        <div class="excel-sheet-demo">
+                            <div class="sheet-row">
+                                <span class="sheet-cell label-cell">Bulan</span>
+                                <span class="sheet-cell highlight-cell anim-pulse">Jan</span>
+                                <span class="sheet-cell">Feb</span>
+                                <span class="sheet-cell">Mar</span>
+                            </div>
+                            <div class="sheet-row">
+                                <span class="sheet-cell label-cell">Penjualan</span>
+                                <span class="sheet-cell">500</span>
+                                <span class="sheet-cell">700</span>
+                                <span class="sheet-cell">600</span>
+                            </div>
+                            <div class="sheet-row">
+                                <span class="sheet-cell label-cell">Target</span>
+                                <span class="sheet-cell result-cell anim-typing">450</span>
+                                <span class="sheet-cell">650</span>
+                                <span class="sheet-cell">550</span>
+                            </div>
+                            <div class="formula-bar-demo">
+                                <span class="fx-label">fx</span>
+                                <span class="fx-formula">=HLOOKUP("Jan", A1:D3, 3, FALSE) → 450</span>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </article>
 
@@ -216,6 +311,40 @@
                             <li>Kriteria bisa berupa angka, teks, atau ekspresi seperti ">100".</li>
                         </ul>
                     </div>
+                    <div class="demo-animation">
+                        <h4>🎬 Demo Animasi:</h4>
+                        <div class="excel-sheet-demo">
+                            <div class="sheet-header">
+                                <span class="sheet-cell header-cell">A</span>
+                                <span class="sheet-cell header-cell">B</span>
+                                <span class="sheet-cell header-cell">C</span>
+                            </div>
+                            <div class="sheet-row">
+                                <span class="sheet-cell label-cell">Kota</span>
+                                <span class="sheet-cell label-cell">Produk</span>
+                                <span class="sheet-cell label-cell">Penjualan</span>
+                            </div>
+                            <div class="sheet-row anim-sumif-highlight">
+                                <span class="sheet-cell highlight-cell anim-pulse">Jakarta</span>
+                                <span class="sheet-cell">Laptop</span>
+                                <span class="sheet-cell result-cell anim-typing">5.000.000</span>
+                            </div>
+                            <div class="sheet-row">
+                                <span class="sheet-cell">Bandung</span>
+                                <span class="sheet-cell">Mouse</span>
+                                <span class="sheet-cell">200.000</span>
+                            </div>
+                            <div class="sheet-row anim-sumif-highlight delay-1">
+                                <span class="sheet-cell highlight-cell anim-pulse">Jakarta</span>
+                                <span class="sheet-cell">Keyboard</span>
+                                <span class="sheet-cell result-cell anim-typing">350.000</span>
+                            </div>
+                            <div class="formula-bar-demo">
+                                <span class="fx-label">fx</span>
+                                <span class="fx-formula">=SUMIF(A:A, "Jakarta", C:C) → 5.350.000</span>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </article>
 
@@ -255,6 +384,39 @@
                             <li>Wildcard: =COUNTIF(A:A, "Jaka*") menghitung semua yang dimulai "Jaka".</li>
                             <li>Untuk menghitung sel kosong, gunakan COUNTBLANK.</li>
                         </ul>
+                    </div>
+                    <div class="demo-animation">
+                        <h4>🎬 Demo Animasi:</h4>
+                        <div class="excel-sheet-demo">
+                            <div class="sheet-header">
+                                <span class="sheet-cell header-cell">A</span>
+                                <span class="sheet-cell header-cell">B</span>
+                            </div>
+                            <div class="sheet-row">
+                                <span class="sheet-cell label-cell">No</span>
+                                <span class="sheet-cell label-cell">Status</span>
+                            </div>
+                            <div class="sheet-row">
+                                <span class="sheet-cell">1</span>
+                                <span class="sheet-cell highlight-cell anim-pulse">Lulus</span>
+                            </div>
+                            <div class="sheet-row">
+                                <span class="sheet-cell">2</span>
+                                <span class="sheet-cell">Tidak Lulus</span>
+                            </div>
+                            <div class="sheet-row">
+                                <span class="sheet-cell">3</span>
+                                <span class="sheet-cell highlight-cell anim-pulse delay-1">Lulus</span>
+                            </div>
+                            <div class="sheet-row">
+                                <span class="sheet-cell">4</span>
+                                <span class="sheet-cell highlight-cell anim-pulse delay-2">Lulus</span>
+                            </div>
+                            <div class="formula-bar-demo">
+                                <span class="fx-label">fx</span>
+                                <span class="fx-formula">=COUNTIF(B2:B5, "Lulus") → 3</span>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </article>
@@ -298,6 +460,40 @@
                             <li>Gunakan match_type 0 untuk pencocokan tepat.</li>
                         </ul>
                     </div>
+                    <div class="demo-animation">
+                        <h4>🎬 Demo Animasi:</h4>
+                        <div class="excel-sheet-demo">
+                            <div class="sheet-header">
+                                <span class="sheet-cell header-cell">A</span>
+                                <span class="sheet-cell header-cell">B</span>
+                                <span class="sheet-cell header-cell">C</span>
+                            </div>
+                            <div class="sheet-row">
+                                <span class="sheet-cell label-cell">Kode</span>
+                                <span class="sheet-cell label-cell">Nama</span>
+                                <span class="sheet-cell label-cell">Gaji</span>
+                            </div>
+                            <div class="sheet-row">
+                                <span class="sheet-cell">E01</span>
+                                <span class="sheet-cell">Andi</span>
+                                <span class="sheet-cell">5.000.000</span>
+                            </div>
+                            <div class="sheet-row anim-vlookup-highlight">
+                                <span class="sheet-cell highlight-cell anim-pulse">E02</span>
+                                <span class="sheet-cell">Budi</span>
+                                <span class="sheet-cell result-cell anim-typing">7.500.000</span>
+                            </div>
+                            <div class="sheet-row">
+                                <span class="sheet-cell">E03</span>
+                                <span class="sheet-cell">Citra</span>
+                                <span class="sheet-cell">6.000.000</span>
+                            </div>
+                            <div class="formula-bar-demo">
+                                <span class="fx-label">fx</span>
+                                <span class="fx-formula">=INDEX(C2:C4, MATCH("E02", A2:A4, 0)) → 7.500.000</span>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </article>
 
@@ -340,6 +536,38 @@
                             <li>Klik kanan pada Pivot → "Group" untuk mengelompokkan tanggal per bulan/kuartal.</li>
                         </ul>
                     </div>
+                    <div class="demo-animation">
+                        <h4>🎬 Demo Animasi:</h4>
+                        <div class="excel-sheet-demo">
+                            <div class="sheet-row">
+                                <span class="sheet-cell label-cell">Data Awal:</span>
+                                <span class="sheet-cell" colspan="3">1000 baris penjualan</span>
+                            </div>
+                            <div class="sheet-row pivot-arrow">
+                                <span class="sheet-cell" style="text-align:center; font-size:1.5em;">⬇️ Pivot Table ⬇️</span>
+                            </div>
+                            <div class="sheet-row">
+                                <span class="sheet-cell label-cell">Kota</span>
+                                <span class="sheet-cell label-cell">Total</span>
+                            </div>
+                            <div class="sheet-row anim-sumif-highlight">
+                                <span class="sheet-cell highlight-cell anim-pulse">Jakarta</span>
+                                <span class="sheet-cell result-cell anim-typing">25.000.000</span>
+                            </div>
+                            <div class="sheet-row anim-sumif-highlight delay-1">
+                                <span class="sheet-cell highlight-cell anim-pulse">Bandung</span>
+                                <span class="sheet-cell result-cell anim-typing">18.000.000</span>
+                            </div>
+                            <div class="sheet-row anim-sumif-highlight delay-2">
+                                <span class="sheet-cell highlight-cell anim-pulse">Surabaya</span>
+                                <span class="sheet-cell result-cell anim-typing">12.000.000</span>
+                            </div>
+                            <div class="formula-bar-demo">
+                                <span class="fx-label">📊</span>
+                                <span class="fx-formula">Insert → PivotTable → Drag "Kota" ke Rows, "Total" ke Values</span>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </article>
 
@@ -380,6 +608,35 @@
                             <li>Operator & lebih ringkas dan mudah dibaca.</li>
                             <li>Tambahkan CHAR(10) untuk line break dalam satu sel (aktifkan Wrap Text).</li>
                         </ul>
+                    </div>
+                    <div class="demo-animation">
+                        <h4>🎬 Demo Animasi:</h4>
+                        <div class="excel-sheet-demo">
+                            <div class="sheet-header">
+                                <span class="sheet-cell header-cell">A</span>
+                                <span class="sheet-cell header-cell">B</span>
+                                <span class="sheet-cell header-cell">C</span>
+                            </div>
+                            <div class="sheet-row">
+                                <span class="sheet-cell label-cell">Nama Depan</span>
+                                <span class="sheet-cell label-cell">Nama Belakang</span>
+                                <span class="sheet-cell label-cell">Nama Lengkap</span>
+                            </div>
+                            <div class="sheet-row">
+                                <span class="sheet-cell highlight-cell anim-pulse">Andi</span>
+                                <span class="sheet-cell highlight-cell anim-pulse delay-1">Pratama</span>
+                                <span class="sheet-cell result-cell anim-typing">Andi Pratama</span>
+                            </div>
+                            <div class="sheet-row delay-1">
+                                <span class="sheet-cell highlight-cell anim-pulse">Budi</span>
+                                <span class="sheet-cell highlight-cell anim-pulse delay-1">Santoso</span>
+                                <span class="sheet-cell result-cell anim-typing">Budi Santoso</span>
+                            </div>
+                            <div class="formula-bar-demo">
+                                <span class="fx-label">fx</span>
+                                <span class="fx-formula">=CONCATENATE(A2, " ", B2) → "Andi Pratama"</span>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </article>
@@ -425,6 +682,33 @@
                             <li>Berguna untuk memisahkan kode produk, NIK, atau nomor telepon.</li>
                         </ul>
                     </div>
+                    <div class="demo-animation">
+                        <h4>🎬 Demo Animasi:</h4>
+                        <div class="excel-sheet-demo">
+                            <div class="sheet-header">
+                                <span class="sheet-cell header-cell">A</span>
+                                <span class="sheet-cell header-cell">B</span>
+                                <span class="sheet-cell header-cell">C</span>
+                                <span class="sheet-cell header-cell">D</span>
+                            </div>
+                            <div class="sheet-row">
+                                <span class="sheet-cell label-cell">Teks Asli</span>
+                                <span class="sheet-cell label-cell">LEFT(5)</span>
+                                <span class="sheet-cell label-cell">RIGHT(4)</span>
+                                <span class="sheet-cell label-cell">MID(6,4)</span>
+                            </div>
+                            <div class="sheet-row">
+                                <span class="sheet-cell highlight-cell anim-pulse">EXCEL2024</span>
+                                <span class="sheet-cell result-cell anim-typing">EXCEL</span>
+                                <span class="sheet-cell result-cell anim-typing delay-1">2024</span>
+                                <span class="sheet-cell result-cell anim-typing delay-2">2024</span>
+                            </div>
+                            <div class="formula-bar-demo">
+                                <span class="fx-label">fx</span>
+                                <span class="fx-formula">=LEFT("EXCEL2024",5) → "EXCEL"</span>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </article>
 
@@ -469,6 +753,35 @@
                             <li>DATEDIF tidak muncul di autocomplete tapi tetap berfungsi.</li>
                             <li>Gunakan TEXT(NOW(), "DD/MM/YYYY") untuk format tanggal custom.</li>
                         </ul>
+                    </div>
+                    <div class="demo-animation">
+                        <h4>🎬 Demo Animasi:</h4>
+                        <div class="excel-sheet-demo">
+                            <div class="sheet-header">
+                                <span class="sheet-cell header-cell">A</span>
+                                <span class="sheet-cell header-cell">B</span>
+                                <span class="sheet-cell header-cell">C</span>
+                            </div>
+                            <div class="sheet-row">
+                                <span class="sheet-cell label-cell">Tgl Lahir</span>
+                                <span class="sheet-cell label-cell">Hari Ini</span>
+                                <span class="sheet-cell label-cell">Umur</span>
+                            </div>
+                            <div class="sheet-row">
+                                <span class="sheet-cell highlight-cell anim-pulse">15/03/1995</span>
+                                <span class="sheet-cell anim-pulse delay-1">26/05/2026</span>
+                                <span class="sheet-cell result-cell anim-typing delay-2">31 tahun</span>
+                            </div>
+                            <div class="sheet-row delay-1">
+                                <span class="sheet-cell highlight-cell anim-pulse">01/01/2000</span>
+                                <span class="sheet-cell anim-pulse delay-1">26/05/2026</span>
+                                <span class="sheet-cell result-cell anim-typing delay-2">26 tahun</span>
+                            </div>
+                            <div class="formula-bar-demo">
+                                <span class="fx-label">fx</span>
+                                <span class="fx-formula">=DATEDIF(A2, TODAY(), "Y") → 31</span>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </article>
